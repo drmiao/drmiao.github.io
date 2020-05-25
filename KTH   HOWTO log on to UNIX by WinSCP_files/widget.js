@@ -1,1 +1,0 @@
-/*referer is not allowed or disabled*/
