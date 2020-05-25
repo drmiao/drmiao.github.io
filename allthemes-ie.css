@@ -1,0 +1,12 @@
+INPUT[type=checkbox] {
+	BOX-SIZING: content-box; BORDER-BOTTOM-COLOR: transparent; BORDER-TOP-COLOR: transparent; BORDER-RIGHT-COLOR: transparent; BORDER-LEFT-COLOR: transparent; box-shadow: none
+}
+INPUT[type=radio] {
+	BOX-SIZING: content-box; BORDER-BOTTOM-COLOR: transparent; BORDER-TOP-COLOR: transparent; BORDER-RIGHT-COLOR: transparent; BORDER-LEFT-COLOR: transparent; box-shadow: none
+}
+INPUT[type=checkbox]:hover {
+	BOX-SIZING: content-box; BORDER-BOTTOM-COLOR: transparent; BORDER-TOP-COLOR: transparent; BORDER-RIGHT-COLOR: transparent; BORDER-LEFT-COLOR: transparent; box-shadow: none
+}
+INPUT[type=radio]:hover {
+	BOX-SIZING: content-box; BORDER-BOTTOM-COLOR: transparent; BORDER-TOP-COLOR: transparent; BORDER-RIGHT-COLOR: transparent; BORDER-LEFT-COLOR: transparent; box-shadow: none
+}
