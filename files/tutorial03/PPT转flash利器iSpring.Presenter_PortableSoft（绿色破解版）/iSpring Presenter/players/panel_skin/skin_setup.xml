@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<skinSetup>
+	<i18n>
+		<customizationPanel>
+			<leftPositionOption>Navigation panel on the left</leftPositionOption>
+			<rightPositionOption>Navigation panel on the right</rightPositionOption>
+			<showPanel>Show Control Panel at startup</showPanel>
+		</customizationPanel>
+	</i18n>
+	<skin>
+		<navigationPanelSettings>
+			<layout>
+				<panelPosition>right</panelPosition>
+				<showControlPanel>1</showControlPanel>
+			</layout>
+		</navigationPanelSettings>
+		<messages>
+			<leaveSlideWarning>You must complete the quiz before leaving this slide.</leaveSlideWarning>
+			<leaveSlideWarningTitle>Warning</leaveSlideWarningTitle>
+			<resumeText>Would you like to resume the presentation from the last slide viewed?</resumeText>
+			<resumeTitle>Resume Presentation</resumeTitle>
+			<ok>OK</ok>
+			<no>No</no>
+			<yes>Yes</yes>
+		</messages>
+	</skin>
+</skinSetup>

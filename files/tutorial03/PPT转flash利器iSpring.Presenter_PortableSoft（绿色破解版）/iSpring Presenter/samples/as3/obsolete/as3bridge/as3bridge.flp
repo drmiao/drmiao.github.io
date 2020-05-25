@@ -1,0 +1,45 @@
+﻿<flash_project name="as3bridge" version="1">
+    <project_folder name="fsplayer" expanded="true">
+        <project_folder name="api" expanded="true">
+            <project_folder name="video" expanded="true">
+                <project_file path="../../../../sdk/fsplayer/api/video/IVideoPlayer.as" filetype="as" />
+                <project_file path="../../../../sdk/fsplayer/api/video/IVideoPlayerListener.as" filetype="as" />
+            </project_folder>
+            <project_file path="../../../../sdk/fsplayer/api/CPresentationLoader.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IAnimationStep.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IAnimationSteps.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/ICompanyInfo.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/ICompanyLogo.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/ICompanyLogoLoadingListener.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IPlaybackListener.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IPlayer.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IPlayerCore.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IPlayerEx.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IPlayerListener.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IPlayerListenerEx.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IPresentationInfo.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IPresentationPlaybackController.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IPresentationPlaybackControllerEx.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IPresenterInfo.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IPresenterPhoto.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IPresenterPhotoLoadingListener.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IPresentersCollection.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IPresenterVideo.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IPresenterVideoController.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IPresenterVideoListener.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IReferenceInfo.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IReferencesCollection.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/ISlideInfo.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/ISlideResources.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/ISlidesCollection.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/ISlideThumbnail.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/ISlideThumbnailLoadingListener.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/ISoundController.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/ISoundListener.as" filetype="as" />
+            <project_file path="../../../../sdk/fsplayer/api/IThumbnailsCollection.as" filetype="as" />
+        </project_folder>
+    </project_folder>
+    <project_file path="./CAS3Bridge.as" filetype="as" />
+    <project_file path="./as3bridge.fla" filetype="fla" profile="" />
+    <project_file path="./as3bridge.as" filetype="as" />
+</flash_project>

@@ -1,0 +1,16 @@
+<player name="Banner" id="banner" priority="10">
+	<coreModules>
+		<coreModule id="full" src="core\core.swf">
+			<capabilities>
+				<soundPlayback supported="1"/>
+			</capabilities>
+		</coreModule>
+		<coreModule id="light" src="core\core_light.swf">
+		</coreModule>
+	</coreModules>
+	<skinModules>
+		<skinModule id="FullFeatured" src="banner\banner.swf" coreModule="light" swfVersion="7"/>
+	</skinModules>
+	<defaultPublishSettings src="banner\publish_settings.xml"/>
+	<defaultSkinSettings src="banner\skin_settings.xml"/>
+</player>

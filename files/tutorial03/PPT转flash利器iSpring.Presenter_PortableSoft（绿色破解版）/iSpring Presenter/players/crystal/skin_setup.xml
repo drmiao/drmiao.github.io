@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<skinSetup>
+	<i18n>
+		<setupPanel>
+			<labels>
+				<outlines>Outlines</outlines>
+				<thumbnails>Thumbnails</thumbnails>
+				<notes>Notes</notes>
+				<presenter>Presenter</presenter>
+				<references>References</references>
+				<search>Search</search>
+				<fullScreen>Full Screen</fullScreen>
+				<useSystemFonts>Use system fonts</useSystemFonts>
+				<timeline>Time line</timeline>
+				<volumeControl>Volume control</volumeControl>
+				<nextSlide>Next Slide</nextSlide>
+				<multiLevelNavigation>Multi-level Navigation</multiLevelNavigation>
+				<presenterPhoto>Presenter Photo</presenterPhoto>
+				<companyLogo>Company Logo</companyLogo>
+				<resetDefaults>Reset defaults</resetDefaults>
+			</labels>
+		</setupPanel>
+	</i18n>
+	<skin>
+		<outlines>1</outlines>
+		<thumbnails>1</thumbnails>
+		<notes>1</notes>
+		<presenter>1</presenter>
+		<search>1</search>
+		<references>1</references>
+		<fullScreen>1</fullScreen>
+		<systemFont>0</systemFont>
+		<volumeControl>1</volumeControl>
+		<timeline>1</timeline>
+		<nextSlide>1</nextSlide>
+		<multilevelNavigation>1</multilevelNavigation>
+		<presenterPhoto>1</presenterPhoto>
+		<companyLogo>1</companyLogo>
+		<labels>
+			<searchInSlideNotes>Slide notes</searchInSlideNotes>
+			<searchInSlideText>Slide text</searchInSlideText>
+			<searchIn>Search in</searchIn>
+			<searchFor>Search for</searchFor>
+			<references>References</references>
+			<presenter>Presenter</presenter>
+			<notes>Notes</notes>
+			<thumbnails>Thumbnails</thumbnails>
+			<outlines>Outlines</outlines>
+		</labels>
+		<messages>
+			<leaveSlideWarning>You must complete the quiz before leaving this slide.</leaveSlideWarning>
+			<leaveSlideWarningTitle>Warning</leaveSlideWarningTitle>
+			<resumeText>Would you like to resume the presentation from the last slide viewed?</resumeText>
+			<resumeTitle>Resume Presentation</resumeTitle>
+			<ok>OK</ok>
+			<no>No</no>
+			<yes>Yes</yes>
+		</messages>
+	</skin>
+</skinSetup>

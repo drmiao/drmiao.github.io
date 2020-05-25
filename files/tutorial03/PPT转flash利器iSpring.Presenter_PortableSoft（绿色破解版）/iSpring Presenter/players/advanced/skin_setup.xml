@@ -1,0 +1,280 @@
+﻿<?xml version="1.0"?>
+<skinSetup>
+	<i18n>
+		<callout>Click to customize the player</callout>
+		<customizationWindow>
+			<title>Player customization</title>
+			<pages>
+				<colors>
+					<title>Color settings</title>
+					<labels>
+						<colorTheme>Color Theme:</colorTheme>
+						<panelsAndButtons>Panels and buttons:</panelsAndButtons>
+						<icons>Icons:</icons>
+						<presentationTitle>Presentation title:</presentationTitle>
+						<buttonCaptions>Button captions:</buttonCaptions>
+						<currentSlideAndPosition>Current slide and position:</currentSlideAndPosition>
+						<slideCountAndDuration>Slide count and duration:</slideCountAndDuration>
+						<timeline>Timeline:</timeline>
+						<presenterPanel>Presenter panel:</presenterPanel>
+						<presenterName>Presenter name:</presenterName>
+						<presenterTitle>Presenter title:</presenterTitle>
+						<colorDialog>
+							<choosePanelsAndButtonsColor>Choose panels and buttons color</choosePanelsAndButtonsColor>
+							<chooseIconsColor>Choose icons color</chooseIconsColor>
+							<choosePresentationTitleColor>Choose presentation title color</choosePresentationTitleColor>
+							<chooseButtonCaptionsColor>Choose button captions color</chooseButtonCaptionsColor>
+							<chooseCurrentSlideAndPositionColor>Choose current slide and position color</chooseCurrentSlideAndPositionColor>
+							<chooseSlideCountAndDurationColor>Choose slide count and duration color</chooseSlideCountAndDurationColor>
+							<choosePresenterPanelColor>Choose presenter panel color</choosePresenterPanelColor>
+							<choosePresenterNameColor>Choose presenter name color</choosePresenterNameColor>
+							<choosePresenterTitleColor>Choose presenter title color</choosePresenterTitleColor>
+							<chooseTimelineColor>Choose timeline color</chooseTimelineColor>
+							<ok>OK</ok>
+							<cancel>Cancel</cancel>
+						</colorDialog>
+					</labels>
+				</colors>
+				<titleBar>
+					<title>Title bar</title>
+					<labels>
+						<showPresentationTime>Show presentation time</showPresentationTime>
+						<enableCloseButton>Enable Close button</enableCloseButton>
+						<enableFullScreen>Enable Full Screen</enableFullScreen>
+					</labels>
+				</titleBar>
+				<presenter>
+					<title>Company and Presenter</title>
+					<labels>
+						<companyLogo>Company logo</companyLogo>
+						<presenterInformation>Presenter information</presenterInformation>
+						<presenterPhoto>Presenter photo</presenterPhoto>
+						<presenterVideo>Presenter video</presenterVideo>
+						<moreInfoButton>More info button:</moreInfoButton>
+						<lessInfoButton>Less info button:</lessInfoButton>
+						<homePage>Home page:</homePage>
+						<email>E-mail:</email>
+						<showVideo>Show video</showVideo>
+						<hideVideo>Hide video</hideVideo>
+					</labels>
+				</presenter>
+				<tabs>
+					<title>Tabs</title>
+					<labels>
+						<text>You can change tabs order by dragging them left and right using mouse as it is shown in the picture below.</text>
+					</labels>
+				</tabs>
+				<outline>
+					<title>Outline</title>
+					<labels>
+						<outlineTab>Outline tab</outlineTab>
+						<title>Title:</title>
+						<multiLevelNavigation>Multi-level navigation</multiLevelNavigation>
+						<showTooltips>Show tooltips</showTooltips>
+					</labels>
+				</outline>
+				<thumbnails>
+					<title>Thumbnails</title>
+					<labels>
+						<thumbnailsTab>Thumbnails tab</thumbnailsTab>
+						<title>Title:</title>
+						<normalSizeThumbnails>Normal size thumbnails</normalSizeThumbnails>
+						<largeSizeThumbnails>Large size thumbnails</largeSizeThumbnails>
+						<showExtraLargeThumbnails>Show extra large thumbnails in tooltip</showExtraLargeThumbnails>
+						<largeSize>Large size</largeSize>
+						<extraLargeSize>Extra large size</extraLargeSize>
+						<enableZoomEffect>Enable zoom effect</enableZoomEffect>
+					</labels>
+				</thumbnails>
+				<notes>
+					<title>Notes</title>
+					<labels>
+						<notesTab>Notes tab</notesTab>
+						<title>Title:</title>
+						<time>Time:</time>
+					</labels>
+				</notes>
+				<search>
+					<title>Search</title>
+					<labels>
+						<searchTab>Search tab</searchTab>
+						<title>Title:</title>
+						<searchFieldHint>Search field hint:</searchFieldHint>
+						<searchOptions>Search options:</searchOptions>
+						<slideText>Slide text:</slideText>
+						<slideNotes>Slide notes:</slideNotes>
+						<slideTitles>Slide titles:</slideTitles>
+					</labels>
+				</search>
+				<references>
+					<title>References</title>
+					<labels>
+						<referencesTab>References tab</referencesTab>
+						<title>Title:</title>
+					</labels>
+				</references>
+				<controlPanel>
+					<title>Control panel</title>
+					<labels>
+						<slides>Slides</slides>
+						<steps>Steps</steps>
+						<enableMarkerTools>Enable Marker tools</enableMarkerTools>
+						<enableVolumeControl>Enable Volume control</enableVolumeControl>
+						<slideLabel>Slide label:</slideLabel>
+						<penColor>Pen color</penColor>
+						<highlighterColor>Highlighter color</highlighterColor>
+						<navigationBy>Navigation by:</navigationBy>
+						<timeline>Timeline:</timeline>
+						<presentationTimeline>Presentation timeline</presentationTimeline>
+						<slideTimeline>Slide timeline</slideTimeline>
+						<noTimeline>No timeline</noTimeline>
+					</labels>
+				</controlPanel>
+				<misc>
+					<title>Miscellaneous</title>
+					<labels>
+						<adjustPlayerSize>Adjust player size to fit Flash player window</adjustPlayerSize>
+						<width>Width:</width>
+						<height>Height:</height>
+						<useSystemFonts>Use system fonts (Improves rendering of oriental characters)</useSystemFonts>
+					</labels>
+				</misc>
+				<messages>
+					<title>Messages</title>
+					<labels>
+						<yes>Yes:</yes>
+						<no>No:</no>
+						<ok>Ok:</ok>
+						<resumeTitle>Resume title:</resumeTitle>
+						<resumeText>Resume text:</resumeText>
+						<leaveSlideWarning>Slide leaving:</leaveSlideWarning>
+						<leaveSlideWarningTitle>Slide leaving title:</leaveSlideWarningTitle>
+					</labels>
+				</messages>
+				<defaultTab>Default tab</defaultTab>
+			</pages>
+			<buttons>
+				<restoreAll>Restore all settings</restoreAll>
+				<resetDefaults>Reset defaults</resetDefaults>
+				<ok>OK</ok>
+				<cancel>Cancel</cancel>
+			</buttons>
+		</customizationWindow>
+	</i18n>
+	<skin>
+		<misc>
+			<embedFonts>1</embedFonts>
+			<size>
+				<height>540</height>
+				<width>720</width>
+				<autoSize>1</autoSize>
+			</size>
+		</misc>
+		<presenter>
+			<hideVideo>Hide video</hideVideo>
+			<showVideo>Show video</showVideo>
+			<enableVideo>1</enableVideo>
+			<email>E-mail:</email>
+			<homePage>Home page:</homePage>
+			<lessInfo>Less info</lessInfo>
+			<moreInfo>More info</moreInfo>
+			<enablePhoto>1</enablePhoto>
+			<noVideo>NO VIDEO AVAILABLE</noVideo>
+			<enabled>1</enabled>
+		</presenter>
+		<company>
+			<enableLogo>1</enableLogo>
+		</company>
+		<controlPanel>
+			<volumeControl>
+				<enabled>1</enabled>
+			</volumeControl>
+			<marker>
+				<highlighterColor>16776960</highlighterColor>
+				<penColor>16711680</penColor>
+				<enabled>1</enabled>
+			</marker>
+			<timeLine>
+				<enabled>1</enabled>
+				<type>presentation</type>
+				<slideLabel>Slide</slideLabel>
+			</timeLine>
+			<navigation>
+				<type>slides</type>
+			</navigation>
+		</controlPanel>
+		<titleBar>
+			<presentationTime>
+				<enabled>1</enabled>
+			</presentationTime>
+			<closeButton>
+				<enabled>1</enabled>
+			</closeButton>
+			<fullScreenButton>
+				<enabled>1</enabled>
+			</fullScreenButton>
+		</titleBar>
+		<references>
+			<title>References</title>
+			<enabled>1</enabled>
+			<order>4</order>
+		</references>
+		<search>
+			<slideTitles>Slide titles</slideTitles>
+			<slideNotes>Slide notes</slideNotes>
+			<slideText>Slide text</slideText>
+			<searchIn>Search in</searchIn>
+			<searchFor>Search for</searchFor>
+			<title>Search</title>
+			<enabled>1</enabled>
+			<order>3</order>
+		</search>
+		<notes>
+			<time>Time: {MINUTES} min {SECONDS} sec</time>
+			<title>Notes</title>
+			<enabled>1</enabled>
+			<order>2</order>
+		</notes>
+		<thumbnails>
+			<title>Thumbnails</title>
+			<enabled>1</enabled>
+			<order>1</order>
+			<zoom>1</zoom>
+			<type>normal</type>
+			<showExtraThumbnail>0</showExtraThumbnail>
+			<extraThumbnailSize>
+				<width>400</width>
+				<height>300</height>
+			</extraThumbnailSize>
+		</thumbnails>
+		<outline>
+			<title>Outline</title>
+			<multiLevelNavigation>1</multiLevelNavigation>
+			<enabled>1</enabled>
+			<order>0</order>
+			<showTooltips>1</showTooltips>
+		</outline>
+		<colors>
+			<presenterTitle>0</presenterTitle>
+			<presenterName>16777215</presenterName>
+			<presenterPanel>8355711</presenterPanel>
+			<slideCountAndDuration>1644825</slideCountAndDuration>
+			<currentSlideAndPosition>2838410</currentSlideAndPosition>
+			<buttonCaptions>16777215</buttonCaptions>
+			<presentationTitle>1644825</presentationTitle>
+			<icons>5000268</icons>
+			<panelsAndButtons>16777215</panelsAndButtons>
+			<timeline>11851254</timeline>
+		</colors>
+		<defaultTab>thumbnails</defaultTab>
+		<messages>
+			<leaveSlideWarning>You must complete the quiz before leaving this slide.</leaveSlideWarning>
+			<leaveSlideWarningTitle>Warning</leaveSlideWarningTitle>
+			<resumeText>Would you like to resume the presentation from the last slide viewed?</resumeText>
+			<resumeTitle>Resume Presentation</resumeTitle>
+			<ok>OK</ok>
+			<no>No</no>
+			<yes>Yes</yes>
+		</messages>
+	</skin>
+</skinSetup>

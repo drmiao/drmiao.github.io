@@ -1,0 +1,56 @@
+﻿<flash_project name="presentation-control" version="1">
+    <project_folder name="fsplayer" expanded="true">
+        <project_folder name="api" expanded="true">
+            <project_folder name="video" expanded="true">
+                <project_file path="../../../sdk/fsplayer/api/video/IVideoPlayer.as" filetype="as" />
+                <project_file path="../../../sdk/fsplayer/api/video/IVideoPlayerListener.as" filetype="as" />
+            </project_folder>
+            <project_file path="../../../sdk/fsplayer/api/CPresentationLoader.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IAnimationStep.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IAnimationSteps.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/ICompanyInfo.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/ICompanyLogo.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/ICompanyLogoLoadingListener.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IPlaybackListener.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IPlayer.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IPlayerListener.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IPresentationInfo.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IPresentationPlaybackController.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IPresentationPlaybackControllerEx.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IPresenterInfo.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IPresenterPhoto.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IPresenterPhotoLoadingListener.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IPresentersCollection.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IPresenterVideo.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IPresenterVideoController.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IPresenterVideoListener.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IReferenceInfo.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IReferencesCollection.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/ISlideInfo.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/ISlideResources.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/ISlidesCollection.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/ISlideThumbnail.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/ISlideThumbnailLoadingListener.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/ISoundController.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/ISoundListener.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IThumbnailsCollection.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IPlayerCore.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IPlayerEx.as" filetype="as" />
+            <project_file path="../../../sdk/fsplayer/api/IPlayerListenerEx.as" filetype="as" />
+        </project_folder>
+    </project_folder>
+    <project_file path="./playback_control.fla" filetype="fla" profile="" />
+    <project_file path="./event_handling.fla" filetype="fla" profile="" />
+    <project_file path="./loading_events.fla" filetype="fla" profile="" />
+    <project_file path="./mouse_navigation.fla" filetype="fla" profile="" />
+    <project_file path="./keyboard_navigation.fla" filetype="fla" profile="" />
+    <project_file path="./step_navigation.fla" filetype="fla" profile="" />
+    <project_file path="./timeline_navigation.fla" filetype="fla" profile="" def_file="true" />
+    <project_file path="./event_handling.as" filetype="as" />
+    <project_file path="./timeline_navigation.as" filetype="as" />
+    <project_file path="./keyboard_navigation.as" filetype="as" />
+    <project_file path="./mouse_navigation.as" filetype="as" />
+    <project_file path="./playback_control.as" filetype="as" />
+    <project_file path="./step_navigation.as" filetype="as" />
+    <project_file path="./loading_events.as" filetype="as" />
+</flash_project>

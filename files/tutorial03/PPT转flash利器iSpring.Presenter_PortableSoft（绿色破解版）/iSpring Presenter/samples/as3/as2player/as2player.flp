@@ -1,0 +1,55 @@
+﻿<flash_project name="as2player" version="1">
+    <project_folder name="ispring" expanded="false">
+        <project_folder name="as2player" expanded="false">
+            <project_folder name="impl" expanded="false">
+                <project_file path="../../../sdk/ispring/as2player/impl/AnimationStep.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/AnimationSteps.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/CompanyInfo.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/CompanyLogo.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/Connection.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/ConnectionEvent.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/Player.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/PresentationInfo.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/PresentationPlaybackController.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/PresenterInfo.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/PresentersCollection.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/PresenterVideo.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/ReferenceInfo.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/ReferencesCollection.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/SlideInfo.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/SlideResources.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/SlidesCollection.as" filetype="as" />
+                <project_file path="../../../sdk/ispring/as2player/impl/SoundController.as" filetype="as" />
+            </project_folder>
+            <project_file path="../../../sdk/ispring/as2player/IPlayer.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/PresentationLoader.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/PlayerEvent.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/IPresentationPlaybackController.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/PlaybackEvent.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/PlaybackPositionEvent.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/ISoundController.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/IPresentationInfo.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/ISlidesCollection.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/ISlideInfo.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/IAnimationSteps.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/IAnimationStep.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/ISlideResources.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/IPresenterVideo.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/IPresenterInfo.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/ICompanyInfo.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/ICompanyLogo.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/IReferenceInfo.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/IReferencesCollection.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/IPresentersCollection.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/StepPlaybackEvent.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/AcquireFocusEvent.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/SlidePlaybackEvent.as" filetype="as" />
+            <project_file path="../../../sdk/ispring/as2player/SoundEvent.as" filetype="as" />
+        </project_folder>
+    </project_folder>
+    <project_file path="./as2player_sample.as" filetype="as" />
+    <project_file path="./as2player_sample.fla" filetype="fla" profile="" def_file="true" />
+    <project_file path="./as2player_simplest_example.as" filetype="as" />
+    <project_file path="./as2player_simplest_example.fla" filetype="fla" profile="" />
+    <project_file path="./AS2PlayerSample.as" filetype="as" />
+</flash_project>

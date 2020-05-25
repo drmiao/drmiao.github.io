@@ -1,0 +1,31 @@
+<publishSettings skinModule="FullFeatured">
+	<externalAssets>
+		<thumbnails enabled="1">
+			<size width="100" height="75"/>
+		</thumbnails>
+		<companyLogo enabled="1">
+			<size height="30" width="100"/>
+		</companyLogo>
+	</externalAssets>
+	<additionalSize width="0" height="36"/>
+	<fonts>
+		<font family="Arial" bold="0" italic="0" name="iSpringSkinFont">
+			<charsets>
+				<staticCharset characters="0123456789:/ "/>
+				<staticCharset characters="You must complete the quiz before leaving this slide."/>
+				<staticCharset characters="Would you like to resume the presentation from the last slide viewed?"/>
+				<staticCharset characters="OK"/>
+				<staticCharset characters="Yes"/>
+				<staticCharset characters="No"/>
+			</charsets>
+		</font>
+		<font family="Arial" bold="1" italic="0" name="iSpringSkinFont">
+			<charsets>
+				<staticCharset characters="Warning"/>
+				<staticCharset characters="Resume Presentation"/>
+			</charsets>
+		</font>
+	</fonts>
+	<texts>
+	</texts>
+</publishSettings>

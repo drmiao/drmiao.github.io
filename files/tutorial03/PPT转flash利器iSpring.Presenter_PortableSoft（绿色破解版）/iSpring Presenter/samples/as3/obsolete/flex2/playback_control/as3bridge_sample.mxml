@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" creationComplete="{creationComplete()}" xmlns:mc="ispring.flex.*" frameRate="30" minWidth="470" minHeight="200">
+	<mx:Script source="main.as"/>
+	
+	<mc:PresentationContainer id="presentationContainer" width="780" height="524" x="10" y="36">
+	</mc:PresentationContainer>
+	<mx:Label id="lPresentationTitle" text="Presentation title" x="10" y="10">
+	</mx:Label>
+	<mx:Button id="buttonNext" width="50" height="22" y="568" x="126" disabledIcon="@Embed('resources/icon_next_disabled.swf')" upIcon="@Embed('resources/icon_next_up.swf')" overIcon="@Embed('resources/icon_next_over.swf')" downIcon="@Embed('resources/icon_next_down.swf')">
+	</mx:Button>
+	<mx:Button id="buttonPrevious" x="68" y="568" width="50" height="22" disabledIcon="@Embed('resources/icon_previous_disabled.swf')" upIcon="@Embed('resources/icon_previous_up.swf')" overIcon="@Embed('resources/icon_previous_over.swf')" downIcon="@Embed('resources/icon_previous_down.swf')">
+	</mx:Button>
+	<mx:Button id="buttonPlayPause" x="10" y="568" width="50" height="22" toggle="true" selectedDisabledIcon="@Embed('resources/icon_play_disabled.swf')" selectedDownIcon="@Embed('resources/icon_play_down.swf')" selectedOverIcon="@Embed('resources/icon_play_over.swf')" selectedUpIcon="@Embed('resources/icon_play_up.swf')" disabledIcon="@Embed('resources/icon_pause_disabled.swf')" upIcon="@Embed('resources/icon_pause_up.swf')" overIcon="@Embed('resources/icon_pause_over.swf')" downIcon="@Embed('resources/icon_pause_down.swf')">
+	</mx:Button>
+	<mx:Button id="buttonPres1" x="400" y="630" width="100" height="22" label="presentation1">
+	</mx:Button>
+	<mx:Button id="buttonPres2" x="520" y="630" width="100" height="22" label="presentation2">
+	</mx:Button>
+	<mx:HSlider id="posSlider" x="184" y="568" height="22" width="543" snapInterval="0.001" maximum="1" allowTrackClick="false" liveDragging="true">
+	</mx:HSlider>
+	<mx:Label id="lSlideNumber" text="Slide" x="735" y="572" width="55">
+	</mx:Label>
+</mx:Application>

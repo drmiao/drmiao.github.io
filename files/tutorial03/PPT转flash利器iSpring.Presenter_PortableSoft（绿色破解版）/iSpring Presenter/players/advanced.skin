@@ -1,0 +1,27 @@
+<player name="Advanced Matte" id="advanced" version="8" priority="90">
+	<coreModules>
+		<coreModule id="full" src="core\core.swf">
+			<capabilities>
+				<soundPlayback supported="1"/>
+			</capabilities>
+		</coreModule>
+		<coreModule id="light" src="core\core_light.swf">
+		</coreModule>
+	</coreModules>
+	<skinModules>
+		<skinModule id="FullFeatured" src="advanced\advanced.swf" coreModule="full" swfVersion="8"/>
+		<skinModule id="NoVideo" src="advanced\advanced_no_video.swf" coreModule="full" swfVersion="8"/>
+	</skinModules>
+	<defaultPublishSettings src="advanced\publish_settings.xml"/>
+	<defaultSkinSettings src="advanced\skin_settings.xml"/>
+	<defaultSkinSetup src="advanced\skin_setup.xml"/>
+	<preview>
+		<screenshot src="advanced\advanced.png"/>
+		<slideArea left="242" top="32" width="600" height="450"/>
+	</preview>
+	<customization>
+		<previewSkin src="advanced\advanced_adj.swf"/>
+		<adjustmentSkin src="advanced\advanced_adj.swf"/>
+	</customization>
+	<info src="http://www.ispringsolutions.com/go/docs/players/advanced/5.0"/>
+</player>

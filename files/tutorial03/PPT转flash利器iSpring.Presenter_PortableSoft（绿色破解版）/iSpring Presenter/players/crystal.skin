@@ -1,0 +1,26 @@
+<player name="Crystal" alias="Crystal" id="crystal" version="4" priority="80">
+	<coreModules>
+		<coreModule id="full" src="core\core.swf">
+			<capabilities>
+				<soundPlayback supported="1"/>
+			</capabilities>
+		</coreModule>
+		<coreModule id="light" src="core\core_light.swf">
+		</coreModule>
+	</coreModules>
+	<skinModules>
+		<skinModule id="FullFeatured" src="crystal\crystal.swf" coreModule="full" swfVersion="8"/>
+	</skinModules>
+	<defaultPublishSettings src="crystal\publish_settings.xml"/>
+	<defaultSkinSettings src="crystal\skin_settings.xml"/>
+	<defaultSkinSetup src="crystal\skin_setup.xml"/>
+	<preview>
+		<screenshot src="crystal\crystal.png"/>
+		<slideArea left="6" top="28" width="592" height="442"/>
+	</preview>
+	<customization>
+		<previewSkin src="crystal\crystal_adj.swf"/>
+		<adjustmentSkin src="crystal\crystal_adj.swf"/>
+	</customization>
+	<info src="http://www.ispringsolutions.com/go/docs/players/crystal/2.0"/>
+</player>

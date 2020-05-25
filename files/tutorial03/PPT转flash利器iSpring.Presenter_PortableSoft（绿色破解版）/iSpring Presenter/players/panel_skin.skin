@@ -1,0 +1,25 @@
+<player name="Navigation + Notes" alias="Navigation + Notes" id="panel_skin" version="3" priority="40">
+	<coreModules>
+		<coreModule id="full" src="core\core.swf">
+			<capabilities>
+				<soundPlayback supported="1"/>
+			</capabilities>
+		</coreModule>
+		<coreModule id="light" src="core\core_light.swf">
+		</coreModule>
+	</coreModules>
+	<skinModules>
+		<skinModule id="FullFeatured" src="panel_skin\panel_skin.swf" coreModule="full" swfVersion="8"/>
+	</skinModules>
+	<defaultPublishSettings src="panel_skin\publish_settings.xml"/>
+	<defaultSkinSettings src="panel_skin\skin_settings.xml"/>
+	<defaultSkinSetup src="panel_skin\skin_setup.xml"/>
+	<preview>
+		<screenshot src="panel_skin\preview.png" overlay="panel_skin\preview_overlay.png"/>
+		<slideArea left="0" top="0" width="720" height="540"/>
+	</preview>
+	<customization>
+		<previewSkin src="panel_skin\panel_skin_adjust.swf"/>
+		<adjustmentSkin src="panel_skin\panel_skin_adjust.swf"/>
+	</customization>
+</player>

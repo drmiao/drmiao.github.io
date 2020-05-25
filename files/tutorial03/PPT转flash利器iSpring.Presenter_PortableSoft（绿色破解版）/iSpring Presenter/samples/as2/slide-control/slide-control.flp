@@ -1,0 +1,24 @@
+﻿<flash_project name="slide-control" version="1">
+    <project_folder name="slideplayer" expanded="true">
+        <project_folder name="api" expanded="true">
+            <project_file path="../../../sdk/slideplayer/api/IHyperlinksManager.as" filetype="as" />
+            <project_file path="../../../sdk/slideplayer/api/IPlaybackController.as" filetype="as" />
+            <project_file path="../../../sdk/slideplayer/api/IPlaybackListener.as" filetype="as" />
+            <project_file path="../../../sdk/slideplayer/api/ISlideController.as" filetype="as" />
+            <project_file path="../../../sdk/slideplayer/api/ISoundController.as" filetype="as" />
+            <project_file path="../../../sdk/slideplayer/api/IAnimationStep.as" filetype="as" />
+            <project_file path="../../../sdk/slideplayer/api/IAnimationSteps.as" filetype="as" />
+        </project_folder>
+    </project_folder>
+    <project_file path="./hyperlinks.as" filetype="as" />
+    <project_file path="./hyperlinks.fla" filetype="fla" profile="" def_file="true" />
+    <project_file path="./load_slide.as" filetype="as" />
+    <project_file path="./load_slide.fla" filetype="fla" profile="" />
+    <project_file path="./sound_volume.as" filetype="as" />
+    <project_file path="./sound_volume.fla" filetype="fla" profile="" />
+    <project_file path="./steps.as" filetype="as" />
+    <project_file path="./steps.fla" filetype="fla" profile="" />
+    <project_file path="./utils.as" filetype="as" />
+    <project_file path="./CTrackBar.as" filetype="as" />
+    <project_file path="./CMyHyperlinksManager.as" filetype="as" />
+</flash_project>

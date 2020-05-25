@@ -1,0 +1,27 @@
+<player name="Advanced Glossy" id="advanced_glossy" version="8" priority="100">
+	<coreModules>
+		<coreModule id="full" src="core\core.swf">
+			<capabilities>
+				<soundPlayback supported="1"/>
+			</capabilities>
+		</coreModule>
+		<coreModule id="light" src="core\core_light.swf">
+		</coreModule>
+	</coreModules>
+	<skinModules>
+		<skinModule id="FullFeatured" src="advanced_glossy\advanced_glossy.swf" coreModule="full" swfVersion="8"/>
+		<skinModule id="NoVideo" src="advanced_glossy\advanced_glossy_no_video.swf" coreModule="full" swfVersion="8"/>
+	</skinModules>
+	<defaultPublishSettings src="advanced_glossy\publish_settings.xml"/>
+	<defaultSkinSettings src="advanced_glossy\skin_settings.xml"/>
+	<defaultSkinSetup src="advanced_glossy\skin_setup.xml"/>
+	<preview>
+		<screenshot src="advanced_glossy\advanced_glossy.png"/>
+		<slideArea left="242" top="32" width="600" height="450"/>
+	</preview>
+	<customization>
+		<previewSkin src="advanced_glossy\advanced_glossy_adj.swf"/>
+		<adjustmentSkin src="advanced_glossy\advanced_glossy_adj.swf"/>
+	</customization>
+	<info src="http://www.ispringsolutions.com/go/docs/players/glossy/2.0"/>
+</player>

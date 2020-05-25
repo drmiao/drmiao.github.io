@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:WindowedApplication xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" initialize="onInit()" xmlns:air="ispring.air.*" xmlns:flex="ispring.flex.*">
+	<mx:Script source="main.as" />
+	
+	<mx:Box verticalAlign="middle" horizontalAlign="center" width="100%" height="100%">
+		<flex:PresentationContainer id="presentationContainer" width="95%" height="95%"/>
+	</mx:Box>
+</mx:WindowedApplication>

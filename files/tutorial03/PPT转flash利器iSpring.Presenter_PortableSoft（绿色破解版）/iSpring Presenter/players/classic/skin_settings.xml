@@ -1,0 +1,33 @@
+<skin>
+	<labels>
+		<!-- 
+			You can change labels in the player by changing texts within the following tags
+			Notes: 
+				1. Use the UTF-8 character encoding
+				2. You must add these texts to <staticCharset> tags of publish_settings.xml file
+				   to ensure that font charaters used for these labels will be embedded into the player
+		-->
+		<outline>Outline</outline>
+		<thumbnails>Thumbnails</thumbnails>
+		<presenter>Presenter</presenter>
+		<notes>Notes</notes>
+		<slide>Slide: {SLIDE} / {TOTAL}</slide>
+		<time>{TIME} / {TOTAL}</time>
+	</labels>
+	<tabs>
+		<!-- you can change tab order - the first non-zero tab is shown by default -->
+		<thumbnails>1</thumbnails>
+		<outline>1</outline>
+		<notes>1</notes>
+		<!-- presenter tab is added when any presenter information is specified -->
+	</tabs>
+	<messages>
+		<leaveSlideWarning>You must complete the quiz before leaving this slide.</leaveSlideWarning>
+		<leaveSlideWarningTitle>Warning</leaveSlideWarningTitle>
+		<resumeText>Would you like to resume the presentation from the last slide viewed?</resumeText>
+		<resumeTitle>Resume Presentation</resumeTitle>
+		<ok>OK</ok>
+		<no>No</no>
+		<yes>Yes</yes>
+	</messages>
+</skin>

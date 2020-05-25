@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" initialize="onInit()" xmlns:flex="ispring.flex.*">
+	<mx:Script source="main.as" />
+
+	<mx:Style source="style.css" />
+
+	<mx:VBox verticalAlign="middle" horizontalAlign="center" width="100%" height="100%" verticalGap="10" paddingTop="10">
+		<mx:ApplicationControlBar width="100%" horizontalAlign="center">
+			<mx:Button id="btnPresentation1" label="Presentation 1" />
+			<mx:Button id="btnPresentation2" label="Presentation 2" />
+		</mx:ApplicationControlBar>
+		
+		<flex:PresentationContainer id="presentationContainer" width="100%" height="100%"/>
+		
+		<mx:ApplicationControlBar width="100%" horizontalAlign="center">
+			<mx:Button id="btnPrev" 		styleName="previousButton" />
+			<mx:Button id="btnPlayPause" 	styleName="playPauseButton"/>
+			<mx:Button id="btnNext" 		styleName="nextButton" />
+			
+			<mx:HSlider id="timeline" width="100%"/>
+		</mx:ApplicationControlBar>
+	</mx:VBox>
+</mx:Application>

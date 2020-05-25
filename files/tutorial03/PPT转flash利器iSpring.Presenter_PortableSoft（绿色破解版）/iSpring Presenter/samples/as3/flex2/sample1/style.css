@@ -1,0 +1,12 @@
+.playPauseButton
+{
+	disabled-icon: Embed(source='res/navigation_buttons.swf', symbol='icon_play_disabled.swf');
+	down-icon: Embed(source="res/navigation_buttons.swf", symbol='icon_play_down.swf');
+	over-icon: Embed(source="res/navigation_buttons.swf", symbol='icon_play_over.swf');
+	up-icon: Embed(source="res/navigation_buttons.swf", symbol='icon_play_up.swf');
+	
+	selected-disabled-icon: Embed(source="res/navigation_buttons.swf", symbol='icon_pause_disabled.swf');
+	selected-down-icon: Embed(source="res/navigation_buttons.swf", symbol='icon_pause_up.swf');
+	selected-over-icon: Embed(source="res/navigation_buttons.swf", symbol='icon_pause_over.swf');
+	selected-up-icon: Embed(source="res/navigation_buttons.swf", symbol='icon_pause_down.swf');
+}

@@ -1,0 +1,26 @@
+<player name="Navigation + Marker" alias="NavigationMarker" id="ppt_navigation_panel" version="4" priority="30">
+	<coreModules>
+		<coreModule id="full" src="core\core.swf">
+			<capabilities>
+				<soundPlayback supported="1"/>
+			</capabilities>
+		</coreModule>
+		<coreModule id="light" src="core\core_light.swf">
+		</coreModule>
+	</coreModules>
+	<skinModules>
+		<skinModule id="FullFeatured" src="ppt_navigation_panel\nav_panel_ex.swf" coreModule="full" swfVersion="8"/>
+	</skinModules>
+	<defaultPublishSettings src="ppt_navigation_panel\publish_settings.xml"/>
+	<defaultSkinSettings src="ppt_navigation_panel\skin_settings.xml"/>
+	<defaultSkinSetup src="ppt_navigation_panel\skin_setup.xml"/>
+	<preview>
+		<screenshot src="ppt_navigation_panel\preview.png" overlay="ppt_navigation_panel\preview_overlay.png"/>
+		<slideArea left="0" top="0" width="576" height="432"/>
+	</preview>
+	<customization>
+		<previewSkin src="ppt_navigation_panel\nav_panel_ex_adj.swf"/>
+		<adjustmentSkin src="ppt_navigation_panel\nav_panel_ex_adj.swf"/>
+	</customization>
+	<info src="http://www.ispringsolutions.com/go/docs/players/navigation-marker/1.0"/>
+</player>

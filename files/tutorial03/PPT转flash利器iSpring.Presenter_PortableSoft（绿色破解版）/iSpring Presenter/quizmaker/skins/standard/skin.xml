@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin id="standard" name="standard" xmlns="http://www.ispringsolutions.com/quizbuilder/skin" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ispringsolutions.com/quizbuilder/skin skin.xsd">
+  <core swfVersion="8" src="core.swf" />
+	<modules>
+		<module swfVersion="7" id="quizmaker.ui.salad" src="salad.swf"/>
+		<module swfVersion="7" id="quizmaker.ui.violet" src="violet.swf"/>
+		<module swfVersion="7" id="quizmaker.ui.turquoise" src="turquoise.swf"/>
+		<module swfVersion="7" id="quizmaker.ui.blue" src="blue.swf"/>
+		<module swfVersion="7" id="quizmaker.ui.orange" src="orange.swf"/>
+		<module swfVersion="7" id="quizmaker.ui.green" src="green.swf"/>
+	</modules>
+	<simplePreview>
+		<background src="background.png"/>
+		<slideArea height="40" left="10" width="30" top="20" absolute="true"/>
+		<foreground src="foreground.png"/>
+	</simplePreview>
+</skin>

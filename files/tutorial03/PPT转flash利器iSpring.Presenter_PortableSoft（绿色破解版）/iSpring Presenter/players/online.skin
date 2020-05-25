@@ -1,0 +1,18 @@
+<player name="Lite" alias="Online" id="online" version="2" priority="60">
+	<coreModules>
+		<coreModule id="full" src="core\core.swf">
+			<capabilities>
+				<soundPlayback supported="1"/>
+			</capabilities>
+		</coreModule>
+	</coreModules>
+	<skinModules>
+		<skinModule id="FullFeatured" src="online\lite.swf" coreModule="full" swfVersion="8"/>
+	</skinModules>
+	<defaultPublishSettings src="online\publish_settings.xml"/>
+	<defaultSkinSettings src="online\skin_settings.xml"/>
+	<preview>
+		<screenshot src="online\preview.png"/>
+		<slideArea left="0" top="0" width="400" height="300"/>
+	</preview>
+</player>

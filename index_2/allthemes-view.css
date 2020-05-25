@@ -1,0 +1,102 @@
+.goog-tree-row {
+	PADDING-BOTTOM: 8px
+}
+.goog-tree-row .goog-tree-item-label {
+	VERTICAL-ALIGN: bottom
+}
+.goog-tree-row .goog-tree-icon {
+	BACKGROUND: url(../../images/camelot.png) no-repeat; MARGIN-LEFT: 6px
+}
+.goog-tree-root > .goog-tree-row .goog-tree-icon {
+	BACKGROUND: url(../../images/camelot.png) no-repeat; MARGIN-LEFT: 6px
+}
+.goog-tree-root > .goog-tree-row .goog-tree-icon {
+	POSITION: relative; WIDTH: 15px; BACKGROUND-POSITION: -208px 0px; HEIGHT: 15px; MARGIN-LEFT: 2px; TOP: -1px
+}
+.goog-tree-row .goog-tree-file-icon {
+	WIDTH: 0px; MARGIN-LEFT: 0px
+}
+.goog-tree-row .goog-tree-expanded-folder-icon {
+	WIDTH: 0px; MARGIN-LEFT: 0px
+}
+.goog-tree-row .goog-tree-collapsed-folder-icon {
+	WIDTH: 0px; MARGIN-LEFT: 0px
+}
+.sites-delete-items-subtree .goog-tree-root > .goog-tree-row .goog-tree-icon {
+	WIDTH: 0px; MARGIN-LEFT: 0px
+}
+DIV .goog-tree-row .goog-tree-expand-icon-tplus {
+	WIDTH: 11px; MARGIN-LEFT: 5px
+}
+DIV .goog-tree-row .goog-tree-expand-icon-tminus {
+	WIDTH: 11px; MARGIN-LEFT: 5px
+}
+DIV .goog-tree-row .goog-tree-expand-icon-lplus {
+	WIDTH: 11px; MARGIN-LEFT: 5px
+}
+DIV .goog-tree-row .goog-tree-expand-icon-lminus {
+	WIDTH: 11px; MARGIN-LEFT: 5px
+}
+DIV .goog-tree-row .goog-tree-expand-icon-t {
+	WIDTH: 8px; BACKGROUND-POSITION: -275px 0px; MARGIN-LEFT: 8px
+}
+DIV .goog-tree-row .goog-tree-expand-icon-l {
+	WIDTH: 8px; BACKGROUND-POSITION: -275px 0px; MARGIN-LEFT: 8px
+}
+.site-rtl DIV .goog-tree-row .goog-tree-expand-icon-t {
+	BACKGROUND-POSITION: -319px 0px
+}
+.site-rtl DIV .goog-tree-row .goog-tree-expand-icon-l {
+	BACKGROUND-POSITION: -319px 0px
+}
+DIV .goog-tree-row .goog-tree-expand-icon-tplus {
+	BACKGROUND-POSITION: -245px 0px
+}
+DIV .goog-tree-row .goog-tree-expand-icon-lplus {
+	BACKGROUND-POSITION: -245px 0px
+}
+.site-rtl DIV .goog-tree-row .goog-tree-expand-icon-tplus {
+	BACKGROUND-POSITION: -290px 0px
+}
+.site-rtl DIV .goog-tree-row .goog-tree-expand-icon-lplus {
+	BACKGROUND-POSITION: -290px 0px
+}
+DIV .goog-tree-row .goog-tree-expand-icon-tminus {
+	BACKGROUND-POSITION: -260px 0px
+}
+DIV .goog-tree-row .goog-tree-expand-icon-lminus {
+	BACKGROUND-POSITION: -260px 0px
+}
+.site-rtl DIV .goog-tree-row .goog-tree-expand-icon-tminus {
+	BACKGROUND-POSITION: -305px 0px
+}
+.site-rtl DIV .goog-tree-row .goog-tree-expand-icon-lminus {
+	BACKGROUND-POSITION: -305px 0px
+}
+#sitemap-tree .goog-tree-item-label A {
+	TEXT-DECORATION: none
+}
+#sitemap-tree .goog-tree-item-label A:visited {
+	TEXT-DECORATION: none
+}
+#sitemap-tree .goog-tree-item-label A:hover {
+	TEXT-DECORATION: underline
+}
+.sites-delete-items-subtree .goog-tree-row:hover {
+	BACKGROUND-COLOR: transparent
+}
+.sites-delete-items-subtree .goog-tree-root .selected {
+	BACKGROUND-COLOR: transparent
+}
+.sites-delete-items-subtree .goog-tree-root .selected SPAN {
+	BACKGROUND-COLOR: transparent
+}
+.sites-delete-items-subtree .selected .goog-tree-item-label {
+	BACKGROUND-COLOR: transparent
+}
+BODY .sites-delete-items-subtree .goog-tree-root SPAN {
+	COLOR: #333; FONT-SIZE: 13px
+}
+BODY .sites-delete-items-subtree .goog-tree-root .selected SPAN {
+	COLOR: #333; FONT-SIZE: 13px
+}

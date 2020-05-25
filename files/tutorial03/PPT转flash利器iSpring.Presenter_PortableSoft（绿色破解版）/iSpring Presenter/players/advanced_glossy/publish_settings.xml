@@ -1,0 +1,95 @@
+﻿<?xml version="1.0"?>
+<publishSettings skinModule="FullFeatured">
+	<externalAssets>
+		<thumbnails enabled="1">
+			<size height="90" width="120"/>
+		</thumbnails>
+		<presenterPhoto enabled="1">
+			<size height="80" width="60"/>
+		</presenterPhoto>
+		<companyLogo enabled="1">
+			<size height="40" width="225"/>
+		</companyLogo>
+		<presenterVideo enabled="1">
+			<size height="168" width="224"/>
+		</presenterVideo>
+	</externalAssets>
+	<references enabled="1"/>
+	<additionalSize height="79" width="233"/>
+	<fonts>
+		<font name="iSpringSkinFont" italic="0" bold="0" family="Arial">
+			<charsets>
+				<staticCharset characters="1234567890.:/() "/>
+				<staticCharset characters="1234567890. -"/>
+				<staticCharset characters="1234567890. "/>
+				<staticCharset characters="Time: 0123456789 min 0123456789 sec"/>
+				<staticCharset characters="Search for"/>
+				<staticCharset characters="Slide text"/>
+				<staticCharset characters="Slide notes"/>
+				<staticCharset characters="Slide titles"/>
+				<staticCharset characters="1234567890. "/>
+				<staticCharset characters="1234567890. "/>
+				<staticCharset characters="More info"/>
+				<staticCharset characters="Less info"/>
+				<staticCharset characters="Home page:"/>
+				<staticCharset characters="E-mail:"/>
+				<staticCharset characters="Show video"/>
+				<staticCharset characters="Hide video"/>
+				<staticCharset characters="1234567890:"/>
+				<staticCharset characters="Slide /"/>
+				<staticCharset characters="Yes"/>
+				<staticCharset characters="No"/>
+				<staticCharset characters="OK"/>
+				<staticCharset characters="Would you like to resume the presentation from the last slide viewed?"/>
+				<staticCharset characters="You must complete the quiz before leaving this slide."/>
+				<dynamicCharset type="presenterWebsite"/>
+				<dynamicCharset type="presenterEmail"/>
+				<dynamicCharset type="presenterInfo"/>
+				<dynamicCharset type="presenterTitle"/>
+				<dynamicCharset type="referenceTitle"/>
+				<dynamicCharset subset="usingFontStyle" type="slideNotesText"/>
+				<dynamicCharset type="slideTitle"/>
+				<dynamicCharset type="presentationTitle"/>
+			</charsets>
+		</font>
+		<font name="iSpringSkinFont" italic="0" bold="1" family="Arial">
+			<charsets>
+				<staticCharset characters="Outline"/>
+				<staticCharset characters="Thumbnails"/>
+				<staticCharset characters="Notes"/>
+				<staticCharset characters="Search"/>
+				<staticCharset characters="Search in"/>
+				<staticCharset characters="References"/>
+				<staticCharset characters="Resume Presentation"/>
+				<staticCharset characters="Warning"/>
+				<dynamicCharset type="presenterName"/>
+				<dynamicCharset subset="usingFontStyle" type="slideNotesText"/>
+				<dynamicCharset type="slideTitle"/>
+			</charsets>
+		</font>
+		<font name="iSpringSkinFont" italic="1" bold="0" family="Arial">
+			<charsets>
+				<dynamicCharset subset="usingFontStyle" type="slideNotesText"/>
+			</charsets>
+		</font>
+		<font name="iSpringSkinFont" italic="1" bold="1" family="Arial">
+			<charsets>
+				<dynamicCharset subset="usingFontStyle" type="slideNotesText"/>
+			</charsets>
+		</font>
+	</fonts>
+	<texts>
+		<staticText type="slideNotesHtml"/>
+		<staticText type="presenterInfo"/>
+		<staticText type="presenterEmail"/>
+		<staticText type="presenterWebsite"/>
+		<staticText type="presenterTitle"/>
+		<staticText type="presenterName"/>
+		<staticText type="referenceURL"/>
+		<staticText type="referenceTitle"/>
+		<staticText type="slideText"/>
+		<staticText type="slideNotesText"/>
+		<staticText type="slideTitle"/>
+		<staticText type="presentationTitle"/>
+	</texts>
+</publishSettings>

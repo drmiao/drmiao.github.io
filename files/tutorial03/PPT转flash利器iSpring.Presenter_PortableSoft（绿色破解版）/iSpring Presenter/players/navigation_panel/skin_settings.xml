@@ -1,0 +1,22 @@
+<skin>
+	<layout>
+		<!--
+			horizontal: left/center/right
+			vertical: top/bottom
+		-->
+		<alignment horizontal="right" vertical="bottom"/>
+		<margins horizontal="5" vertical="5"/>
+		<buttons width="32" height="33" stride="6"/>
+	</layout>
+	<!--
+		advanceType: slide/step
+	-->
+	<navigation advanceType="slide"/>
+	<messages>
+		<resumeText>Would you like to resume the presentation from the last slide viewed?</resumeText>
+		<resumeTitle>Resume Presentation</resumeTitle>
+		<ok>OK</ok>
+		<no>No</no>
+		<yes>Yes</yes>
+	</messages>
+</skin>
