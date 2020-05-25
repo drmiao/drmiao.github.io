@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)https://intra.kth.se/en/it/support/guider/natverk/inloggning-pa-unix-med-winscp-1.279019 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./KTH   HOWTO log on to UNIX by WinSCP_files/cb=gapi.loaded_1" async=""></script><script src="./KTH   HOWTO log on to UNIX by WinSCP_files/cb=gapi.loaded_0" async=""></script>   
+<title>KTH | HOWTO log on to UNIX by WinSCP</title> 
+<!-- kljshfask23df5d42d35drhaskfbgas4dugw43q2gsf5ydawb4q246bf87w6bq64 --> 
+
+<link rel="shortcut icon" id="favicon" href="https://intra.kth.se/img/icon/favicon.ico"> 
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">     
+<meta name="robots" content="noodp">
+<meta name="DC.Description" content="Instructions about how attend to the private web page on a remote UNIX using WinSCP.">
+<meta name="description" content="Instructions about how attend to the private web page on a remote UNIX using WinSCP.">             
+<link type="text/css" href="./KTH   HOWTO log on to UNIX by WinSCP_files/kth.css" rel="stylesheet">
+<!--[if IE 8]><link type="text/css" href="/css/v/8.26.3/ie8.css" rel="stylesheet" /><![endif]-->
+<!--[if IE 9]><link type="text/css" href="/css/v/8.26.3/ie9.css" rel="stylesheet" /><![endif]-->  
+       
+<script type="text/javascript" id="www-widgetapi-script" src="./KTH   HOWTO log on to UNIX by WinSCP_files/www-widgetapi.js" async=""></script><script type="text/javascript" async="" src="./KTH   HOWTO log on to UNIX by WinSCP_files/geolocation.jsp"></script><script type="text/javascript" async="" src="./KTH   HOWTO log on to UNIX by WinSCP_files/in.js"></script><script type="text/javascript" async="" src="./KTH   HOWTO log on to UNIX by WinSCP_files/plusone.js" gapi_processed="true"></script><script id="facebook-jssdk" src="./KTH   HOWTO log on to UNIX by WinSCP_files/all.js"></script><script id="twitter-wjs" src="./KTH   HOWTO log on to UNIX by WinSCP_files/widgets.js"></script><script src="./KTH   HOWTO log on to UNIX by WinSCP_files/iframe_api" async=""></script><script async="" src="./KTH   HOWTO log on to UNIX by WinSCP_files/analytics.js"></script><script type="text/javascript" async="" src="./KTH   HOWTO log on to UNIX by WinSCP_files/widget.js"></script><script type="text/javascript" src="./KTH   HOWTO log on to UNIX by WinSCP_files/core.min.js"></script>
+<script type="text/javascript" src="./KTH   HOWTO log on to UNIX by WinSCP_files/profile.jsp"></script>
+<script type="text/javascript" src="./KTH   HOWTO log on to UNIX by WinSCP_files/survey.js"></script>           
+<script type="text/javascript">var KthToolbarConfig = { locale : "en_UK" }; (function() { var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true; se.src = 'https://www.kth.se/social/toolbar/widget.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s); })();</script> 
+
+          
+<script type="text/javascript">$(document).ready(function() {
+  setTimeout(function(){
+    $(".jwplayer iframe").each(function(){
+      var ifr_source = $(this).attr('src');
+      console.log("iframe source: " + ifr_source);
+      var wmode = "wmode=transparent";
+      if(ifr_source.indexOf('?') != -1) {
+        var getQString = ifr_source.split('?');
+        var oldString = getQString[1];
+        var newString = getQString[0];
+        $(this).attr('src',newString+'?'+wmode+'&'+oldString);
+      } 
+      else $(this).attr('src',ifr_source+'?'+wmode);
+    });
+  }, 2000);
+});</script>  
+   <link href="./KTH   HOWTO log on to UNIX by WinSCP_files/KTH   HOWTO log on to UNIX by WinSCP.html" rel="canonical">
+          
+<link rel="alternate" href="https://intra.kth.se/it/support/guider/natverk" type="text/html" hreflang="sv-SE" title="Denna sida på svenska">         
+<link rel="alternate" href="https://intra.kth.se/en/it/support/guider/natverk?rss=navigation" type="application/rss+xml" hreflang="en-UK" title="Menu - Computer Network">         
+<link rel="alternate" href="https://intra.kth.se/it/support/guider/natverk/inloggning-pa-unix-med-winscp-1.279019" type="text/html" hreflang="sv-SE" title="Denna sida på svenska">         
+<link rel="alternate" href="https://intra.kth.se/en/it/support/guider/natverk/inloggning-pa-unix-med-winscp-1.279019?rss=complete" type="application/rss+xml" hreflang="en-UK" title="HOWTO log on to UNIX by WinSCP">                  
+<!-- contentId-1_464751 -->
+<script type="text/javascript">
+// Universal Analytics tracking script
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-6683156-1', '.kth.se'); // Set account and domain
+ga('set', 'anonymizeIp', true);         // Anonymize ip
+ga('send', 'pageview');
+
+/* version 2.0 with Universal Analytics */
+
+// Mega menu
+function megaMenuLinkEvent() {
+  $('.block.megaMenu a').on('mousedown', function(event) {
+    ga('send', 'event', 'Mega menu', spanReplace(quoteReplace($(event.target).html()), event.target.getAttribute('href')));
+    console.log("Mega menu: " + "'" + spanReplace(quoteReplace($(event.target).html()) + "'"));
+  });
+}
+
+/**
+ * Replace quotes from the given string.
+ */
+function spanReplace(s) {
+  if (s) {
+    s = s.replace(/<span.+<\/span>/g,"");
+  }
+  return s;
+}
+
+/**
+ * Replace quotes from the given string.
+ */
+function quoteReplace(s) {
+  if (s) {
+    s = s.replace(/\'/g,"\\'");
+  }
+  return s;
+}
+
+$(document).ready(function(e) {
+
+    // Link click tracking
+    $('a').on('mousedown', function(e) {
+        var $this = $(this);
+        var href = $this.prop('href').split('?')[0];
+        var ext = href.split('.').pop();
+
+        // Downloads
+        if ('xls,xlsx,doc,docx,ppt,pot,pptx,pdf,pub,txt,zip,rar,tar,7z,gz,exe,wma,mov,avi,wmv,wav,mp3,midi,csv,tsv,jar,psd,pdn,ai,pez,wwf,torrent,cbr,fla,swf,js,css,m,nb,dot,pot,dotx,erl,mat,3ds,adi,dwg'.split(',').indexOf(ext) !== -1) {
+            ga('send', 'event', 'Download', ext, href);
+            ga('send', 'pageview', '/virtual/download/' + ext + '/' + href);
+            console.log("Sending event and pageview for Download: /virtual/download/" + ext + '/' + href);
+        }
+
+        // Mailto
+        if(href.toLowerCase().indexOf('mailto:') === 0) {
+            var email = href.substr(7);
+            ga('send', 'event', 'Mailto', email);
+            ga('send', 'pageview', '/virtual/contact/email/' + email);
+            console.log("Sending event and pageview for Mailto:" + email);
+        }
+
+        // Outbound
+        if ((this.protocol === 'http:' || this.protocol === 'https:') && this.hostname.indexOf(document.location.hostname) === -1) {
+            ga('send', 'event', 'Outbound', this.hostname, this.pathname);
+            ga('send', 'pageview', '/virtual/outbound/' + href);
+            console.log("Sending event for Outbount: /virtual/outbound/" + href);
+        }
+    });
+
+
+    // Mega menu
+    //$('.block.megaMenu a').on('mousedown', function(event) {
+        //ga('send', 'event', 'Mega menu', spanReplace(quoteReplace($(event.target).html()), event.target.getAttribute('href')));
+        //console.log("Mega menu: " + "'" + spanReplace(quoteReplace($(event.target).html()) + "'"));
+    //});
+
+
+    $('.block.megaMenu a').on('mousedown', function(event) {
+      console.log("Mega menu event");
+    });
+
+    // Feed back
+    $('.contentResponsible a').on('mousedown', function(event) {
+        ga('send', 'event', 'Feedback', getDocumentTitle());
+        console.log("Feed back: " + "'" + getDocumentTitle() + "'");
+    });
+
+    // Curriculum
+    $('.callToAction.completeCurriculum').on('mousedown', function(event) {
+        ga('send', 'event', 'Complete Curriculum', getDocumentTitle(), event.target.getAttribute('href'));
+        console.log("Curriculum: " + "'" + getDocumentTitle() + "' (" + event.target.getAttribute('href') + ")");
+    });
+
+    // Banners and Teasers
+    $('.block.teaser').on('mousedown', function(event) {
+        var $this = $(this);
+        var hRef = $this.find('h2 a').attr('href');
+        var target = $(event.target);
+
+        if (hRef && typeof(target.attr('href')) != 'undefined' && hRef != target.attr('href')) {
+            hRef = target.attr('href');
+        } else if (!hRef && typeof(target.attr('href')) != 'undefined') {
+            hRef = target.attr('href');
+        }
+
+        if ($this.hasClass('overlay')) { // Banner
+            if (target.is("a, a img")) {
+                ga('send', 'event', 'Banner', findTeaserH2Text($this), hRef);
+                console.log("Banner: " + findTeaserH2Text($this) + ' (' + hRef + ')');
+            }
+        } else { // Teaser
+            if (target.is('a:not([href*="mailto"]), a img')) {
+                if (target.is('a img')) {
+          		    var alt = target.attr('alt');
+                    var link = target.parent('a');
+                    var linkHref = link.attr('href');
+          
+          		    //alert('Target href: ' + linkHref + ' alt: ' + alt);
+          
+                    // If giants campaign
+                    if(alt.indexOf('Giants') > -1) { // If is special Giants link
+                        ga('send', 'event', 'Teaser', alt, linkHref);
+                  		console.log("Teaser: " + alt + ' (' + linkHref + ')');
+                	} else {
+        		    	ga('send', 'event', 'Teaser', findTeaserH2Text($this), hRef);
+                  		console.log("Teaser: " + findTeaserH2Text($this) + ' (' + hRef + ')');
+        			}
+        		} else {
+        		  ga('send', 'event', 'Teaser', findTeaserH2Text($this), hRef);
+                  console.log("Teaser: " + findTeaserH2Text($this) + ' (' + hRef + ')');
+        		}
+            }
+        }
+    });
+
+    // Dropdowns
+    $('.block.list.dropdown form select').change(function() {
+        ga('send', 'event', 'Dropdown', quoteReplace($(this).find('option[value="' + $(this).val() + '"]').text()), $(this).val());
+    });
+
+    // Form error
+    if($('.article.standard.contact .contactForm .error h2').length != 0) {
+        ga('send', 'pageview', '/virtual/form - error ' + document.location.pathname + document.location.search);
+        console.log("Form error at " + document.location.pathname + document.location.search);
+    }
+
+    // Form sent
+    if($('.article.standard.contact .formSent').length != 0) {
+        ga('send', 'pageview', '/virtual/form - sent' + document.location.pathname + document.location.search);
+        console.log("Form sent from " + document.location.pathname + document.location.search);
+    }
+
+    // Special form tracking
+    $('form .buttons .dataManipulation input, form#material input.submitForm').on('mousedown', function(event) {
+        ga('send', 'event', 'Form', 'Sent', location.pathname);
+        console.log("Form sent from " + location.pathname);
+    });
+
+    // LinkedIn
+    $('.shareLarge .linkedin').on('mousedown', function(event) {
+        ga('send', 'social', 'LinkedIn', 'share', document.location.href);
+        console.log("Linked in event tracked");
+    });
+    
+    // Facebook tracking
+    $('.shareLarge .facebook span.shareButton a').on('mousedown', function(event) {
+        ga('send', 'social', 'Facebook', 'share', document.location.href);
+        console.log("Facebook share event tracked");
+    });
+
+    // Twitter
+    function trackTwitter(event) {
+        if (event) {
+            var targetUrl;
+            if (event.target && event.target.nodeName == 'IFRAME') {
+                targetUrl = extractParamFromUri(event.target.src, 'url');
+            }
+            ga('send', 'social', 'twitter', 'tweet', targetUrl);
+            console.log("Twitter event tracked");
+        }
+    }
+
+    if (typeof(twttr) != 'undefined') {
+        //Wrap event bindings - Wait for async js to load
+        twttr.ready(function (twttr) {
+            twttr.events.bind('tweet', trackTwitter);
+        });
+    }
+
+    function extractParamFromUri(uri, paramName) {
+        if (!uri) {
+            return;
+        }
+        var regex = new RegExp('[\\?&#]' + paramName + '=([^&#]*)');
+        var params = regex.exec(uri);
+        if (params != null) {
+            return unescape(params[1]);
+        }
+        return;
+    }
+
+    // Page vote function
+    $('#vote').click(function(event) {
+        var docTitle = quoteReplace(document.title);
+        var e = event.target;
+
+        if(e && $(e).hasClass('icon-thumbs-up')) {
+            ga('send', 'event', 'Voting', 'Yes', docTitle, 1);
+            console.log('Voting "YES" for page: ' + docTitle);
+        } else if(e && $(e).hasClass('icon-thumbs-down')) {
+            ga('send', 'event', 'Voting', 'No', docTitle, -1);
+            console.log('Voting "NO" for page: ' + docTitle);
+        }
+    });
+
+    /**
+     * Get the error code if available.
+     */
+    function getErrorCode(classes) {
+        var regExpErrCode = /.*error_code_(\w+).*/;
+
+        if (classes && classes.match(regExpErrCode)) {
+            return classes.replace(regExpErrCode, $1);
+        }
+        return "";
+    }
+
+    /**
+     * Get the h2 text from the teaser.
+     */
+    function findTeaserH2Text(e) {
+        if (e.find('h2 a').html()) {
+            return quoteReplace(e.find('h2 a').html());
+        } else if (e.find('h2').html()) {
+            return quoteReplace(e.find('h2').html());
+        } else {
+            return "";
+        }
+    }
+
+    /**
+     * Get the document title.
+     */
+    function getDocumentTitle() {
+        return quoteReplace(document.title.replace('KTH | ',''));
+    }
+});
+
+/* * * * * * * * * YouTube Tracking script * * * * * * * * */
+
+$(document).ready(function() {
+    // Enable JSAPI if it's not already on the URL for Youtube videos
+    for (var e = document.getElementsByTagName("iframe"), x = e.length; x--;) {
+      if (/youtube.com\/embed/.test(e[x].src)) {
+          console.log("Found YouTube iframe")
+        if(e[x].src.indexOf('enablejsapi=') === -1) {
+          e[x].src += (e[x].src.indexOf('?') ===-1 ? '?':'&') + 'enablejsapi=1';
+        }
+      }
+    }
+});
+
+var yTListeners = []; // support multiple players on the same page
+
+// The API will call this function when the page has finished downloading the JavaScript for the player API.
+// attach our YT listener once the API is loaded
+function onYouTubeIframeAPIReady() {
+    for (var e = document.getElementsByTagName("iframe"), x = e.length; x--;) {
+        if (/youtube.com\/embed/.test(e[x].src)) {
+            yTListeners.push(new YT.Player(e[x], {
+                events: {
+                    onStateChange: onPlayerStateChange,
+                    onError: onPlayerError
+                }
+            }));
+            YT.lastAction = "p";
+        }
+    }
+}
+
+// listen for play/pause actions
+function onPlayerStateChange(e) {
+    e["data"] == YT.PlayerState.PLAYING && setTimeout(onPlayerPercent, 1000, e["target"]);
+    var video_data = e.target["getVideoData"](),
+        label = "https://www.youtube.com/watch?v="+ video_data.video_id;
+    if (e["data"] == YT.PlayerState.PLAYING && YT.lastAction == "p") {
+        ga('send', 'event', 'YouTube Video', 'play', label);
+        console.log("ga(send, event, YouTube Video, play, " + label);
+
+        YT.lastAction = "";
+    }
+    if (e["data"] == YT.PlayerState.PAUSED) {
+        // Send PAUSE event to UA
+        ga('send', 'event', 'YouTube Video', 'pause', label);
+        console.log("ga(send, event, YouTube Video, pause, " + label);
+        YT.lastAction = "p";
+    }
+}
+
+// catch all to report errors through the GTM data layer
+// once the error is exposed to GTM, it can be tracked in UA as an event!
+function onPlayerError(e) {
+    ga('send', 'event', 'YouTube Video', 'error', e);
+    console.log("ga(send, event, YouTube Video, error, " + e);
+}
+
+// report the % played if it matches 0%, 25%, 50%, 75% or 100%
+function onPlayerPercent(e) {
+    if (e["getPlayerState"]() == YT.PlayerState.PLAYING) {
+        var t = e["getDuration"]() - e["getCurrentTime"]() <= 1.5 ? 1 : (Math.floor(e["getCurrentTime"]() / e["getDuration"]() * 4) / 4).toFixed(2);
+        if (!e["lastP"] || t > e["lastP"]) {
+            var video_data = e["getVideoData"](),
+                label = video_data.video_id+':'+video_data.title;
+            e["lastP"] = t;
+            ga('send', 'event', 'YouTube Video', t * 100 + "%", label);
+            console.log("ga(send, event, YouTube " + t * 100 + "%, " + label);
+        }
+        e["lastP"] != 1 && setTimeout(onPlayerPercent, 1000, e);
+    }
+}
+
+// load the Youtube JS api and get going
+var j = document.createElement("script"),
+    f = document.getElementsByTagName("script")[0];
+j.src = "//www.youtube.com/iframe_api";
+j.async = true;
+f.parentNode.insertBefore(j, f);
+
+
+/* * * * * * * * * Vimeo Tracking script * * * * * * * * */
+
+/*!
+ * Modified script from https://github.com/sanderheilbron/vimeo.ga.js
+ * vimeo.ga.js | v0.4
+ * MIT licensed
+ */
+ $(document).ready(function() {
+  (function($) {
+    "use strict";
+      // Add the ?api=1 if missing in the iframe tags.
+      for (var e = document.getElementsByTagName("iframe"), x = e.length; x--;) {
+        if (/player.vimeo.com\/video/.test(e[x].src)) {
+          if(e[x].src.indexOf('api=') === -1) {
+            e[x].src += (e[x].src.indexOf('?') ===-1 ? '?':'&') + 'api=1';
+          }
+        }
+      }
+
+      var f = $('iframe[src*="player.vimeo.com"]');
+      if(typeof f !== "undefined" && typeof f.attr('src') !== 'undefined') {
+        var url = f.attr('src').split('?')[0],      // Source URL
+            trackSeeking = f.data('seek'),          // Data attribute to enable seek tracking
+            protocol = document.URL.split(':')[0],  // Domain protocol (http or https)
+            trackProgress = true,                     // f.data('progress') Data attribute to enable progress tracking
+            gaTracker,
+            progress25 = false,
+            progress50 = false,
+            progress75 = false,
+            progress90 = false,
+            videoPlayed = false,
+            videoPaused = false,
+            videoResumed = false,
+            videoSeeking = false,
+            videoCompleted = false,
+            timePercentComplete = 0;
+      }
+
+      // Match protocol with what is in document.URL
+      if (typeof url !== 'undefined' && url.match(/^http/) === null) {
+        url = protocol + ':' + url;
+      }
+
+
+      // Universal Analytics (universal.js)
+      if (typeof ga === "function") {
+        gaTracker = 'ua';
+        // console.info('Universal Analytics');
+      }
+
+      // Listen for messages from the player
+      if (window.addEventListener) {
+        window.addEventListener('message', onMessageReceived, false);
+      } else {
+        window.attachEvent('onmessage', onMessageReceived, false);
+      }
+
+      // Send event to Universal Analytics
+      function sendEvent(action) {
+        ga('send', 'event', 'Vimeo Video', action, url);
+        console.log("ga(send, event, Vimeo Video, " + action + ", " + url);
+      }
+
+      // Handle messages received from the player
+      function onMessageReceived(e) {
+        // Filter out other events
+        if (e.origin.replace('https:', 'http:') !== "http://player.vimeo.com" || typeof gaTracker === 'undefined') {
+          return;
+        }
+        var data = JSON.parse(e.data);
+        switch (data.event) {
+          case 'ready':
+            onReady();
+            break;
+
+          case 'playProgress':
+            onPlayProgress(data.data);
+            break;
+
+          case 'seek':
+            if (trackSeeking && !videoSeeking) {
+              sendEvent('Skipped video forward or backward');
+              videoSeeking = true; // Avoid subsequent seek trackings
+            }
+            break;
+
+          case 'play':
+            if (!videoPlayed) {
+              sendEvent('play');
+              videoPlayed = true; // Avoid subsequent play trackings
+            } else if (!videoResumed && videoPaused) {
+              sendEvent('resume');
+              videoResumed = true; // Avoid subsequent resume trackings
+            }
+            break;
+
+          case 'pause':
+            onPause();
+            break;
+
+          case 'finish':
+            if (!videoCompleted) {
+              sendEvent('finish');
+              videoCompleted = true; // Avoid subsequent finish trackings
+            }
+            break;
+        }
+      }
+
+      // Helper function for sending a message to the player
+      function post(action, value) {
+        var data = {
+          method: action
+        };
+
+        if (value) {
+          data.value = value;
+        }
+
+        if(typeof f !== "undefined" && typeof url !== "undefined") {
+          f[0].contentWindow.postMessage(JSON.stringify(data), url);
+        }
+      }
+
+      function onReady() {
+        post('addEventListener', 'play');
+        post('addEventListener', 'seek');
+        post('addEventListener', 'pause');
+        post('addEventListener', 'finish');
+        post('addEventListener', 'playProgress');
+      }
+
+      function onPause() {
+        if (timePercentComplete < 99 && !videoPaused) {
+          sendEvent('pause');
+          videoPaused = true; // Avoid subsequent pause trackings
+        }
+      }
+
+      // Tracking video progress
+      function onPlayProgress(data) {
+        timePercentComplete = Math.round((data.percent) * 100); // Round to a whole number
+
+        if (!trackProgress) {
+          return;
+        }
+
+        var progress;
+
+        if (timePercentComplete > 24 && !progress25) {
+          progress = '25%';
+          progress25 = true;
+        }
+
+        if (timePercentComplete > 49 && !progress50) {
+          progress = '50%';
+          progress50 = true;
+        }
+
+        if (timePercentComplete > 74 && !progress75) {
+          progress = '75%';
+          progress75 = true;
+        }
+
+        if (timePercentComplete > 89 && !progress90) {
+          progress = '90%';
+          progress90 = true;
+        }
+
+        if (progress) {
+          sendEvent(progress);
+        }
+      }
+  })(jQuery);
+});
+
+
+// Facebook tracking
+window.fbAsyncInit = function() {
+  // Get page part of url
+  var page = "/" + window.location.pathname.replace(/^.*\/([^/]*)/, "$1");
+
+  //Likes the page
+  FB.Event.subscribe('edge.create', function(href, widget) {
+
+    ga('send', {
+      'hitType': 'social',
+      'socialNetwork': 'Facebook',
+      'socialAction': 'Like',
+      'socialTarget': href,
+      'page': page
+    });
+    console.log("FB like: " + href);
+  });
+
+  // Unlikes the page
+  FB.Event.subscribe('edge.remove', function(href, widget) {
+    ga('send', {
+      'hitType': 'social',
+      'socialNetwork': 'Facebook',
+      'socialAction': 'Unlike',
+      'socialTarget': href,
+      'page': page
+    });
+    console.log("FB unlike " + href);
+  });
+
+  // Send or Share The Page
+  FB.Event.subscribe('message.send', function(href, widget) {
+    ga('send', {
+      'hitType': 'social',
+      'socialNetwork': 'Facebook',
+      'socialAction': 'Send',
+      'socialTarget': href,
+      'page': page
+    });
+    console.log("FB send " + href);
+  });
+
+
+  //Facebook Comments
+  FB.Event.subscribe('comment.create', function(href, widget) {
+    var currentPage = jQuery(document).attr('title');
+    ga('send', {
+      'hitType': 'social',
+      'socialNetwork': 'Facebook',
+      'socialAction': 'Comment',
+      'socialTarget': href,
+      'page': page
+    });
+    console.log("FB comment " + href);
+  });
+
+};
+</script> 
+ 
+
+<link rel="stylesheet" href="./KTH   HOWTO log on to UNIX by WinSCP_files/e7bf23d77451.css" type="text/css" media="all"><script type="text/javascript" src="./KTH   HOWTO log on to UNIX by WinSCP_files/55c44d10fd3b.js"></script><script src="./KTH   HOWTO log on to UNIX by WinSCP_files/secureAnonymousFramework"></script><style type="text/css">* html #li_ui_li_gen_1434040153855_0 a#li_ui_li_gen_1434040153855_0-link{height:1% !important;}#li_ui_li_gen_1434040153855_0{position:relative !important;overflow:visible !important;display:block !important;}#li_ui_li_gen_1434040153855_0 span{-webkit-box-sizing:content-box !important;-moz-box-sizing:content-box !important;box-sizing:content-box !important;}#li_ui_li_gen_1434040153855_0 a#li_ui_li_gen_1434040153855_0-link{border:0 !important;height:20px !important;text-decoration:none !important;padding:0 !important;margin:0 !important;display:inline-block !important;}#li_ui_li_gen_1434040153855_0 a#li_ui_li_gen_1434040153855_0-link:link, #li_ui_li_gen_1434040153855_0 a#li_ui_li_gen_1434040153855_0-link:visited, #li_ui_li_gen_1434040153855_0 a#li_ui_li_gen_1434040153855_0-link:hover, #li_ui_li_gen_1434040153855_0 a#li_ui_li_gen_1434040153855_0-link:active{border:0 !important;text-decoration:none !important;}#li_ui_li_gen_1434040153855_0 a#li_ui_li_gen_1434040153855_0-link:after{content:"." !important;display:block !important;clear:both !important;visibility:hidden !important;line-height:0 !important;height:0 !important;}#li_ui_li_gen_1434040153855_0 #li_ui_li_gen_1434040153855_0-logo{background-image:url(https://static.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-position:-56px -423px !important;background-repeat:no-repeat !important;background-color:#0077b5 !important;background-size:135px auto !important;cursor:pointer !important;border:0 !important;border-right:1px solid #066094 !important;text-indent:-9999em !important;overflow:hidden !important;padding:0 !important;margin:0 !important;position:absolute !important;left:0px !important;top:0px !important;display:block !important;width:20px !important;height:20px !important;float:right !important;border-radius:2px !important;-webkit-border-radius:2px !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;}#li_ui_li_gen_1434040153855_0 #li_ui_li_gen_1434040153855_0-title{color:#fff !important;cursor:pointer !important;display:block !important;white-space:nowrap !important;float:left !important;margin-left:1px !important;vertical-align:top !important;overflow:hidden !important;text-align:center !important;height:18px !important;padding:0 4px 0 23px !important;border:1px solid #000 !important;border-top-color:#0077b5 !important;border-right-color:#0077b5 !important;border-bottom-color:#0077b5 !important;border-left-color:#0077b5 !important;text-shadow:0 -1px #005887 !important;line-height:20px !important;border-radius:2px !important;-webkit-border-radius:2px !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;background-color:#0077b5 !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#0077b5), color-stop(100%,#0077b5)) !important; background-image: -webkit-linear-gradient(top, #0077b5 0%, #0077b5 100%) !important;}#li_ui_li_gen_1434040153855_0.hovered #li_ui_li_gen_1434040153855_0-title{border:1px solid #000 !important;border-top-color:#0369a0 !important;border-right-color:#0369a0 !important;border-bottom-color:#0369a0 !important;border-left-color:#0369a0 !important;background-color:#0369a0 !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#0369a0), color-stop(100%,#0369a0)) !important; background-image: -webkit-linear-gradient(top, #0369a0 0%, #0369a0 100%) !important;}#li_ui_li_gen_1434040153855_0.clicked #li_ui_li_gen_1434040153855_0-title, #li_ui_li_gen_1434040153855_0.down #li_ui_li_gen_1434040153855_0-title{color:#fff !important;border:1px solid #000 !important;border-top-color:#066094 !important;border-right-color:#066094 !important;border-bottom-color:#066094 !important;border-left-color:#066094 !important;background-color:#066094 !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#066094), color-stop(100%,#066094)) !important; background-image: -webkit-linear-gradient(top, #066094 0%, #066094 100%) !important;}.IN-shadowed #li_ui_li_gen_1434040153855_0 #li_ui_li_gen_1434040153855_0-title{}.IN-shadowed #li_ui_li_gen_1434040153855_0.hovered #li_ui_li_gen_1434040153855_0-title{}.IN-shadowed #li_ui_li_gen_1434040153855_0.clicked #li_ui_li_gen_1434040153855_0-title, .IN-shadowed #li_ui_li_gen_1434040153855_0.down #li_ui_li_gen_1434040153855_0-title{}#li_ui_li_gen_1434040153855_0 #li_ui_li_gen_1434040153855_0-title-text, #li_ui_li_gen_1434040153855_0 #li_ui_li_gen_1434040153855_0-title-text *{color:#fff !important;font-size:11px !important;font-family:Arial, sans-serif !important;font-weight:bold !important;font-style:normal !important;-webkit-font-smoothing:antialiased !important;display:inline-block !important;background:transparent none !important;vertical-align:top !important;height:18px !important;line-height:20px !important;float:none !important;}#li_ui_li_gen_1434040153855_0 #li_ui_li_gen_1434040153855_0-title-text strong{font-weight:bold !important;}#li_ui_li_gen_1434040153855_0 #li_ui_li_gen_1434040153855_0-title-text em{font-style:italic !important;}#li_ui_li_gen_1434040153855_0.hovered #li_ui_li_gen_1434040153855_0-title-text, #li_ui_li_gen_1434040153855_0.hovered #li_ui_li_gen_1434040153855_0-title-text *{color:#fff !important;}#li_ui_li_gen_1434040153855_0.clicked #li_ui_li_gen_1434040153855_0-title-text, #li_ui_li_gen_1434040153855_0.down #li_ui_li_gen_1434040153855_0-title-text, #li_ui_li_gen_1434040153855_0.clicked #li_ui_li_gen_1434040153855_0-title-text *, #li_ui_li_gen_1434040153855_0.down #li_ui_li_gen_1434040153855_0-title-text *{color:#fff !important;}#li_ui_li_gen_1434040153855_0 #li_ui_li_gen_1434040153855_0-title #li_ui_li_gen_1434040153855_0-mark{display:inline-block !important;width:0px !important;overflow:hidden !important;}.success #li_ui_li_gen_1434040153855_0 #li_ui_li_gen_1434040153855_0-title{color:#fff !important;border-top-color:#0077b5 !important;border-right-color:#0077b5 !important;border-bottom-color:#0077b5 !important;border-left-color:#0077b5 !important;background-color:#0077b5 !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#0077b5), color-stop(100%,#0077b5)) !important; background-image: -webkit-linear-gradient(top, #0077b5 0%, #0077b5 100%) !important;}.success #li_ui_li_gen_1434040153855_0 #li_ui_li_gen_1434040153855_0-title-text, .success #li_ui_li_gen_1434040153855_0 #li_ui_li_gen_1434040153855_0-title-text *{color:#fff !important;}.IN-shadowed .success #li_ui_li_gen_1434040153855_0 #li_ui_li_gen_1434040153855_0-title{}.success #li_ui_li_gen_1434040153855_0.hovered #li_ui_li_gen_1434040153855_0-title{color:#fff !important;border-top-color:#0369a0 !important;border-right-color:#0369a0 !important;border-bottom-color:#0369a0 !important;border-left-color:#0369a0 !important;background-color:#0369a0 !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#0369a0), color-stop(100%,#0369a0)) !important; background-image: -webkit-linear-gradient(top, #0369a0 0%, #0369a0 100%) !important;}.success #li_ui_li_gen_1434040153855_0.hovered #li_ui_li_gen_1434040153855_0-title-text, .success #li_ui_li_gen_1434040153855_0.hovered #li_ui_li_gen_1434040153855_0-title-text *{color:#fff !important;}.success #li_ui_li_gen_1434040153855_0.clicked #li_ui_li_gen_1434040153855_0-title, .success #li_ui_li_gen_1434040153855_0.down #li_ui_li_gen_1434040153855_0-title{color:#fff !important;border-top-color:#066094 !important;border-right-color:#066094 !important;border-bottom-color:#066094 !important;border-left-color:#066094 !important;background-color:#066094 !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#066094), color-stop(100%,#066094)) !important; background-image: -webkit-linear-gradient(top, #066094 0%, #066094 100%) !important;}.success #li_ui_li_gen_1434040153855_0.clicked #li_ui_li_gen_1434040153855_0-title-text, .success #li_ui_li_gen_1434040153855_0.down #li_ui_li_gen_1434040153855_0-title-text, .success #li_ui_li_gen_1434040153855_0.clicked #li_ui_li_gen_1434040153855_0-title-text *, .success #li_ui_li_gen_1434040153855_0.down #li_ui_li_gen_1434040153855_0-title-text *{color:#fff !important;}.IN-shadowed .success #li_ui_li_gen_1434040153855_0.clicked #li_ui_li_gen_1434040153855_0-title, .IN-shadowed .success #li_ui_li_gen_1434040153855_0.down #li_ui_li_gen_1434040153855_0-title{}#li_ui_li_gen_1434040153864_1-container.IN-right {display:inline-block !important;float:left !important;overflow:visible !important;position:relative !important;height:20px !important;padding-left:2px !important;line-height:1px !important;cursor:pointer !important;}#li_ui_li_gen_1434040153864_1.IN-right {display:block !important;float:left !important;height:20px !important;margin-right:4px !important;padding-right:4px !important;background-image:url(https://static.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-color:transparent !important;background-repeat:no-repeat !important;background-position:right -447px !important;}#li_ui_li_gen_1434040153864_1-inner.IN-right {display:block !important;float:left !important;padding-left:8px !important;text-align:center !important;background-image:url(https://static.licdn.com/scds/common/u/images/apps/connect/sprites/sprite_connect_v14.png) !important;background-color:transparent !important;background-repeat:no-repeat !important;background-position:0px -426px !important;}#li_ui_li_gen_1434040153864_1-content.IN-right {display:inline !important;font-size:11px !important;color:#4e4e4e !important;font-weight:bold !important;font-family:Arial, sans-serif !important;line-height:20px !important;padding:0 5px 0 5px !important;}#li_ui_li_gen_1434040153864_1-container.IN-empty {display:none !important;}#li_ui_li_gen_1434040153864_1-container.IN-hidden #li_ui_li_gen_1434040153864_1 {display:none !important;}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://fbstatic-a.akamaihd.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+          
+<body class="defaultTheme articlePage  lang-en use-personal-menu" data-twttr-rendered="true"><iframe id="twttrHubFrameSecure" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrameSecure" src="./KTH   HOWTO log on to UNIX by WinSCP_files/hub.f15fe2cd70788a40560e69fa17341d5e.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;"></iframe><div id="kth-pmenu" class="yui3-cssreset">
+	
+  <div id="menu-bar-wrapper">
+    
+    <div id="menu-bar">
+      
+        <ul id="main-menu" class="barsection right">
+          <li><a id="mi-login" href="https://www.kth.se/social/accounts/login/?next=https%3A//intra.kth.se/en/it/support/guider/natverk/inloggning-pa-unix-med-winscp-1.279019">Logga in</a></li>
+        </ul>
+      
+
+      <ul id="mini-menu" class="barsection left" style="display:none;">
+        <!-- used for sub 400 screens. -->
+        
+          <li><a id="mi-login" href="https://intra.kth.se/social/accounts/login/">Logga in</a></li>
+        
+      </ul>
+
+    </div>
+  </div><!-- end wrapper -->
+
+  <span id="system-alert-config" data-refresh-interval="30"></span>
+  <div id="system-alert-warning" style="display:none;">
+
+    <div class="canvas">
+      
+      <a class="close icon-close" onclick="SystemAlert.i_understand($(&#39;#system-alert-warning&#39;));" href="https://intra.kth.se/en/it/support/guider/natverk/inloggning-pa-unix-med-winscp-1.279019#"></a>
+    </div>
+    <!-- div class="message">Ett till meddelande.</div -->
+  </div>
+  <div id="system-alert-error" style="display:none;">
+    <div class="canvas">
+        <a class="close icon-close" onclick="SystemAlert.i_understand($(&#39;#system-alert-error&#39;));" href="https://intra.kth.se/en/it/support/guider/natverk/inloggning-pa-unix-med-winscp-1.279019#"></a>
+    </div>
+  </div>
+
+  <div id="menu-panel" class="hide">
+    <span id="current-indicator"></span>
+
+    <div class="menu-panel-inner"></div>
+  </div>
+  <div id="menu-dropdown" class="hide"></div>
+
+  <div id="login-help" class="hide">
+    <div id="login-content">
+      <p>
+        
+          Logga in här om du är student eller anställd på KTH
+        
+      </p>
+    </div>
+  </div>
+
+  
+  <span style="display:none;" id="notices_since_last"></span>
+
+
+</div>
+<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./KTH   HOWTO log on to UNIX by WinSCP_files/1ldYU13brY_.html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<div class="content" id="page">         
+<header>
+<div id="header" class="header  hasPrimaryHeader  hasSecondaryHeader"> 
+<div id="primaryHeader" class="primaryHeader">       <div class="tlc cid-1_77257 no-categories block figure defaultTheme mainLogo">        
+<div class="imageWrapper">   <a href="https://www.kth.se/en"><img src="./KTH   HOWTO log on to UNIX by WinSCP_files/logo-main-2013.png" alt="KTH logotype" height="70" width="70" title="logo-main-2013.png"></a>     
+</div> 
+ </div> 
+          
+<div class="blockItemSeparator blockItemSeparatorIndex0"><span class="blockItemSeparatorInner"></span></div>
+         <div class="tlc cid-1_260146 no-categories block search  verbier  default-size">   
+<form class="form search searchboxautocomplete" id="search-wElbj-searchForm" method="GET" action="https://www.kth.se/search/search">
+<fieldset class="filterd" id="search-wElbj-searchFieldset">  
+<input type="hidden" class="parameters" name="collection" value="intra_collection_no-courses">      
+<input type="hidden" class="filterParameter" name="filterlabel" value="KTH Intranet"> 
+<button title="Search on all KTH´s web sites" class="button filter visible " id="search-wElbj-filterButton" type="button">KTH Intranet</button>
+<div class="q_field">
+<div class="input">
+<span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input id="search-wElbj-q" autocomplete="off" class="q ui-autocomplete-input" accesskey="s" type="text" size="26" maxlength="2048" name="q" placeholder="Search the KTH Intranet">
+</div>
+</div>
+<button title="Clear the input field" id="search-wElbj-clearButton" type="button" class="button clear "></button>
+</fieldset> 
+<input type="submit" value="Search" class="button search">
+</form>
+<script type="text/javascript">
+$(document).ready(function() {
+if ($("#search-wElbj-q").val() != "") {
+$("#search-wElbj-clearButton").addClass("visible");
+$("#search-wElbj-searchFieldset").addClass("hasText");
+}
+$("#search-wElbj-clearButton").click(function(e){
+$("#search-wElbj-q").val("");
+$(this).removeClass("visible");
+$('#search-wElbj-searchFieldset').removeClass('hasText');
+e.preventDefault();
+$('#search-wElbj-q').focus();
+});
+$("#search-wElbj-q").on("keyup", function(e) {
+if ($("#search-wElbj-q").val() != "") {
+$("#search-wElbj-clearButton").addClass("visible");
+$("#search-wElbj-searchFieldset").addClass("hasText");
+} else {
+$("#search-wElbj-clearButton").removeClass("visible");
+}
+});
+$("#search-wElbj-filterButton").click(function(e){
+$(".filterParameter").remove();
+$(".parameters").remove();
+$("#search-wElbj-searchFieldset").removeClass("filterd");
+$(this).hide();
+});
+});
+</script>   
+<script type="text/javascript" src="./KTH   HOWTO log on to UNIX by WinSCP_files/searchboxautocomplete.js"></script>
+<script type="text/javascript">
+if ($.fn.searchboxautocomplete) {
+$('#search-wElbj-q').searchboxautocomplete({ searchFormId: "#search-wElbj-searchForm", searchInputId : "#search-wElbj-q", formsetId : "#search-wElbj-searchFieldset" });
+}
+</script>     </div>          
+<div class="blockItemSeparator blockItemSeparatorIndex1"><span class="blockItemSeparatorInner"></span></div>
+         <div class="tlc cid-1_399927 no-categories block separator gray"><span class="separatorInner"></span></div> 
+      
+<div id="minimizedMenus" class="minimizedMenus" style="display: none;">
+<div class="buttons">
+<div id="megaMenuMinimizedButton" class="button open megaMenuButton" style="display: none;">
+<span class="icon open"><span id="megaMenuMinimizedButtonLabel">Menu</span></span>
+</div>
+<div id="standardNavigationMinimizedButton" class="button open standardNavigationButton" style="display: none;">
+<span class="icon open"><span id="standardNavigationMinimizedButtonLabel">  Computer Network 
+</span></span>
+</div>
+</div>
+<div class="menus">
+<ul id="megaMenuMinimizedPlaceholder" class="minimizedMenuPlaceholder">
+<li class="item label">Menu</li>
+</ul>
+<ul id="standardNavigationMinimizedPlaceholder" class="minimizedMenuPlaceholder">
+<li class="item label">Menu</li>
+<li class="leaf standardNavigationLink item"><a href="https://intra.kth.se/en/it/support/guider/natverk/connecting-windows-8-to-eduroam-wireless-network-1.367228">Connecting Windows 8 to Eduroam Wireless Network...</a></li><li class="leaf standardNavigationLink item"><a href="https://intra.kth.se/en/it/support/guider/natverk/konfiguration-for-eduroam-i-windows-7-1.279143">EDUROAM on Windows 7</a></li><li class="leaf standardNavigationLink item"><a href="https://intra.kth.se/en/it/support/guider/natverk/eduroam-instructions-for-standard-microsoft-driver-in-windows-vista-and-windows-7-1.279440">Eduroam - Instructions for standard Microsoft driver in Windows Vista and Windows 7 Eduroam - </a></li><li class="leaf standardNavigationLink item"><a href="https://intra.kth.se/en/it/support/guider/natverk/mac-anslut-till-filservrar-pa-kth-1.279319">Connecting to the central file servers (DFS)</a></li><li class="leaf standardNavigationLink item"><a href="https://intra.kth.se/en/it/support/guider/natverk/mappa-upp-natverksenheten-projekt-i-wiks-fran-icke-wiks-dator-1.279034">Map WIKS project from none WIKS</a></li><li class="selected standardNavigationLink item">HOWTO log on to UNIX by WinSCP</li></ul>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){
+// studrek giants
+if (window.location.href.indexOf('/utbildning/giants') == -1) {
+$("#minimizedMenus").minimizedMenus();
+}
+});
+</script>
+
+</div>  
+<div id="secondaryHeader" class="secondaryHeader">    <div class="tlc cid-1_260142 no-categories block siteName">    <a href="https://intra.kth.se/en/it/support">IT-Support &amp; info</a>   </div>          
+<div class="blockItemSeparator blockItemSeparatorIndex0"><span class="blockItemSeparatorInner"></span></div>
+               <span class="tlc cid-1_260313 no-categories block link  localeLink sv-SE"><a href="https://intra.kth.se/" hreflang="sv-SE" class="localeLink sv-SE">KTH Intranät</a></span>  
+</div> 
+</div>
+</header> 
+     
+
+<div class="bodyWrapper">
+<div class="bodyWrapper2">
+   
+
+ <div class="tlc cid-2_39591 no-categories articleWrapper">
+   
+<nav>
+<div id="breadcrums" class="breadcrums">   <a href="https://intra.kth.se/en">KTH Intranet</a> <span class="separator">/</span>  <a href="https://intra.kth.se/en/it">IT support and phone services </a> <span class="separator">/</span>  <a href="https://intra.kth.se/en/it/support">IT-Support &amp; info</a> <span class="separator">/</span>  <a href="https://intra.kth.se/en/it/support/guider">Guides &amp; Information</a> <span class="separator">/</span>  <a href="https://intra.kth.se/en/it/support/guider/natverk">Computer Network</a>   
+</div>
+</nav>
+          
+<div class="extras">        
+<div class="translations">   
+<span class="translation">      
+<img src="./KTH   HOWTO log on to UNIX by WinSCP_files/sv_SE.png" alt=""> 
+ <a href="https://intra.kth.se/it/support/guider/natverk/inloggning-pa-unix-med-winscp-1.279019">På svenska</a></span>    
+</div> 
+
+</div>  
+<article> <div class="tlc cid-1_279019 no-categories article standard" id="article">
+<div class="preArticleParagraphs"> 
+<h1> HOWTO log on to UNIX by WinSCP
+</h1>   
+<div class="lead ">            
+<p>Instructions about how attend to the private web page on a remote UNIX using WinSCP.</p>      
+
+</div> 
+</div>         
+<div class="paragraphs"> <p>
+	Start WinSCP by Srart/programs/WinSCP3/WinSCP</p><ol>
+	<li>
+		Host name: sftp.sys.kth.se</li>
+	<li>
+		User name: Your KTH username</li>
+	<li>
+		Password: Private KTH password</li>
+	<li>
+		Click Login</li>
+</ol>     <div class="tlc cid-1_279023 no-categories block figure ">        
+<div class="imageWrapper">    <img src="./KTH   HOWTO log on to UNIX by WinSCP_files/winscp1.png" alt="" height="396" width="600">       
+</div> 
+ </div> 
+<p>
+	First time logging in or when using an other computer than earlier a warning shows, accept the server key by clicking Yes.</p><br>     <div class="tlc cid-1_279022 no-categories block figure ">        
+<div class="imageWrapper">    <img src="./KTH   HOWTO log on to UNIX by WinSCP_files/winscp2.png" alt="" height="190" width="600">       
+</div> 
+ </div> 
+<p>
+	Your web page is stored in the Unix server public_html.<br>
+	Pull files to publish in to right hand public_html</p>     <div class="tlc cid-1_279021 no-categories block figure ">        
+<div class="imageWrapper">    <img src="./KTH   HOWTO log on to UNIX by WinSCP_files/winscp3.png" alt="" height="503" width="600">       
+</div> 
+ </div> 
+<br><p>
+	To see the own web page use a browser and visit http://people.kth.se/~yourusername where yourusername is swapped for first part of Your kth.se email "text pre @kth.se"</p><p>
+	<b><i>For none WIKS-computer: </i></b></p><p>
+	<b><i>Windows </i></b></p><p>
+	Two programs that can manage SFTP and can be used as above are WinSCP and FileZilla.</p><p>
+	<b><i>MacOS 9 or earlier </i></b></p><p>
+	By example MacSFTP that can manage both SFTP and SCP.</p><p>
+	<b><i>Mac OS X </i></b></p><p>
+	By example Fugu that can manage both SFTP and SCP. Cyberduck ought to work as well.</p><p>
+	In the pdf below You find instructions in Swedish</p><p>
+	      <span class="tlc cid-1_279026 no-categories block attachment pdf  icon" itemtype="http://schema.org/UserDownloads">      
+<span class="smallIcon pdf"></span>  
+ <a href="https://intra.kth.se/polopoly_fs/1.279026!/Menu/general/column-content/attachment/Instruktion%20f%C3%B6r%20inloggning%20mot%20UNIX%20med%20WinSCP.pdf" target="_blank" type="application/pdf" class="attachment pdf" title="Instruktion för inloggning mot UNIX med WinSCP.pdf in PDF-format (527 kB)" itemprop="url"><span itemprop="name" class="name">Lathunden i PDF-format för utskrift: (pdf 527 kB)</span></a> </span> </p>
+</div> 
+ 
+<div class="articleExtras">     
+<div id="vote" class="enabled">
+<div class="label">Did you find this page useful?</div>
+<div class="icons"><span class="icon-thumbs-up" title="Yes"></span><span class="icon-thumbs-down" title="No"></span></div>
+<div class="message">Thank you for helping us!</div>
+</div>       
+<div class="categorization"> 
+</div> 
+
+</div>            
+<footer>           
+<div class="shareLarge">
+<div class="googlePlus">
+<div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1434040153653" name="I0_1434040153653" src="./KTH   HOWTO log on to UNIX by WinSCP_files/fastbutton.html" data-gapiattached="true" title="+1"></iframe></div>
+</div>
+<div class="linkedin">
+<span class="IN-widget" style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center;"><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1434040153855_0"><a id="li_ui_li_gen_1434040153855_0-link" href="javascript:void(0);"><span id="li_ui_li_gen_1434040153855_0-logo">in</span><span id="li_ui_li_gen_1434040153855_0-title"><span id="li_ui_li_gen_1434040153855_0-mark"></span><span id="li_ui_li_gen_1434040153855_0-title-text">Share</span></span></a></span></span><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1434040153864_1-container" class="IN-right IN-hidden"><span id="li_ui_li_gen_1434040153864_1" class="IN-right"><span id="li_ui_li_gen_1434040153864_1-inner" class="IN-right"><span id="li_ui_li_gen_1434040153864_1-content" class="IN-right">0</span></span></span></span></span></span><script type="IN/Share+init" data-url="https://intra.kth.se/en/it/support/guider/natverk/inloggning-pa-unix-med-winscp-1.279019" data-counter="right"></script>
+</div>
+<div class="twitter">
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./KTH   HOWTO log on to UNIX by WinSCP_files/tweet_button.c197f64a14a7434e6e58ca9722b54406.en.html" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="position: static; visibility: visible; width: 78px; height: 19px;"></iframe>
+<script type="text/javascript">
+window.twttr = (function (d,s,id) {
+var t, js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return; js=d.createElement(s); js.id=id;
+js.src="//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
+}(document, "script", "twitter-wjs"));
+</script>
+</div>
+<div class="facebook">
+<script type="text/javascript">
+function fbShareOpen() {
+var targetPage = escape('https://intra.kth.se/en/it/support/guider/natverk/inloggning-pa-unix-med-winscp-1.279019');
+window.open('https://www.facebook.com/sharer/sharer.php?u='+targetPage,'name','width=600,height=400');
+return false;
+}
+</script>
+<span class="shareButton"><a target="popup" onclick="fbShareOpen(); return false;" href="https://www.facebook.com/sharer/sharer.php?u=https://intra.kth.se/en/it/support/guider/natverk/inloggning-pa-unix-med-winscp-1.279019">Share on <b>Facebook</b></a></span>
+</div>
+</div> 
+<div class="articleFooter">  
+<div class="column left">          
+<div class="contentResponsible"> Page responsible:   <a href="mailto:it-support@kth.se">it-support@kth.se</a>      
+</div>  
+ 
+<div class="belongsTo">
+<span class="label">Belongs to: </span> IT-Support &amp; info
+</div>  
+<div class="lastchanged">
+<span class="label">Last changed: </span> Apr 25, 2012
+</div> 
+</div>
+<div class="column right">
+<div class="edit">      
+<span id="editLink"> 
+<a href="https://intra.kth.se/api/liveedit/open?contentId=1.279019" class="editLink" target="_blank" rel="nofollow" title="Edit this page"></a>
+</span> 
+</div>
+</div>            
+<div class="qrCode">
+<p>The QR-code contains the print web address</p>
+<img width="100" height="100" src="./KTH   HOWTO log on to UNIX by WinSCP_files/chart" alt="Scan the QR-code for the page link"> 
+<script type="text/javascript">
+$(document).ready(function() {
+$('#pageUrlAsQrCode').replaceWith('<img width="100" height="100" src="https://chart.googleapis.com/chart?chs=100x100&amp;cht=qr&amp;chl=https%3a%2f%2fintra.kth.se%2fen%2fit%2fsupport%2fguider%2fnatverk%2finloggning-pa-unix-med-winscp-1.279019&amp;utm_source=printed-qr-code&amp;utm_medium=print&amp;utm_campaign=none" alt="Scan the QR-code for the page link" />');
+});
+</script>
+</div> 
+
+<div class="clearfix"></div>
+</div>
+</footer> 
+     
+      
+<div id="studentAmbassadors">          
+</div>
+<script type="text/javascript">
+$('#studentAmbassadors').load("/public/studentAmbassadors.jsp");
+</script>
+ </div>
+</article>
+          
+<aside>
+<div id="complementaryBlocks" class="complementaryBlocks"> 
+           
+</div>
+</aside>
+ </div> 
+</div>       
+<nav>
+<div id="standardNavigation" class="standardNavigation "> 
+<h2 class="standardNavigationHeaderParent">  <a href="https://intra.kth.se/en/it/support/guider">Guides &amp; Information</a> 
+</h2>   
+<h2 id="standardNavigationHeader" class="standardNavigationHeader">  Computer Network 
+</h2>   
+<ul>     
+<li class="leaf standardNavigationLink"><a href="https://intra.kth.se/en/it/support/guider/natverk/connecting-windows-8-to-eduroam-wireless-network-1.367228">Connecting Windows 8 to Eduroam Wireless Network...</a></li>        
+<li class="leaf standardNavigationLink"><a href="https://intra.kth.se/en/it/support/guider/natverk/konfiguration-for-eduroam-i-windows-7-1.279143">EDUROAM on Windows 7</a></li>        
+<li class="leaf standardNavigationLink"><a href="https://intra.kth.se/en/it/support/guider/natverk/eduroam-instructions-for-standard-microsoft-driver-in-windows-vista-and-windows-7-1.279440">Eduroam - Instructions for standard Microsoft driver in Windows Vista and Windows 7 Eduroam - </a></li>        
+<li class="leaf standardNavigationLink"><a href="https://intra.kth.se/en/it/support/guider/natverk/mac-anslut-till-filservrar-pa-kth-1.279319">Connecting to the central file servers (DFS)</a></li>        
+<li class="leaf standardNavigationLink"><a href="https://intra.kth.se/en/it/support/guider/natverk/mappa-upp-natverksenheten-projekt-i-wiks-fran-icke-wiks-dator-1.279034">Map WIKS project from none WIKS</a></li>       
+<li class="selected standardNavigationLink">HOWTO log on to UNIX by WinSCP</li>     
+</ul> 
+</div>
+</nav> 
+
+</div>        
+<footer>
+<div id="footer">          <div class="tlc cid-1_206031 no-categories block columnSplitter  using3columns ">
+<div class="columns"> 
+<div class="column column1">
+<div class="columnInner">        <div class="tlc cid-1_206033 no-categories block list links defaultTheme"> 
+<h3>Other intranets</h3>  
+<ul> 
+<li><span class="arrow"></span> <a href="http://intra.abe.kth.se/?l=en_UK" class="standardLink">Architecture and the Built Environment (ABE)</a></li> 
+<li><span class="arrow"></span> <a href="https://www.kth.se/social/group/bio-intranet/" class="standardLink">Biotechnology (BIO)</a></li> 
+<li><span class="arrow"></span> <a href="http://www.kth.se/che/internt?l=en_UK" class="standardLink">Chemical Science and Engineering (CHE)</a></li> 
+<li><span class="arrow"></span> <a href="http://intra.csc.kth.se/?l=en_UK" class="standardLink">Computer Science and Communication (CSC)</a></li> 
+<li><span class="arrow"></span> <a href="http://intra.ees.kth.se/?l=en_UK" class="standardLink">Electrical Engineering (EES)</a></li> 
+<li><span class="arrow"></span> <a href="https://intra.ict.kth.se/en" class="standardLink">Information and Communication Technology (ICT)</a></li> 
+<li><span class="arrow"></span> <a href="http://intra.itm.kth.se/?l=en_UK" class="standardLink">Industrial Engineering and Management (ITM)</a></li> 
+<li><span class="arrow"></span> <a href="http://www.kth.se/sci/intra?l=en_UK" class="standardLink">Engineering Sciences (SCI)</a></li> 
+<li><span class="arrow"></span> <a href="http://intra.sth.kth.se/?l=en_UK" class="standardLink">Technology and Health (STH)</a></li> 
+<li><span class="arrow"></span> <a href="http://www.albanova.se/index.php?apilang=en_US&q=an/internt/a-sve" class="standardLink">Albanova</a></li> 
+</ul>  </div>
+  
+</div>
+</div> 
+<div class="column column2">
+<div class="columnInner">        <div class="tlc cid-1_205113 no-categories block list links defaultTheme"> 
+<h3>Quick Links</h3>  
+<ul> 
+<li><span class="arrow"></span> <a href="http://webmail.kth.se/" class="standardLink">Webmail</a></li> 
+<li><span class="arrow"></span> <a href="https://www.kth.se/social/" class="standardLink">Social</a></li> 
+<li><span class="arrow"></span> <a href="http://campi.kth.se/?l=en_UK" class="standardLink">Campi</a></li> 
+<li><span class="arrow"></span> <a href="http://www.lib.kth.se/main/eng/" class="standardLink">KTH Library</a></li> 
+<li><span class="arrow"></span> <a href="https://www.kth.se/en/student" class="standardLink">Student web</a></li> 
+<li><span class="arrow"></span> <a href="https://www.kth.se/en" class="standardLink">External web</a></li> 
+</ul>  </div>
+  
+</div>
+</div> 
+<div class="column column3">
+<div class="columnInner">            <div class="tlc cid-1_206086 no-categories block teaser   leftFloating  noMedia">      
+<div class="teaserText">
+<div class="teaserTextInner">       
+<h2>Contact</h2>             
+<div class="paragraphs"> <p>
+	Kungliga Tekniska högskolan<br>
+	SE-100 44 Stockholm</p><p>
+	+46 8 790 60 00</p>      <div class="tlc cid-1_391786 no-categories block list links defaultTheme">  
+<ul> 
+<li><span class="arrow"></span> <a href="https://intra.kth.se/en/administration/kommunikation/webbpublicering/om/webbansvariga-1.23113" class="standardLink">Contact web site admninistrators</a></li> 
+</ul>  </div>
+<table cellpadding="1" cellspacing="1">
+	<tbody>
+		<tr>
+			<td colspan="1" rowspan="1">
+				
+				     <div class="tlc cid-1_391581 no-categories block figure ">        
+<div class="imageWrapper">   <a href="http://www.facebook.com/KTH"><img src="./KTH   HOWTO log on to UNIX by WinSCP_files/facebook-50.png" alt="KTH on Facebook" height="66" width="60"></a>     
+</div> 
+ </div> 
+
+			</td>
+			<td colspan="1" rowspan="1">
+				            <span class="tlc cid-1_391583 no-categories block link  standardLink"><a href="http://www.facebook.com/KTH" class="standardLink">KTH on Facebook</a></span></td>
+		</tr>
+		<tr>
+			<td colspan="1" rowspan="1">
+				
+				     <div class="tlc cid-1_391607 no-categories block figure ">        
+<div class="imageWrapper">   <a href="http://www.youtube.com/kth"><img src="./KTH   HOWTO log on to UNIX by WinSCP_files/youtube-50.png" alt="KTH on YouTube" height="57" width="60"></a>     
+</div> 
+ </div> 
+
+			</td>
+			<td colspan="1" rowspan="1">
+				            <span class="tlc cid-1_391611 no-categories block link  standardLink"><a href="http://www.youtube.com/kth" class="standardLink">KTH on YouTube</a></span></td>
+		</tr>
+	</tbody>
+</table>
+</div> 
+  
+</div>
+</div> </div>
+  
+</div>
+</div> 
+</div> </div> 
+  
+</div>
+</footer> 
+
+</div><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all" id="ui-id-1" tabindex="0" style="display: none;"></ul>
+<div class="logImage"><img src="./KTH   HOWTO log on to UNIX by WinSCP_files/l.gif" alt="" height="1" width="1" title=""></div>
+<div id="backToTop" href="#" title="Top page top">Top page top</div>
+ 
+
+
+<iframe name="oauth2relay649751614" id="oauth2relay649751614" src="./KTH   HOWTO log on to UNIX by WinSCP_files/postmessageRelay.html" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe></body></html>

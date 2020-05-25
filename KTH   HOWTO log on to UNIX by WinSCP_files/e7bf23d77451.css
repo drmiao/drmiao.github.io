@@ -1,0 +1,1195 @@
+@charset "UTF-8";
+/*
+ *
+ * rules to affect the page menu is injected on
+ *
+ */
+body {
+  /* yes its required now and most kth size use this otherwise should behave lite static anyway */
+
+  position: relative !important;
+  border-top: none !important;
+  margin-top: 31px !important;
+  /*initial size avoids page 'bouncing' once pm loaded */
+
+  padding-top: 0 !important;
+}
+.kth-personal-menu-hide {
+  display: none;
+}
+/*
+ *
+ * wrapper 'root'
+ *
+ */
+/*
+YUI 3.4.0 (build 3928) Copyright 2011 Yahoo! Inc. All rights reserved. Licensed under the BSD License. http://yuilibrary.com/license/
+Injected here to avoid loading two resources
+*/
+.yui3-cssreset html {
+  color: #000;
+  background: #FFF;
+}
+.yui3-cssreset body,
+.yui3-cssreset div,
+.yui3-cssreset dl,
+.yui3-cssreset dt,
+.yui3-cssreset dd,
+.yui3-cssreset ul,
+.yui3-cssreset ol,
+.yui3-cssreset li,
+.yui3-cssreset h1,
+.yui3-cssreset h2,
+.yui3-cssreset h3,
+.yui3-cssreset h4,
+.yui3-cssreset h5,
+.yui3-cssreset h6,
+.yui3-cssreset pre,
+.yui3-cssreset code,
+.yui3-cssreset form,
+.yui3-cssreset fieldset,
+.yui3-cssreset legend,
+.yui3-cssreset input,
+.yui3-cssreset textarea,
+.yui3-cssreset p,
+.yui3-cssreset blockquote,
+.yui3-cssreset th,
+.yui3-cssreset td {
+  margin: 0;
+  padding: 0;
+}
+.yui3-cssreset table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.yui3-cssreset fieldset,
+.yui3-cssreset img {
+  border: 0;
+}
+.yui3-cssreset address,
+.yui3-cssreset caption,
+.yui3-cssreset cite,
+.yui3-cssreset code,
+.yui3-cssreset dfn,
+.yui3-cssreset em,
+.yui3-cssreset strong,
+.yui3-cssreset th,
+.yui3-cssreset var {
+  font-style: normal;
+  font-weight: normal;
+}
+.yui3-cssreset li {
+  list-style: none;
+}
+.yui3-cssreset caption,
+.yui3-cssreset th {
+  text-align: left;
+}
+.yui3-cssreset h1,
+.yui3-cssreset h2,
+.yui3-cssreset h3,
+.yui3-cssreset h4,
+.yui3-cssreset h5,
+.yui3-cssreset h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+.yui3-cssreset q:before,
+.yui3-cssreset q:after {
+  content: '';
+}
+.yui3-cssreset abbr,
+.yui3-cssreset acronym {
+  border: 0;
+  font-variant: normal;
+}
+.yui3-cssreset sup {
+  vertical-align: text-top;
+}
+.yui3-cssreset sub {
+  vertical-align: text-bottom;
+}
+.yui3-cssreset input,
+.yui3-cssreset textarea,
+.yui3-cssreset select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.yui3-cssreset input,
+.yui3-cssreset textarea,
+.yui3-cssreset select {
+  font-size: 100%;
+}
+.yui3-cssreset legend {
+  color: #000;
+}
+#kth-pmenu {
+  width: 100%;
+  font-size: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.231;
+  color: #5E5E5E;
+}
+/* NOTE: we should consider cleanslate css but also handle box-shadow, border-radius, background etc
+ * or perhaps refactor to very explicit classnames etc, but that does not cover element level
+ * css that can bleed from other sites. For now handle exceptions by testing known sites. */
+/****************************************
+ *
+ * Icon font, inlined from fontello-YYMMDD/css/fontello.css (relative urls adjusted)
+ *
+ ****************************************/
+@font-face {
+  font-family: 'fontello';
+  src: url('/social/static/personal-menu/fontello-20150109/font/fontello.eot?c4c8949caffb');
+  src: url('/social/static/personal-menu/fontello-20150109/font/fontello.eot?&c4c8949caffb#iefix') format('embedded-opentype'), url('/social/static/personal-menu/fontello-20150109/font/fontello.woff?c4c8949caffb') format('woff'), url('/social/static/personal-menu/fontello-20150109/font/fontello.ttf?c4c8949caffb') format('truetype'), url('/social/static/personal-menu/fontello-20150109/font/fontello.svg?c4c8949caffb#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /*
+ * opacity: 0.8;*/
+
+  /* fix buttons height, for twitter bootstrap */
+
+  line-height: 1em;
+  /* Animation center compensation - magrins should be symmetric */
+
+  /* remove if not needed */
+
+  margin-left: 0.2em;
+  /* you can be more comfortable with increased icons size */
+
+  /* font-size: 120%; */
+
+  /* Uncomment for 3D effect */
+
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+}
+.icon-close:before {
+  content: '\2715';
+}
+.icon-star:before {
+  content: '\2605';
+}
+/* '★' */
+.icon-star-empty:before {
+  content: '\2606';
+}
+/* '☆' */
+.icon-menu:before {
+  content: '\2630';
+}
+/* '☰' */.icon-cog:before {
+  content: '\2699';
+}
+/* '⚙' */
+.icon-mail:before {
+  content: '\2709';
+}
+/* '✉' */
+.icon-chat:before {
+  content: '\e720';
+}
+/* '' */
+.icon-resize-full:before {
+  content: '\e744';
+}
+/* '' */
+.icon-resize-small:before {
+  content: '\e746';
+}
+/* '' */
+.icon-progress-0:before {
+  content: '\e768';
+}
+/* '' */
+.icon-progress-1:before {
+  content: '\e769';
+}
+/* '' */
+.icon-progress-2:before {
+  content: '\e76a';
+}
+/* '' */
+.icon-progress-3:before {
+  content: '\e76b';
+}
+/* '' */
+.icon-thumbs-up:before {
+  content: '\274c';
+}
+/* '\1f44d' */
+.icon-thumbs-down:before {
+  content: '\1f44e';
+}
+/* '\1f44e' */
+.icon-user:before {
+  content: '👤';
+}
+/* '\1f464' */
+.icon-calendar:before {
+  content: '📅';
+}
+/* '\1f4c5' */
+.icon-book:before {
+  content: '📕';
+}
+/* '\1f4d5' */
+.icon-book-open:before {
+  content: '📖';
+}
+/* '\1f4d6' */
+.icon-megaphone:before {
+  content: '📣';
+}
+/* '\1f4e3' */
+.icon-bell:before {
+  content: '🔔';
+}
+/* '\1f514' */
+.icon-record:before {
+  content: '\e801';
+}
+/* '' */
+.icon-record-outline:before {
+  content: '\e812';
+}
+/* '' */
+.icon-link:before {
+  content: '🔗';
+}
+/* '\1f517' */
+.icon-doc-text:before {
+  content: '📄';
+}
+/* '\1f4c4' */
+.icon-down-open:before {
+  content: '\e808';
+}
+/* '' */
+.icon-left-open:before {
+  content: '\e809';
+}
+/* '' */
+.icon-right-open:before {
+  content: '\e80a';
+}
+/* '' */
+.icon-up-open:before {
+  content: '\e80b';
+}
+/* '' */
+.icon-edit:before {
+  content: '\e806';
+}
+/* '' */
+.icon-search:before {
+  content: '🔍';
+}
+/* '\1f50d' */
+.icon-archive:before {
+  content: '\e80c';
+}
+/* '' */
+.icon-briefcase:before {
+  content: '\e805';
+}
+/* '' */
+.icon-video:before {
+  content: '\e80f';
+}
+/* '' */
+.icon-doc-1:before {
+  content: '\e811';
+}
+/* '' */
+.icon-picture:before {
+  content: '\e810';
+}
+/* '' */
+.icon-check:before {
+  content: '\e800';
+}
+/* '' */
+.icon-file-pdf:before {
+  content: '\e813';
+}
+/* '' */
+/****************************************
+ *
+ * General selectors to be overridden when needed
+ *
+ ****************************************/
+#kth-pmenu {
+  /****************************************
+ *
+ * menu-bar style
+ *
+ ****************************************/
+
+  /****************************************
+     *
+     * menu-panel contents
+     *
+     ****************************************/
+
+  /* simple columns / grid framework */
+
+  /*******************
+     * System alerts.
+     *******************/
+
+  /****************************************
+    *
+    * MEDIA QUERIES
+    *
+    ****************************************/
+
+  /* small screen, one link and select, not panel/dropdown stuff */
+
+  /* sub ipad screen, make sure everything fits */
+
+  /* above ipad */
+
+  /* notepad screens */
+
+  /* large screens */
+
+  /*end of #kth-pmenu */
+
+}
+#kth-pmenu .hide-in-personal-menu {
+  /* for menu items to be on normal page but not when loaded in menu. See also .kth-personal-menu-hide */
+
+  display: none;
+}
+#kth-pmenu a {
+  text-decoration: none;
+  color: #24a0d8;
+}
+#kth-pmenu a:visited {
+  color: #24a0d8;
+}
+#kth-pmenu p {
+  margin-bottom: 1em;
+}
+#kth-pmenu .inline {
+  display: inline-block;
+}
+#kth-pmenu .block {
+  display: block;
+}
+#kth-pmenu .left {
+  float: left;
+}
+#kth-pmenu .right {
+  float: right;
+}
+#kth-pmenu .hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+#kth-pmenu #kth-pmenu-progress-indicator {
+  background: url('/social/static/personal-menu/ajax-loader-65656c.gif?c4c8949caffb') no-repeat;
+  position: absolute;
+  display: none;
+  left: 8px;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+}
+#kth-pmenu.busy,
+#kth-pmenu.busy .current a:hover {
+  cursor: wait !important;
+}
+#kth-pmenu .current,
+#kth-pmenu .barsection li a.current:hover {
+  color: #fff;
+  background: #24a0d8;
+}
+#kth-pmenu.loading {
+  top: -31px;
+  position: absolute;
+  background: #65656c;
+  color: #fff;
+  height: 31px;
+}
+#kth-pmenu #menu-bar-wrapper {
+  top: -31px;
+  position: absolute;
+  width: 100%;
+  height: 31px;
+  overflow: hidden;
+  /*panels and dropdowns assumes height of bar,*/
+
+  background: #65656C;
+}
+#kth-pmenu #menu-bar {
+  margin: 0 auto;
+  z-index: 1000;
+  max-width: 976px;
+}
+#kth-pmenu #menu-bar #main-menu {
+  padding-left: 2%;
+}
+#kth-pmenu .profilepicture {
+  margin-top: 0;
+  width: 31px;
+  height: 31px;
+  float: left;
+  vertical-align: middle;
+  background-color: white;
+}
+#kth-pmenu .barsection {
+  vertical-align: middle;
+}
+#kth-pmenu .barsection li {
+  float: left;
+  list-style-type: none;
+}
+#kth-pmenu .barsection li a {
+  color: #fff;
+  padding: 0 10px;
+  display: block;
+  line-height: 31px;
+  height: 31px;
+}
+#kth-pmenu .barsection li a:visited {
+  color: #fff;
+}
+#kth-pmenu .barsection li a:hover {
+  text-decoration: none;
+  background: #505056;
+}
+#kth-pmenu #alerts {
+  /* end #alerts */
+
+}
+#kth-pmenu #alerts a.new_notice_since_last {
+  color: white;
+  background: #d85497;
+}
+#kth-pmenu #alerts a.changed {
+  background: #fab919;
+}
+#kth-pmenu #alerts li a:hover {
+  text-decoration: none;
+}
+#kth-pmenu #alerts li span.new_notice_since_last {
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+  font-weight: bolder;
+  position: relative;
+  left: -7px;
+  top: -8px;
+}
+#kth-pmenu #alerts .menu-bilda {
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 35px;
+}
+#kth-pmenu #alerts [class^="icon-"]:before,
+#kth-pmenu #alerts [class*=" icon-"]:before {
+  font-size: 15pt;
+  line-height: inherit;
+  opacity: 1;
+}
+#kth-pmenu #alerts [class^="icon-"] .hide-if-only-icon,
+#kth-pmenu #alerts [class*=" icon-"] .hide-if-only-icon {
+  display: none;
+}
+#kth-pmenu .fault {
+  display: inline-block;
+  margin: 10px 40px;
+  color: #fff;
+}
+#kth-pmenu #mi-login:hover {
+  background: #24a0d8;
+  color: #fff;
+}
+#kth-pmenu a.initialHiddenFocus {
+  outline: 0;
+  position: absolute;
+  left: -99px;
+  top: -99px;
+}
+#kth-pmenu .partially-supported-browser {
+  display: none;
+  font-weight: bold;
+  font-style: italic;
+}
+#kth-pmenu #menu-panel {
+  background: #fff;
+  /* for non-css3 browsers */
+
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  /* do we need this? */
+
+  border-bottom: 2px solid #bdbcbc;
+}
+#kth-pmenu .menu-panel-inner {
+  margin: 0 auto;
+  padding: 0.75em 0.75em 1.5em 0.75em;
+  overflow: hidden;
+}
+#kth-pmenu #menu-dropdown {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #fff;
+  /* for non-css3 browsers */
+
+  overflow: hidden;
+  padding: 1em;
+  z-index: 700;
+  border-bottom: 3px solid #bdbcbc;
+  border-left: 1px solid #bdbcbc;
+  border-right: 1px solid #bdbcbc;
+}
+#kth-pmenu #menu-dropdown .linkSet {
+  padding: 0;
+}
+#kth-pmenu .section {
+  float: left;
+  padding-top: 1em;
+}
+#kth-pmenu .section .intern {
+  margin-bottom: 2em;
+  margin-right: 1em;
+}
+#kth-pmenu .section h3 {
+  color: #5E5E5E;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+#kth-pmenu .section li {
+  list-style: none;
+  padding: 4px 0;
+}
+#kth-pmenu .section a:hover {
+  text-decoration: underline;
+}
+#kth-pmenu .section ul.bullets {
+  list-style-type: disc;
+  padding-left: 10px;
+}
+#kth-pmenu .section ul.bullets li {
+  list-style: inherit;
+}
+#kth-pmenu .col {
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  float: left;
+  position: relative;
+  width: 100%;
+}
+#kth-pmenu .fifty {
+  width: 45%;
+  margin-right: 5%;
+}
+#kth-pmenu .star-item {
+  position: relative;
+  padding-left: 25px !important;
+}
+#kth-pmenu .star-item.is_student {
+  margin-left: 15px;
+  text-indent: -10px;
+  padding-left: 2px !important;
+}
+#kth-pmenu .star-item a {
+  margin-left: 0px;
+}
+#kth-pmenu .star-item a.bilda {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+  margin-left: 2px;
+}
+#kth-pmenu .star-toogle {
+  cursor: pointer;
+  position: absolute;
+  font-size: 1.1em;
+  opacity: 1;
+  left: 0px;
+}
+#kth-pmenu .star-toogle.icon-star-empty {
+  color: #e4e4e4;
+}
+#kth-pmenu .star-toogle.icon-star {
+  color: #FAB919;
+}
+#kth-pmenu .filter {
+  margin-bottom: 1em;
+  display: block;
+}
+#kth-pmenu .filter a {
+  color: #5E5E5E;
+}
+#kth-pmenu .filter .active {
+  font-weight: bold;
+  color: #333333;
+  text-decoration: none;
+}
+#kth-pmenu .filter .active:hover {
+  text-decoration: none;
+  cursor: default;
+}
+#kth-pmenu .notice {
+  position: absolute;
+  top: 4px;
+  color: darkGreen;
+}
+#kth-pmenu .mystatus {
+  display: inline-block;
+  vertical-align: middle;
+}
+#kth-pmenu .mystatus img {
+  width: 12px;
+  height: 12px;
+  opacity: 0.5;
+  margin-left: 0.3em;
+}
+#kth-pmenu .with-text {
+  /* end .with-text*/
+
+}
+#kth-pmenu .with-text > a {
+  font-size: 14px;
+}
+#kth-pmenu .with-text > h3 {
+  display: inline;
+  font-size: 16px;
+  font-weight: normal;
+}
+#kth-pmenu .with-text .block {
+  color: #5E5E5E;
+  margin: .2em 0 0 0.5em;
+}
+#kth-pmenu .with-text .block.no-left-margin {
+  margin-left: 0;
+}
+#kth-pmenu .with-text [class^="icon-"] {
+  margin-right: .2em;
+  color: #24a0d8;
+}
+#kth-pmenu #me-menu li {
+  margin-top: 1.0em;
+}
+#kth-pmenu #me-menu li:first-child {
+  margin-top: 0px;
+}
+#kth-pmenu .columns {
+  float: left;
+  /* columns and no-break not stable enough cross browser feb2013, using js enhancement instead */
+
+}
+#kth-pmenu .upcoming-events {
+  /* end .upcoming-events*/
+
+}
+#kth-pmenu .upcoming-events .icon-calendar {
+  position: absolute;
+  font-size: 1.17em;
+}
+#kth-pmenu .upcoming-events .event {
+  margin-left: 3em;
+}
+#kth-pmenu .upcoming-events .contentlink {
+  display: inline-block;
+}
+#kth-pmenu .upcoming-events .time {
+  display: block;
+  font-weight: bold;
+}
+#kth-pmenu .upcoming-events .context_html {
+  display: block;
+}
+#kth-pmenu .upcoming-events .context_html a {
+  color: #5E5E5E;
+}
+#kth-pmenu .upcoming-events .context_html .type_name {
+  display: none;
+}
+#kth-pmenu .upcoming-events .location {
+  display: block;
+}
+#kth-pmenu .upcoming-events li {
+  margin-right: 0.5em;
+  margin-bottom: 1.3em;
+}
+#kth-pmenu #pm-schema span.recently-modified {
+  float: left;
+  width: 18px;
+}
+#kth-pmenu .pm-box {
+  margin-top: .5em;
+}
+#kth-pmenu .pm-box li {
+  background: 8px 11px url('/social/static/personal-menu/gray-arrow.png?c4c8949caffb') no-repeat;
+  border-top: 1px dotted #bdbcbc;
+  padding: .4em 0.8em 0.4em 1.6em;
+  margin-right: 0.8em;
+  overflow: hidden;
+}
+#kth-pmenu .pm-box li:last-child {
+  border-bottom: 1px dotted #bdbcbc;
+}
+#kth-pmenu .pm-box li.no-arrow {
+  /* Remove arrow */
+
+  background-image: none;
+  padding-left: 0px;
+}
+#kth-pmenu .pm-box li.no-arrow .block {
+  /* Remove arrow */
+
+  margin-left: 1.7em;
+}
+#kth-pmenu .pm-box li.icon-cog {
+  color: #bdbcbc;
+}
+#kth-pmenu .pm-box li a:hover {
+  text-decoration: underline;
+}
+#kth-pmenu .latest-notifications {
+  /* end .latest-notifications */
+
+}
+#kth-pmenu .latest-notifications .new-since-last {
+  color: #FAB919;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+#kth-pmenu .latest-notifications .seen-onsite {
+  opacity: 0.7;
+}
+#kth-pmenu .latest-notifications li {
+  border-bottom: 1px solid #E4E4E4;
+  margin-bottom: 0.7em;
+  margin-top: 0.7em;
+}
+#kth-pmenu .notice-marker {
+  display: inline-block;
+  width: 18px;
+  color: white;
+}
+#kth-pmenu .notice-markers {
+  vertical-align: top;
+  display: inline-block;
+  width: 42px;
+  cursor: pointer;
+}
+#kth-pmenu .notice-info {
+  display: inline-block;
+  color: white;
+  width: 385px;
+}
+#kth-pmenu .context-name,
+#kth-pmenu .time {
+  color: #111111;
+}
+#kth-pmenu .content-type {
+  color: #b0c92b;
+}
+#kth-pmenu .notice-total .icon-record {
+  margin-right: 0px;
+}
+#kth-pmenu .blue {
+  color: #24a0d8;
+}
+#kth-pmenu .orange {
+  color: #fab919;
+}
+#kth-pmenu .translation {
+  padding: 4px 10px;
+}
+#kth-pmenu .translation form button[type="submit"] {
+  background: none;
+  border: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  color: #24a0d8;
+  font-weight: normal;
+  padding: 0 0 0 20px;
+  margin: 0;
+  font-size: 1em;
+  height: auto;
+}
+#kth-pmenu .translation form button[type="submit"].to_en {
+  background: url('/social/static/personal-menu/en_UK.png?c4c8949caffb') 0 50% no-repeat;
+}
+#kth-pmenu .translation form button[type="submit"].to_sv {
+  background: url('/social/static/personal-menu/sv_SE.png?c4c8949caffb') 0 50% no-repeat;
+}
+#kth-pmenu .minor-action {
+  display: inline-block;
+  background: #ddd;
+  color: #222;
+  padding: 4px 10px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: normal;
+  font-size: 100%;
+  border: none;
+  height: auto;
+}
+#kth-pmenu .minor-action:visited {
+  color: #222;
+}
+#kth-pmenu .minor-action:hover {
+  background: #90AE3F;
+  text-decoration: none;
+  color: white;
+}
+#kth-pmenu a.call-to-action {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  background: #d85497;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  padding: 0 10px 0 10px;
+  line-height: 25px;
+  height: 25px;
+  width: auto;
+  color: white;
+}
+#kth-pmenu a.call-to-action:hover {
+  text-decoration: none;
+  background-color: #cb2e7e;
+}
+#kth-pmenu #menu-panel div.infolist {
+  padding: 1em 3em;
+  clear: left;
+  width: 56%;
+  margin-bottom: 2em;
+  background: no-repeat top right url('/social/static/personal-menu/ribbon.png?c4c8949caffb') #f4f5ed;
+}
+#kth-pmenu #menu-panel div.infolist h3 {
+  font-size: 120%;
+  color: #65656c;
+}
+#kth-pmenu .infolist h3,
+#kth-pmenu .infolist h4,
+#kth-pmenu .infolist p {
+  margin-bottom: 1em;
+}
+#kth-pmenu #pm-servicelinks li {
+  background: 0 11px url('/social/static/personal-menu/gray-arrow.png?c4c8949caffb') no-repeat;
+  padding-left: 12px;
+}
+#kth-pmenu #login-help {
+  background: right 0 url('/social/static/personal-menu/dialog-arrow.png?c4c8949caffb') no-repeat;
+  position: absolute;
+  padding-top: 15px;
+  z-index: 1000;
+  color: #fff;
+}
+#kth-pmenu #login-help #login-content {
+  background: #65656c;
+  padding: 15px;
+}
+#kth-pmenu #login-help p {
+  margin-bottom: 0;
+}
+#kth-pmenu div.new-features {
+  border-radius: 4px;
+  background-color: #fffedc;
+  border-color: #fffec3;
+  border-style: solid;
+  padding: 0.2em 1em 0.2em 1em;
+  color: black;
+  margin-top: 0.4em;
+  margin-bottom: 1em;
+}
+#kth-pmenu div.new-features li {
+  margin-left: 0.5em;
+}
+#kth-pmenu div.new-features li + li {
+  margin-top: 0.5em;
+}
+#kth-pmenu div.new-features p {
+  padding: 0em;
+  margin-bottom: 0px;
+}
+#kth-pmenu div.new-features .headline {
+  text-align: center;
+  margin-top: 1em;
+}
+@media only screen and (min-width: 700px) {
+  #kth-pmenu #system-alert {
+    position: fixed;
+    width: 100%;
+    z-index: 9998;
+    background-color: #ffc400;
+    box-shadow: 3px 3px 3px rgba(100, 100, 100, 0.5);
+    padding: 1px 40px 10px 10px;
+    text-align: center;
+  }
+  #kth-pmenu #system-alert .canvas {
+    border-radius: 5px;
+    margin: 10px auto 0 auto;
+    padding: 10px 0.0em 10px 5.0em;
+    max-width: 800px;
+    background-color: #ffffff;
+  }
+  #kth-pmenu #system-alert .canvas .message {
+    padding: 10px 3.0em;
+    background: #ffffff;
+    line-height: 30px;
+    font-weight: bold;
+  }
+  #kth-pmenu #system-alert .canvas a.close {
+    display: inherit;
+    float: right;
+    font-size: 20pt;
+    font-weight: bolder;
+  }
+  #kth-pmenu #system-alert-warning {
+    position: fixed;
+    width: 100%;
+    z-index: 9998;
+    box-shadow: 3px 3px 3px rgba(100, 100, 100, 0.5);
+    padding: 1px 40px 10px 10px;
+    text-align: center;
+    background-color: #ffc400;
+  }
+  #kth-pmenu #system-alert-warning .canvas {
+    border-radius: 5px;
+    margin: 10px auto 0 auto;
+    padding: 10px 0.0em 10px 5.0em;
+    max-width: 800px;
+    background-color: #ffffff;
+  }
+  #kth-pmenu #system-alert-warning .canvas .message {
+    padding: 10px 3.0em;
+    background: #ffffff;
+    line-height: 30px;
+    font-weight: bold;
+  }
+  #kth-pmenu #system-alert-warning .canvas a.close {
+    display: inherit;
+    float: right;
+    font-size: 20pt;
+    font-weight: bolder;
+  }
+  #kth-pmenu #system-alert-warning .close {
+    color: #b38900;
+  }
+  #kth-pmenu #system-alert-error {
+    position: fixed;
+    width: 100%;
+    z-index: 9998;
+    background-color: #ffc400;
+    box-shadow: 3px 3px 3px rgba(100, 100, 100, 0.5);
+    padding: 1px 40px 10px 10px;
+    text-align: center;
+    background-color: #e00000;
+  }
+  #kth-pmenu #system-alert-error .canvas {
+    border-radius: 5px;
+    margin: 10px auto 0 auto;
+    padding: 10px 0.0em 10px 5.0em;
+    max-width: 800px;
+    background-color: #ffffff;
+  }
+  #kth-pmenu #system-alert-error .canvas .message {
+    padding: 10px 3.0em;
+    background: #ffffff;
+    line-height: 30px;
+    font-weight: bold;
+  }
+  #kth-pmenu #system-alert-error .canvas a.close {
+    display: inherit;
+    float: right;
+    font-size: 20pt;
+    font-weight: bolder;
+  }
+  #kth-pmenu #system-alert-error .close {
+    color: #930000;
+  }
+}
+@media print {
+  #kth-pmenu {
+    display: none;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #kth-pmenu #menu-bar #mini-menu {
+    display: block !important;
+  }
+  #kth-pmenu #menu-bar #main-menu {
+    display: none;
+  }
+  #kth-pmenu #menu-bar #alerts {
+    display: none;
+  }
+  #kth-pmenu select {
+    width: 200px;
+    margin-top: 5px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #kth-pmenu #menu-bar .profilepicture {
+    display: none;
+  }
+  #kth-pmenu #menu-bar #main-menu {
+    padding-left: 0;
+  }
+  #kth-pmenu .rb,
+  #kth-pmenu .lb {
+    border: none;
+    padding: 0;
+  }
+  #kth-pmenu #menu-dropdown {
+    width: 60%;
+  }
+  #kth-pmenu .pm-box {
+    clear: both;
+    padding-top: 2em;
+  }
+  #kth-pmenu .fifty {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #kth-pmenu .col {
+    margin-left: 2%;
+  }
+  #kth-pmenu .col.first {
+    margin-left: 0;
+  }
+  #kth-pmenu .span_1 {
+    width: 6.5%;
+  }
+  #kth-pmenu .span_2 {
+    width: 15.0%;
+  }
+  #kth-pmenu .span_3 {
+    width: 23.5%;
+  }
+  #kth-pmenu .span_4 {
+    width: 32.0%;
+  }
+  #kth-pmenu .span_5 {
+    width: 40.5%;
+  }
+  #kth-pmenu .span_6 {
+    width: 49.0%;
+  }
+  #kth-pmenu .span_7 {
+    width: 57.5%;
+  }
+  #kth-pmenu .span_8 {
+    width: 66.0%;
+  }
+  #kth-pmenu .span_9 {
+    width: 74.5%;
+  }
+  #kth-pmenu .span_10 {
+    width: 83.0%;
+  }
+  #kth-pmenu .span_11 {
+    width: 91.5%;
+  }
+  #kth-pmenu .span_12 {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #kth-pmenu {
+    /* testing keep-on top behaviour */
+  
+  }
+  #kth-pmenu .menu-panel-inner {
+    width: 976px;
+  }
+  #kth-pmenu #menu-bar-wrapper {
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+    -moz-box-shadow: 3px 3px 3px rgba(100, 100, 100, 0.5);
+    -webkit-box-shadow: 3px 3px 3px rgba(100, 100, 100, 0.5);
+    box-shadow: 3px 3px 3px rgba(100, 100, 100, 0.5);
+  }
+  #kth-pmenu #current-indicator {
+    position: fixed;
+    top: 7px;
+    z-index: 9988;
+  }
+  #kth-pmenu #menu-dropdown {
+    position: fixed;
+    top: 31px;
+    z-index: 9988;
+  }
+}
+@media only screen and (min-width: 1281px) {
+  #kth-pmenu .menu-panel-inner {
+    width: 1224px;
+  }
+}
+/* dont know if these should be in #kth-pmenu selector*/
+#kth-pmenu-welcome {
+  position: fixed;
+  left: 4em;
+  top: 30px;
+  z-index: 1000;
+  background: 24px 0 url('/social/static/personal-menu/dialog-arrow.png?c4c8949caffb') no-repeat;
+  color: #fff;
+  font-size: 1.2em;
+  padding-top: 15px;
+}
+#kth-pmenu-welcome #welcome-content {
+  background: #65656c;
+  padding: 15px;
+  line-height: 1.5;
+}
+#kth-pmenu-welcome h2 {
+  font-size: 1.2em;
+  margin-bottom: .4em;
+  color: #fff;
+}
+#kth-pmenu-welcome p {
+  margin-bottom: .5em;
+}
+/*end dont know */
+#content #pm-schema .recently-modified {
+  margin-top: 16px;
+}
+#pm-schema .date {
+  margin-left: 4px;
+}
+#eventdetails #pm-schema i.recently-modified {
+  margin-left: 18px;
+}
+body:not('.kthsocial') #kth-pmenu #pm-schema span.recently-modified {
+  left: 1.2em;
+  top: 0.8em;
+}
