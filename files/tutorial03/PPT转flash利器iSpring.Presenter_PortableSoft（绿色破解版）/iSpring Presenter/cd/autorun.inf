@@ -1,3 +1,0 @@
-[autorun]
-shellexecute = "{PRESENTATION_START_FILE}"
-icon = autorun.ico
