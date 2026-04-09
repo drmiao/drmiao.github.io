@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>G. Miao's Homepage</title>
+<title>Guowang Miao | Researcher in Ubiquitous Systems</title>
 <meta name="title" content="Dr. Guowang Miao">
-<meta name="description" content="Dr. Guowang Miao — researcher in energy-efficient mobile communications, author of two Cambridge University Press textbooks, former Associate Professor at KTH, with expertise in 5G, MIMO, OFDM, and cross-layer network design.">
+<meta name="description" content="Dr. Guowang Miao — researcher in ubiquitous systems, covering system optimization, distributed  and multi-agent collaboration, AIoT, and cognitive applications. Author of two Cambridge University Press textbooks.">
 <link rel="canonical" href="https://drmiao.github.io/">
 <meta property="og:title" content="Guowang Miao">
-<meta property="og:description" content="Dr. Guowang Miao — researcher in energy-efficient mobile communications, author of two Cambridge University Press textbooks on wireless network design.">
+<meta property="og:description" content="Dr. Guowang Miao — researcher in ubiquitous systems and system optimization. Author of two Cambridge University Press textbooks on wireless network design.">
 <meta property="og:image" content="https://drmiao.github.io/files/image002.jpg">
 <meta property="og:url" content="https://drmiao.github.io/">
 <meta property="og:type" content="profile">
@@ -17,7 +17,6 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Guowang Miao",
-  "jobTitle": "Researcher",
   "url": "https://drmiao.github.io/",
   "alumniOf": [
     {
@@ -35,270 +34,668 @@
       "name": "KTH Royal Institute of Technology"
     }
   ],
-  "sameAs": []
+  "sameAs": [
+    "https://en.wikipedia.org/wiki/Guowang_Miao"
+  ]
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-* {
+:root {
+  --primary: #1e3a5f;
+  --accent: #1d4ed8;
+  --text: #1f2937;
+  --text-muted: #6b7280;
+  --bg: #f3f4f6;
+  --white: #ffffff;
+  --border: #e5e7eb;
+  --radius: 8px;
+  --shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+*, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Create two unequal columns that floats next to each other */
-.column {
-  float: left;
-  padding: 1%;
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
 }
 
-.left {
-  width: 30%;
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
-.right {
-  width: 70%;
+.container {
+  max-width: min(92%, 1200px);
+  margin: 0 auto;
+  padding: 28px 0 48px;
 }
 
-.column_book {
-  float: left;
-  padding: 1%;
+/* ── Header ── */
+header {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2c5f8a 100%);
+  box-shadow: 0 3px 12px rgba(0,0,0,0.18);
+}
+.header-inner {
+  max-width: min(92%, 1200px);
+  margin: 0 auto;
+  padding: 36px 0;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.header-photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  border: 4px solid rgba(255,255,255,0.3);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+.header-info {
+  flex: 1;
+}
+.header-info h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+.header-info .subtitle {
+  font-size: 15px;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
+}
+.header-info .email {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.65);
 }
 
-.left_book {
-  width: 14%;
+/* ── Sections ── */
+section {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 32px;
+  margin-bottom: 20px;
 }
 
-.right_book {
-  width: 86%;
+section h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
+section p {
+  margin-bottom: 10px;
+}
+
+section p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── About ── */
+#about p {
+  text-align: justify;
+}
+
+/* ── Books ── */
+.book-item {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+.book-item:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+.book-cover {
+  flex-shrink: 0;
+  width: 90px;
+}
+.book-cover img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+}
+.book-info h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.book-info p {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: justify;
+}
+.book-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 10px;
+}
+.book-links a {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* ── Video ── */
+#tutorial-video h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
 .video-container {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	height: 0;
+  position: relative;
+  padding-bottom: 45%;
+  height: 0;
+  margin: 16px 0;
 }
 .video-container iframe {
-	position: absolute;
-	top: 0;
-	left: 10%;
-	width: 80%;
-	height: 100%;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+  border-radius: var(--radius);
+  border: none;
+}
+#tutorial-video .video-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: justify;
+  margin-top: 16px;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+/* ── Education ── */
+.education-list {
+  list-style: none;
+}
+.education-list li {
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.education-list li:last-child {
+  border-bottom: none;
+}
+.education-list .degree {
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.education-list .minor {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ── Publications ── */
+.pub-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+.pub-list:last-of-type {
+  margin-bottom: 0;
+}
+.pub-list li {
+  padding: 6px 0 6px 14px;
+  border-left: 3px solid var(--border);
+  margin-bottom: 8px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  transition: border-color 0.15s;
+}
+.pub-list li:hover {
+  border-left-color: var(--accent);
+}
+.pub-list li:last-child {
+  margin-bottom: 0;
+}
+
+.pub-group {
+  margin-bottom: 4px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.pub-group:last-of-type {
+  margin-bottom: 0;
+}
+.pub-group summary {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 10px 14px;
+  cursor: pointer;
+  background: #f8f9fb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  user-select: none;
+}
+.pub-group summary::-webkit-details-marker { display: none; }
+.pub-group summary::before {
+  content: "▶";
+  font-size: 10px;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.pub-group[open] summary::before {
+  transform: rotate(90deg);
+}
+.pub-group summary:hover {
+  background: #eef0f4;
+}
+.pub-group .pub-list {
+  margin: 0;
+  padding: 10px 14px 14px;
+}
+.pub-group .pub-list li:last-child {
+  margin-bottom: 0;
+}
+
+.copyright-notice {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.copyright-notice p {
+  margin-bottom: 4px;
+}
+
+/* ── Tutorials ── */
+.tutorial-list {
+  list-style: none;
+  counter-reset: tut;
+}
+.tutorial-list li {
+  counter-increment: tut;
+  font-size: 14px;
+  padding: 7px 0 7px 28px;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.6;
+}
+.tutorial-list li:last-child {
+  border-bottom: none;
+}
+.tutorial-list li::before {
+  content: counter(tut) ".";
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* ── Awards ── */
+.award-list {
+  list-style: none;
+}
+.award-list li {
+  font-size: 14px;
+  padding: 7px 0 7px 20px;
+  position: relative;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.6;
+}
+.award-list li:last-child {
+  border-bottom: none;
+}
+.award-list li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-size: 11px;
+  top: 10px;
+}
+
+/* ── Professional Activities ── */
+.act-block {
+  margin-bottom: 16px;
+}
+.act-block:last-child {
+  margin-bottom: 0;
+}
+.act-block p {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.act-list {
+  list-style: none;
+  padding-left: 0;
+}
+.act-list li {
+  font-size: 14px;
+  padding: 4px 0 4px 16px;
+  position: relative;
+  line-height: 1.6;
+}
+.act-list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  padding: 24px;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .header-photo img {
+    width: 110px;
+    height: 110px;
+  }
+  section {
+    padding: 20px 18px;
+  }
+  .book-item {
+    flex-direction: column;
+  }
+  .book-cover {
+    width: 80px;
+  }
+  .video-container {
+    padding-bottom: 56.25%;
+  }
+  .video-container iframe {
+    left: 0;
+    width: 100%;
+  }
 }
 </style>
 </head>
-<body style="background-color:#bbb;text-align:left; padding-left: 3%;padding-right: 3%;padding-top: 35px; width:100%; font-family: sans-serif">
+<body>
 
 <header>
-<div class="row">
-  <div class="column left" style="background-color:#aaa;">
-    <img src="files/image002.jpg" width="100%" height="auto" alt="Photo of Dr. Guowang Miao">
+  <div class="header-inner">
+    <div class="header-photo">
+      <img src="files/image002.jpg" alt="Photo of Dr. Guowang Miao">
+    </div>
+    <div class="header-info">
+      <h1>Guowang Miao</h1>
+      <p class="email">guowangmiao AT outlook DOT com</p>
+    </div>
   </div>
-  <div class="column right">
-    <h1 style="display: block; text-align: left; font-size: 24pt; color: #554E4E; margin-top: 0;">Guowang Miao</h1>
-    <p><b><font size="3">Email: guowangmiao AT outlook DOT com</font></b></p>
-  </div>
-</div>
 </header>
 
+<div class="container">
 <main>
 
 <section id="about">
-<p style="text-align: justify">
-Dr. Miao received the B.S., M.S., and Ph.D. degrees from Tsinghua University and the Georgia Institute of Technology respectively. He has been with Intel Labs as a Research Engineer, Samsung Research America as a Senior Standard Engineer and a 3GPP LTE-A RAN1/4 Delegate, and KTH as an Associate Professor and Docent.
-In 2011, he received the Individual Gold Award from Samsung Research America for his contributions in LTE-A standardization. His research interest is in the design of mobile communications and networking. He is well known worldwide for his original contributions in building a set of fundamental energy-efficient communications theories, which are widely accepted nowadays. For example he is the main inventor of energy-efficient scheduling and capacity-approaching transmission (United States Patent  <a href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=7782829.PN.&OS=PN/7782829&RS=PN/7782829" target="_blank">7782829</a>)). He is also the lead author of the graduate textbook entitled Fundamentals of Mobile Data Networks (Cambridge University Press), and the book entitled Energy and Spectrum Efficient Wireless Network Design (Cambridge University Press). He has authored about 100 research papers in premier journals or conferences. He is also active in commercializing his research results and has broad expertie and skillset in building team and building various types of systems and platforms, such as 5G system, D2D platform, etc. He has had more than ten patents granted and many more filed. Several of his patented technologies have been adopted as essential in 4/5G standards. For example he recently invented the power control for C-V2X autonomous communications, which has been adopted as essential in 5G V2X standard and is ready for licensing. During his unpaid leaves from KTH, he founded FreeLinguist, which has evolved into a project assistant platform for small businesses. In recent years, he researches primarily the design, signal processing, and development of Internet cloud platforms and networking systems. He has been a Technical Program Committee Member of many international conferences and on the Editorial Board of several international journals.
+<p>
+Dr. Miao is a researcher focusing on the design, signal processing, and cross-layer optimization of cloud platforms and networking systems. He received the B.S. and M.S. degrees in Electronic Information Engineering from Tsinghua University, and the M.S. and Ph.D. degrees in Electrical and Computer Engineering from the Georgia Institute of Technology. He has been with Intel Labs as a Research Engineer, Samsung Research America as a Senior Standard Engineer and a 3GPP LTE-A Delegate, and KTH as an Associate Professor and Docent. He is well known worldwide for his original contributions to building a set of fundamental energy-efficient design theories, which are widely accepted nowadays and have been used in numerous communication and computation devices. For example, he is the main inventor of energy-efficient scheduling and capacity-approaching transmission (United States Patent <a href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=7782829.PN.&OS=PN/7782829&RS=PN/7782829" target="_blank">7782829</a>). He is also the lead author of the graduate textbook entitled <em>Fundamentals of Mobile Data Networks</em> (Cambridge University Press), and the book entitled <em>Energy and Spectrum Efficient Wireless Network Design</em> (Cambridge University Press). He has authored about 100 research papers in premier journals or conferences. He is also a serial entrepreneur and active in commercializing his research results. He has broad expertise and skillset in building teams and various types of systems and platforms, such as intelligent web-building platforms, e-commerce platforms, 5G systems, etc. He has had more than twenty patents granted and many more filed. Several of his patented technologies have been adopted as essential in 4/5G standards. For example, he invented the power control for C-V2X autonomous communications, which has been adopted as essential in 5G V2X standard and is ready for licensing. During his unpaid leaves from KTH, he founded FreeLinguist, which has evolved into an digital content platform for small businesses to obtain quality digital content. He has been a Technical Program Committee Member of many international conferences and on the Editorial Board of many international journals.
 </p>
 </section>
 
 <section id="books">
-<h2 style="font-size:18pt;font-family:Arial,sans-serif;color:rgb(11,83,148)">Something Interesting</h2>
+<h2>Something Interesting</h2>
 
-<article class="row">
-  <div class="column_book left_book">
-    <a href="http://www.cambridge.org/se/academic/subjects/engineering/wireless-communications/energy-and-spectrum-efficient-wireless-network-design" target="_blank" rel="nofollow"><img src="files/bookcover.jpg" width="100%" height="100%" alt="Energy and Spectrum Efficient Wireless Network Design book cover"></a>
+<div class="book-item">
+  <div class="book-cover">
+    <a href="http://www.cambridge.org/se/academic/subjects/engineering/wireless-communications/energy-and-spectrum-efficient-wireless-network-design" target="_blank" rel="nofollow">
+      <img src="files/bookcover.jpg" alt="Energy and Spectrum Efficient Wireless Network Design book cover">
+    </a>
   </div>
-  <div class="column_book right_book">
-    <h3><a href="https://www.cambridge.org/se/academic/subjects/engineering/wireless-communications/energy-and-spectrum-efficient-wireless-network-design?format=HB" target="_blank">Energy and Spectrum Efficient Wireless Network Design</a>, Cambridge University Press, Nov, 2014, ISBN: 9781107039889.</h3>
-    <p style="text-align: justify">
-    Covering the fundamental principles and state-of-the-art cross-layer techniques, this practical guide provides the tools needed to design MIMO- and OFDM-based wireless networks that are both energy- and spectrum-efficient. Technologies are introduced in parallel for both centralized and distributed wireless networks to give you a clear understanding of the similarities and differences between their energy- and spectrum-efficient designs, which is essential for achieving the highest network energy saving without losing performance. Cutting-edge green cellular network design technologies, enabling you to master resource management for next-generation wireless networks based on MIMO and OFDM, and detailed real-world implementation examples are provided to guide your engineering design in both theory and practice. Whether you are a graduate student, a researcher or a practitioner in industry, this is an invaluable guide.
-    </p>
-    <p><a href="files/gmiao_contents.pdf" target="_blank">Contents</a></p>
-    <p><a href="files/Introduction-gmiao-energy-spectrum.pdf" target="_blank">Introduction</a></p>
-    <p><strong>Available at:</strong> <a href="http://www.cambridge.org/se/academic/subjects/engineering/wireless-communications/energy-and-spectrum-efficient-wireless-network-design" target="_blank"><strong>Cambridge University Press</strong></a>; <a href="http://www.bookfinder.com/search/?author=guowang+miao&amp;title=&amp;lang=en&amp;isbn=&amp;new_used=*&amp;destination=us&amp;currency=USD&amp;mode=basic&amp;st=sr&amp;ac=qr" target="_blank"><strong>BookFinder.Com</strong></a></p>
+  <div class="book-info">
+    <h3><a href="https://www.cambridge.org/se/academic/subjects/engineering/wireless-communications/energy-and-spectrum-efficient-wireless-network-design?format=HB" target="_blank">Energy and Spectrum Efficient Wireless Network Design</a> — Cambridge University Press, Nov 2014. ISBN: 9781107039889.</h3>
+    <p>Covering the fundamental principles and state-of-the-art cross-layer techniques, this practical guide provides the tools needed to design MIMO- and OFDM-based wireless networks that are both energy- and spectrum-efficient. Technologies are introduced in parallel for both centralized and distributed wireless networks to give you a clear understanding of the similarities and differences between their energy- and spectrum-efficient designs, which is essential for achieving the highest network energy saving without losing performance. Cutting-edge green cellular network design technologies, enabling you to master resource management for next-generation wireless networks based on MIMO and OFDM, and detailed real-world implementation examples are provided to guide your engineering design in both theory and practice. Whether you are a graduate student, a researcher or a practitioner in industry, this is an invaluable guide.</p>
+    <div class="book-links">
+      <a href="files/gmiao_contents.pdf" target="_blank">Contents</a>
+      <a href="files/Introduction-gmiao-energy-spectrum.pdf" target="_blank">Introduction</a>
+      <a href="http://www.cambridge.org/se/academic/subjects/engineering/wireless-communications/energy-and-spectrum-efficient-wireless-network-design" target="_blank">Cambridge University Press</a>
+      <a href="http://www.bookfinder.com/search/?author=guowang+miao&title=&lang=en&isbn=&new_used=*&destination=us&currency=USD&mode=basic&st=sr&ac=qr" target="_blank">BookFinder.com</a>
+    </div>
   </div>
-</article>
+</div>
 
-<article class="row">
-  <div class="column_book left_book">
-    <a href="http://www.cambridge.org/se/academic/subjects/engineering/wireless-communications/fundamentals-mobile-data-networks?format=HB" target="_blank" rel="nofollow"><img src="files/bookcover2.jpg" width="100%" height="100%" alt="Fundamentals of Mobile Data Networks book cover"></a>
+<div class="book-item">
+  <div class="book-cover">
+    <a href="http://www.cambridge.org/se/academic/subjects/engineering/wireless-communications/fundamentals-mobile-data-networks?format=HB" target="_blank" rel="nofollow">
+      <img src="files/bookcover2.jpg" alt="Fundamentals of Mobile Data Networks book cover">
+    </a>
   </div>
-  <div class="column_book right_book">
-    <h3><a href="http://www.cambridge.org/se/academic/subjects/engineering/wireless-communications/fundamentals-mobile-data-networks?format=HB" target="_blank">Fundamentals of Mobile Data Networks</a>, Cambridge University Press, March, 2016, ISBN: 9781107143210.</h3>
-    <p style="text-align: justify">
-    This unique text provides a comprehensive and systematic introduction to the theory and practice for mobile data networks. Covering basic design principles as well as analytical tools for network performance evaluation, and with a focus on system-level resource management, you will learn how state-of-the-art network design can enable you flexibly and efficiently to manage and trade-off various resources such as spectrum, energy, and infrastructure investments. Topics covered range from traditional elements such as medium access, cell deployment, capacity, handover, and interference management, to more recent cutting-edge topics such as heterogeneous networks, energy and cost-efficient network design, and a detailed introduction to LTE (4G). Numerous worked examples and exercises illustrate the key theoretical concepts and help you put your knowledge into practice, making this an essential resource whether you are a student, researcher, or practicing engineer.
-    </p>
-    <p><a href="files/gmiao_contents2.pdf" target="_blank">Contents</a></p>
-    <p><a href="files/Introduction-gmiao-fundamentals.pdf" target="_blank">Introduction</a></p>
-    <p><strong>Available at:</strong> <a href="http://www.cambridge.org/se/academic/subjects/engineering/wireless-communications/fundamentals-mobile-data-networks?format=HB" target="_blank"><strong>Cambridge University Press</strong></a>; <a href="http://www.bookfinder.com/search/?author=guowang+miao&amp;title=&amp;lang=en&amp;isbn=&amp;new_used=*&amp;destination=us&amp;currency=USD&amp;mode=basic&amp;st=sr&amp;ac=qr" target="_blank"><strong>BookFinder.Com</strong></a></p>
+  <div class="book-info">
+    <h3><a href="http://www.cambridge.org/se/academic/subjects/engineering/wireless-communications/fundamentals-mobile-data-networks?format=HB" target="_blank">Fundamentals of Mobile Data Networks</a> — Cambridge University Press, March 2016. ISBN: 9781107143210.</h3>
+    <p>This unique text provides a comprehensive and systematic introduction to the theory and practice for mobile data networks. Covering basic design principles as well as analytical tools for network performance evaluation, and with a focus on system-level resource management, you will learn how state-of-the-art network design can enable you flexibly and efficiently to manage and trade-off various resources such as spectrum, energy, and infrastructure investments. Topics covered range from traditional elements such as medium access, cell deployment, capacity, handover, and interference management, to more recent cutting-edge topics such as heterogeneous networks, energy and cost-efficient network design, and a detailed introduction to LTE (4G). Numerous worked examples and exercises illustrate the key theoretical concepts and help you put your knowledge into practice, making this an essential resource whether you are a student, researcher, or practicing engineer.</p>
+    <div class="book-links">
+      <a href="files/gmiao_contents2.pdf" target="_blank">Contents</a>
+      <a href="files/Introduction-gmiao-fundamentals.pdf" target="_blank">Introduction</a>
+      <a href="http://www.cambridge.org/se/academic/subjects/engineering/wireless-communications/fundamentals-mobile-data-networks?format=HB" target="_blank">Cambridge University Press</a>
+      <a href="http://www.bookfinder.com/search/?author=guowang+miao&title=&lang=en&isbn=&new_used=*&destination=us&currency=USD&mode=basic&st=sr&ac=qr" target="_blank">BookFinder.com</a>
+    </div>
   </div>
-</article>
+</div>
 </section>
 
 <section id="tutorial-video">
-<h3><a href="https://icc2019.ieee-icc.org/program/tutorials" target="_blank">Spectrum and Energy Efficiency in 5G Mobile Data Networks</a>, Tutorial at IEEE International Conference on Communications, May, 2018.</h3>
+<h2>Tutorial</h2>
+<h3><a href="https://icc2019.ieee-icc.org/program/tutorials" target="_blank">Spectrum and Energy Efficiency in 5G Mobile Data Networks</a> — Tutorial at IEEE International Conference on Communications, May 2018.</h3>
 
 <div class="video-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/dDkEHG6UWgI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe src="https://www.youtube.com/embed/dDkEHG6UWgI" title="Spectrum and Energy Efficiency in 5G Mobile Data Networks" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-<br>
-
-<p style="text-align: justify">
+<p class="video-desc">
 The future success of communication networks hinges on the ability to overcome the mismatch between requested quality of service and limited network resources. Spectrum is a natural resource that cannot be replenished and therefore must be used efficiently. This makes spectrum efficiency to be very important for communication systems. Communications engineers have developed many techniques to maximize spectral efficiency. On the other hand, battery technology has not kept up with the growing requirements stemming from ubiquitous multimedia and MTC applications. From a global perspective, we are confronted with extremely severe challenges on environment protection and prevention of climate change, increasingly for the information and communication technologies. Therefore, energy efficiency of wireless networks is also becoming more and more important. This tutorial introduces cutting-edge cross-layer technologies to improve both spectral efficiency and energy efficiency of mobile data networks from different perspectives. Our focus is to introduce state-of-the-art spectrum and energy efficient communication technologies for both single- and multi-user networks. Our treatment will cover both centralized and distributed wireless networks. We will discuss in detail the relation between spectral efficiency and energy efficiency in different types of wireless networks and introduce new guidelines that will significantly improve spectral efficiency and energy efficiency for future network design. We will then concentrate on mobile data networks. With the upcoming Fifth Generation (5G) cellular standard and the expected tremendous increase in network traffic, these networks will become even more important than today. It is already known that today's cellular networks are not energy-efficient. After revealing the causes of energy inefficiency in today's networks, we will introduce a large number of techniques, applicable across several layers of the communications hierarchy, that have demonstrated substantial improvement in energy and spectral efficiency. We will discuss techniques to jointly optimize spectral and energy efficiency in such networks.
 </p>
 </section>
 
 <section id="education">
-<h2 style="font-size:18pt;font-family:Arial,sans-serif;color:rgb(11,83,148)">Education</h2>
-<p>Ph.D., Electrical and Computer Engineering, Georgia Institute of Technology</p>
-<p><em>Minor: Mathematics</em></p>
-<p>M.S., Electrical and Computer Engineering, Georgia Institute of Technology</p>
-<p>M.S., Electronic Engineering, Tsinghua University</p>
-<p>B. S., Electronic Engineering, Tsinghua University</p>
+<h2>Education</h2>
+<ul class="education-list">
+  <li><span class="degree">Ph.D.</span> Electrical and Computer Engineering, Georgia Institute of Technology <span class="minor">(Minor: Mathematics)</span></li>
+  <li><span class="degree">M.S.</span> Electrical and Computer Engineering, Georgia Institute of Technology</li>
+  <li><span class="degree">M.S.</span> Electronic Information Engineering, Tsinghua University</li>
+  <li><span class="degree">B.S.</span> Electronic Information Engineering, Tsinghua University</li>
+</ul>
 </section>
 
 <section id="publications">
-<h2 style="font-size:18pt;font-family:Arial,sans-serif;color:rgb(11,83,148)">Partial Publications</h2>
+<h2>Partial Publications</h2>
 
-<h3 style="font-size:15pt;color:#0b5394">Journal papers</h3>
-<p>D. Verenzuela and G. W. Miao, &quot;<a href="files/Scalable%20D2D-G%20Miao.pdf">Scalable Device-to-Device Communications For Frequency Reuse &gt;&gt; 1</a>,&quot; IEEE Transactions on Wireless Communications, vol. 16, no. 6, pp. 3435-3447, Apr. 2017.</p>
-<p>G. W. Miao; A. Azari; T. Hwang, &quot;<a href="files/EE-MAC-M2M-Miao.pdf">E<sup>2</sup>-MAC: Energy Efficient Medium Access for Massive M2M Communications</a>,&quot; IEEE Transactions on Communications, Vol 64, No 11, pp. 4720 - 4735, Sep, Year: 2016,</p>
-<p>P. Chang and G. W. Miao, &quot;<a href="files/DTX%20EE%20and%20SE_Miao.pdf">Energy and Spectral Efficiency of Cellular Networks With Discontinuous Transmission</a>,&quot; IEEE Transactions on Wireless Communications, vol. 16, no. 5, pp 2991-3002, Mar. 2017.</p>
-<p>G. W. Miao and A. Vastberg, "<a href="files/Wideband-Miao.pdf">Energy efficiency in the wideband regime</a>," IEEE Transactions on Wireless Communications, vol. 12, no. 8, pp. 4102-4109, Aug, 2013.</p>
-<p>G. W. Miao, "<a href="files/EE MU-MIMO-Miao.pdf">Energy-efficient uplink multi-user MIMO</a>," IEEE Transactions on Wireless Communications, vol. 12, no. 5, pp.&nbsp;2302-2313, May, 2013.</p>
-<p>Y. Kim, G. W. Miao, and T. Hwang, "<a href="files/TDD-Pilot-Miao.pdf">Energy efficient pilot and link adaptation for mobile users in TDD multi-user MIMO systems</a>," IEEE Transactions on Wireless Communications, vol. 13, no. 1, pp. 382-393, 1, 2014.</p>
-<p>G. W. Miao, N. Himayat, G. Y. Li, and A. Swami, "<a href="files/Cross-Layer Energy-Efficient Wireless Communications.pdf">Cross-layer optimization for energy-efficient wireless communications: a survey</a>," (invited), Wiley Journal Wireless Commun. and Mobile Computing, vol.9, no.4, pp. 529-542, Apr. 2009.</p>
-<p>G. W. Miao, G. Y. Li, and A. Swami, "<a href="files/Decentralized MultiChannel Cross-layer Optimization_TComVersion_CR.pdf">Decentralized optimization for multichannel random access</a>," IEEE Transactions on Communications, vol. 57, no. 10, pp. 3012- 3024, Oct. 2009.</p>
-<p>G. W. Miao, G. Y. Li, N. Himayat, and S. Talwar, "<a href="files/CIA-MAC_TCom.pdf">Cochannel interference avoidance MAC in wireless cellular networks</a>," IEEE Transactions on Communications, vol. 57, no. 11, pp. 3397-3405, Nov. 2009.</p>
-<p>G. W. Miao, N. Himayat, and G. Y. Li, "<a href="files/Energy-Efficienct Link Adaptation in Frequency-Selective Channels.pdf">Energy-efficient link adaptation in frequency-selective channels</a>," IEEE Transactions on Communications, vol. 58, no.2, pp. 545-554, Feb. 2010.</p>
-<p>G. W. Miao and Z. Niu, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqYjkxYjJlOWItMzJkNC00MjMyLWEwYTYtMzA5MzM0Yjc3MWQ1&hl=en&authkey=CNqAjuIN" target="_blank">Profit oriented multichannel resource management of integrated communication and broadcast networks</a>," IEEE Transactions on Broadcasting, vol. 51, no. 4, pp. 530-537, Dec. 2005.</p>
-<p>G. W. Miao, N. Himayat, G. Y. Li, and S. Talwar, "<a href="files/distributed interference EE-Miao.pdf">Distributed interference-aware energy-efficient power optimization</a>," IEEE Transactions on Wireless Communications, vol. 10, no. 4, pp. 1323-1333, Apr. 2011.</p>
-<p>G. W. Miao, N. Himayat, G. Y. Li, and S. Talwar, "<a href="files/Low-complexity-EE-miao.pdf">Low-complexity energy-efficient scheduling for uplink OFDMA</a>," IEEE Transactions on Communications, vol. 60, no. 1, pp. 112-120, Jan., 2012.</p>
-<p>G. W. Miao, G. Y. Li, and A. Swami, "<a href="files/CAD-MAC.pdf">Channel aware distributed medium access control</a>," IEEE/ACM Transactions on Networking, vol. 20, no. 4, Aug., 2012.</p>
-<p>Y. Nam, L. Liu, G. W. Miao, C. Zhang, "Link adaptation for Energy-Efficient Uplink Coordinated Multi-point Receptions," EURASIP Journal on Wireless Communications, vol. 2011, no. 1.</p>
+<details class="pub-group" open>
+<summary>Journal Papers</summary>
+<ul class="pub-list">
+  <li>D. Verenzuela and G. W. Miao, "<a href="files/Scalable%20D2D-G%20Miao.pdf">Scalable Device-to-Device Communications For Frequency Reuse &gt;&gt; 1</a>," <em>IEEE Transactions on Wireless Communications</em>, vol. 16, no. 6, pp. 3435–3447, Apr. 2017.</li>
+  <li>G. W. Miao, A. Azari, and T. Hwang, "<a href="files/EE-MAC-M2M-Miao.pdf">E<sup>2</sup>-MAC: Energy Efficient Medium Access for Massive M2M Communications</a>," <em>IEEE Transactions on Communications</em>, vol. 64, no. 11, pp. 4720–4735, Sep. 2016.</li>
+  <li>P. Chang and G. W. Miao, "<a href="files/DTX%20EE%20and%20SE_Miao.pdf">Energy and Spectral Efficiency of Cellular Networks With Discontinuous Transmission</a>," <em>IEEE Transactions on Wireless Communications</em>, vol. 16, no. 5, pp. 2991–3002, Mar. 2017.</li>
+  <li>G. W. Miao and A. Vastberg, "<a href="files/Wideband-Miao.pdf">Energy efficiency in the wideband regime</a>," <em>IEEE Transactions on Wireless Communications</em>, vol. 12, no. 8, pp. 4102–4109, Aug. 2013.</li>
+  <li>G. W. Miao, "<a href="files/EE MU-MIMO-Miao.pdf">Energy-efficient uplink multi-user MIMO</a>," <em>IEEE Transactions on Wireless Communications</em>, vol. 12, no. 5, pp. 2302–2313, May 2013.</li>
+  <li>Y. Kim, G. W. Miao, and T. Hwang, "<a href="files/TDD-Pilot-Miao.pdf">Energy efficient pilot and link adaptation for mobile users in TDD multi-user MIMO systems</a>," <em>IEEE Transactions on Wireless Communications</em>, vol. 13, no. 1, pp. 382–393, Jan. 2014.</li>
+  <li>G. W. Miao, N. Himayat, G. Y. Li, and A. Swami, "<a href="files/Cross-Layer Energy-Efficient Wireless Communications.pdf">Cross-layer optimization for energy-efficient wireless communications: a survey</a>," (invited) <em>Wiley Journal Wireless Communications and Mobile Computing</em>, vol. 9, no. 4, pp. 529–542, Apr. 2009.</li>
+  <li>G. W. Miao, G. Y. Li, and A. Swami, "<a href="files/Decentralized MultiChannel Cross-layer Optimization_TComVersion_CR.pdf">Decentralized optimization for multichannel random access</a>," <em>IEEE Transactions on Communications</em>, vol. 57, no. 10, pp. 3012–3024, Oct. 2009.</li>
+  <li>G. W. Miao, G. Y. Li, N. Himayat, and S. Talwar, "<a href="files/CIA-MAC_TCom.pdf">Cochannel interference avoidance MAC in wireless cellular networks</a>," <em>IEEE Transactions on Communications</em>, vol. 57, no. 11, pp. 3397–3405, Nov. 2009.</li>
+  <li>G. W. Miao, N. Himayat, and G. Y. Li, "<a href="files/Energy-Efficienct Link Adaptation in Frequency-Selective Channels.pdf">Energy-efficient link adaptation in frequency-selective channels</a>," <em>IEEE Transactions on Communications</em>, vol. 58, no. 2, pp. 545–554, Feb. 2010.</li>
+  <li>G. W. Miao and Z. Niu, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqYjkxYjJlOWItMzJkNC00MjMyLWEwYTYtMzA5MzM0Yjc3MWQ1&hl=en&authkey=CNqAjuIN" target="_blank">Profit oriented multichannel resource management of integrated communication and broadcast networks</a>," <em>IEEE Transactions on Broadcasting</em>, vol. 51, no. 4, pp. 530–537, Dec. 2005.</li>
+  <li>G. W. Miao, N. Himayat, G. Y. Li, and S. Talwar, "<a href="files/distributed interference EE-Miao.pdf">Distributed interference-aware energy-efficient power optimization</a>," <em>IEEE Transactions on Wireless Communications</em>, vol. 10, no. 4, pp. 1323–1333, Apr. 2011.</li>
+  <li>G. W. Miao, N. Himayat, G. Y. Li, and S. Talwar, "<a href="files/Low-complexity-EE-miao.pdf">Low-complexity energy-efficient scheduling for uplink OFDMA</a>," <em>IEEE Transactions on Communications</em>, vol. 60, no. 1, pp. 112–120, Jan. 2012.</li>
+  <li>G. W. Miao, G. Y. Li, and A. Swami, "<a href="files/CAD-MAC.pdf">Channel aware distributed medium access control</a>," <em>IEEE/ACM Transactions on Networking</em>, vol. 20, no. 4, Aug. 2012.</li>
+  <li>Y. Nam, L. Liu, G. W. Miao, and C. Zhang, "Link adaptation for energy-efficient uplink coordinated multi-point receptions," <em>EURASIP Journal on Wireless Communications</em>, vol. 2011, no. 1.</li>
+</ul>
+</details>
 
-<h3 style="font-size:15pt;color:#0b5394">Conference papers</h3>
-<p>G. W. Miao and A. Vastberg, Energy efficiency in the Wideband Regime," to appear in IEEE WCNC 2013.</p>
-<p>G. W. Miao, <a href="https://docs.google.com/open?id=0B98_mIv_d_orSnpabUxnSnllbDQ" target="_blank">Energy-efficient uplink multi-user MIMO with dynamic antenna management</a>," in Proc. IEEE Globecom 2012, Anaheim, CA, USA, Nov. 2012.</p>
-<p>L. Liu, G. W. Miao, and J. Zhang, "Energy-efficient scheduling for downlink multi-user MIMO". in the proc. of 2012 IEEE International Conference on Communications (ICC), June 2012 (Best Paper Finalist (5/508)).</p>
-<p>G. W. Miao and C. Zhang, "<a href="https://docs.google.com/open?id=0B98_mIv_d_ordHJjVkhyeTlCS3c" target="_blank">On Optimal Energy-Efficient Multi-User MIMO</a>," in Proc. IEEE Globecom 2011, Houston, TX, USA, Nov. 2011.</p>
-<p>G. W. Miao, G. Y. Li, A. Swami, and N. Himayat, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqZDAyYzg0ZGYtNTFhMy00NTBkLWI3ODEtNjliZDZkMzM3MGJk&hl=en&authkey=CInknaYI" target="_blank">Channel aware distributed random access</a>," in Proc. IEEE Globecom 2009, Honolulu, HI, USA, Nov. 2009.</p>
-<p>G. W. Miao, N. Himayat, G. Y. Li, A. T. Koc, and S. Talwar, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqYzA2YzQxMTktYTYwYi00NzMyLWFkODItYTA1MGY0ZjVhMjIz&hl=en&authkey=CNSbxuAI" target="_blank">Interference-aware energy-efficient power optimization</a>," in IEEE 2009 International Conference on Communications, Dresden, Germany, June 2009.</p>
-<p>G. W. Miao, N. Himayat, G. Y. Li, and S. Talwar, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqZmZkZWU2ZmMtYWM2YS00ZjlkLWFlZTAtMzk0ZGExY2NiNTYw&hl=en&authkey=CMje_ZEP" target="_blank">Low-complexity energy-efficient OFDMA</a>," in IEEE 2009 International Conference on Communications, Dresden, Germany, June 2009.</p>
-<p>G. W. Miao, G. Y. Li, N. Himayat, and S. Talwar, "Cochannel interference avoidance MAC in wireless cellular networks," (invited talk) Proc. International Wireless Communications and Mobile Computing Conference 2008, pp. 62-67, Crete, Greece, August 2008.</p>
-<p>G. W. Miao, N. Himayat, and G. Y. Li, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqYzI4YjRhMjgtMDg4Mi00NDU1LThiZDYtYzE5NWIzZDhjNDY4&hl=en&authkey=CJ_60tEJ" target="_blank">Energy-efficient transmission in frequency-selective channels</a>," in Proc. IEEE 2008 Global Communications Conference, New Orleans, LA, November 2008.</p>
-<p>G. W. Miao, G. Y. Li, A. Swami, and N. Himayat, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqODFiNmRmYjgtZjBhMy00ODQ0LWJjZGEtYmM1Yjg5NzE1Y2E4&hl=en&authkey=CLmD8vML" target="_blank">Cross-layer optimization based on partial local knowledge</a>," (invited talk) Proc. IEEE Wireless Communications and Networking Conference, Vegas, Nevada, March-April 2008.</p>
-<p>G. W. Miao and N. Himayat, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqODY5ZTdkOTctODAzOS00YmNlLWFiZjItZTcwYTZkZDY2M2M1&hl=en&authkey=CNHHo6oM" target="_blank">Low complexity utility based resource allocation for 802.16 OFDMA systems</a>", in Proc. IEEE WCNC 2008, pp. 1465-1470, Mar. 2008.</p>
-<p>G. W. Miao, N. Himayat, G. Y. Li, and D. Bormann, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqY2Q0MTNhNjEtMjc5Ny00OGUyLWJlZjItZDNkZWJmMGQwODg5&hl=en&authkey=CIOblpQE" target="_blank">Energy-efficient design in wireless OFDMA</a>," Proc. IEEE 2008 International Conference on Communications, pp. 3307-3312, Beijing, China, May 2008.</p>
-<p>G. W. Miao, G. Y. Li, and A. Swami, "Decentralized cross-layer optimization for multichannel aloha wireless networks," Proc. IEEE 2007 Global Communications Conference, pp. 4456-4460, Washington, D. C., November 2007.</p>
-<p>G. W. Miao and Z. Niu, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqM2ExYjQwZmMtMTI4ZC00ZWRjLWIxZjMtOTdmMDBmNzFiZmI4&hl=en&authkey=CLDC18wO" target="_blank">Bandwidth management for mixed unicast and multicast multimedia flows with perception based QoS differentiation</a>", Proc. IEEE 2006 International Conference on Communications, pp. 687-692, Istanbul, Turkey, May 2008.</p>
-<p>G. W. Miao and Z. Niu, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqZjE1ZDFhYWQtNjliMS00YTQ3LTk0MTMtMjJkYjFmMWM0M2I5&authkey=COCX_dMI&hl=en" target="_blank">Practical feedback design based OFDM link adaptive communications over frequency selective channels</a>", Proc. IEEE 2006 International Conference on Communications, pp. 4624-4629, Istanbul, Turkey, May 2008.</p>
-<p>G. W. Miao and Z. Niu, "Satisfaction oriented resource management in integrated internet and DVB-T network providing high mobility broadband access services", Proc. of IEEE 2005 Global Communications Conference, pp. 3841-3845, St. Louis, MO, November 2005.</p>
-<p>G. W. Miao and Z. Niu, "Profit oriented multichannel resource management for integrated internet and DVB-T network", Proc. of IEEE 2005 Global Communications Conference, pp. 678-683, St. Louis, MO, November 2005.</p>
-<p>G. W. Miao and Z. Niu, "Multichannel resource management of integrated communication and broadcast networks", the 19th International Teletraffic Congress, 2005.</p>
-<p>G. W. Miao and Z. Niu, "Transmission design and QoS oriented resource management based on integrated Internet and DVB-T network", in Proc. IEEE VTC 2005-Fall.</p>
-<p>G. W. Miao and Z. Niu, "A generalized satisfaction oriented bandwidth management", in Proc. Asia-Pacific Conference on Communications 2005.</p>
-<p>G. W. Miao, L. Peng, and X. Ding, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqYTk0NDcwNzgtZjQ1ZS00MGVjLWFiMzYtZTI4OTZjZjVhN2Jm&hl=en&authkey=CNahj9IK" target="_blank">Newspaper headline extraction method based on reversed region geometric characteristics</a>," in Proceedings Tsinghua-KAIST Joint Workshop on Document Recognition, 2005.</p>
-<p>P. Zhou and G. W. Miao, "Cross-layer congestion control and scheduling in multi-hop OFDMA wireless networks," to appear in IEEE Globecom 2009.</p>
+<details class="pub-group">
+<summary>Conference Papers</summary>
+<ul class="pub-list">
+  <li>G. W. Miao and A. Vastberg, "Energy efficiency in the wideband regime," <em>IEEE WCNC 2013</em>.</li>
+  <li>G. W. Miao, "<a href="https://docs.google.com/open?id=0B98_mIv_d_orSnpabUxnSnllbDQ" target="_blank">Energy-efficient uplink multi-user MIMO with dynamic antenna management</a>," in <em>Proc. IEEE Globecom 2012</em>, Anaheim, CA, Nov. 2012.</li>
+  <li>L. Liu, G. W. Miao, and J. Zhang, "Energy-efficient scheduling for downlink multi-user MIMO," in <em>Proc. IEEE ICC 2012</em>, June 2012. (Best Paper Finalist, top 5/508)</li>
+  <li>G. W. Miao and C. Zhang, "<a href="https://docs.google.com/open?id=0B98_mIv_d_ordHJjVkhyeTlCS3c" target="_blank">On optimal energy-efficient multi-user MIMO</a>," in <em>Proc. IEEE Globecom 2011</em>, Houston, TX, Nov. 2011.</li>
+  <li>G. W. Miao, G. Y. Li, A. Swami, and N. Himayat, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqZDAyYzg0ZGYtNTFhMy00NTBkLWI3ODEtNjliZDZkMzM3MGJk&hl=en&authkey=CInknaYI" target="_blank">Channel aware distributed random access</a>," in <em>Proc. IEEE Globecom 2009</em>, Honolulu, HI, Nov. 2009.</li>
+  <li>G. W. Miao, N. Himayat, G. Y. Li, A. T. Koc, and S. Talwar, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqYzA2YzQxMTktYTYwYi00NzMyLWFkODItYTA1MGY0ZjVhMjIz&hl=en&authkey=CNSbxuAI" target="_blank">Interference-aware energy-efficient power optimization</a>," in <em>Proc. IEEE ICC 2009</em>, Dresden, Germany, June 2009.</li>
+  <li>G. W. Miao, N. Himayat, G. Y. Li, and S. Talwar, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqZmZkZWU2ZmMtYWM2YS00ZjlkLWFlZTAtMzk0ZGExY2NiNTYw&hl=en&authkey=CMje_ZEP" target="_blank">Low-complexity energy-efficient OFDMA</a>," in <em>Proc. IEEE ICC 2009</em>, Dresden, Germany, June 2009.</li>
+  <li>G. W. Miao, G. Y. Li, N. Himayat, and S. Talwar, "Cochannel interference avoidance MAC in wireless cellular networks," (invited) <em>Proc. IWCMC 2008</em>, pp. 62–67, Crete, Greece, Aug. 2008.</li>
+  <li>G. W. Miao, N. Himayat, and G. Y. Li, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqYzI4YjRhMjgtMDg4Mi00NDU1LThiZDYtYzE5NWIzZDhjNDY4&hl=en&authkey=CJ_60tEJ" target="_blank">Energy-efficient transmission in frequency-selective channels</a>," in <em>Proc. IEEE Globecom 2008</em>, New Orleans, LA, Nov. 2008.</li>
+  <li>G. W. Miao, G. Y. Li, A. Swami, and N. Himayat, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqODFiNmRmYjgtZjBhMy00ODQ0LWJjZGEtYmM1Yjg5NzE1Y2E4&hl=en&authkey=CLmD8vML" target="_blank">Cross-layer optimization based on partial local knowledge</a>," (invited) <em>Proc. IEEE WCNC 2008</em>, Vegas, NV, Mar.–Apr. 2008.</li>
+  <li>G. W. Miao and N. Himayat, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqODY5ZTdkOTctODAzOS00YmNlLWFiZjItZTcwYTZkZDY2M2M1&hl=en&authkey=CNHHo6oM" target="_blank">Low complexity utility based resource allocation for 802.16 OFDMA systems</a>," in <em>Proc. IEEE WCNC 2008</em>, pp. 1465–1470, Mar. 2008.</li>
+  <li>G. W. Miao, N. Himayat, G. Y. Li, and D. Bormann, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqY2Q0MTNhNjEtMjc5Ny00OGUyLWJlZjItZDNkZWJmMGQwODg5&hl=en&authkey=CIOblpQE" target="_blank">Energy-efficient design in wireless OFDMA</a>," in <em>Proc. IEEE ICC 2008</em>, pp. 3307–3312, Beijing, China, May 2008.</li>
+  <li>G. W. Miao, G. Y. Li, and A. Swami, "Decentralized cross-layer optimization for multichannel aloha wireless networks," in <em>Proc. IEEE Globecom 2007</em>, pp. 4456–4460, Washington, D.C., Nov. 2007.</li>
+  <li>G. W. Miao and Z. Niu, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqM2ExYjQwZmMtMTI4ZC00ZWRjLWIxZjMtOTdmMDBmNzFiZmI4&hl=en&authkey=CLDC18wO" target="_blank">Bandwidth management for mixed unicast and multicast multimedia flows with perception based QoS differentiation</a>," in <em>Proc. IEEE ICC 2006</em>, pp. 687–692, Istanbul, Turkey, May 2006.</li>
+  <li>G. W. Miao and Z. Niu, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqZjE1ZDFhYWQtNjliMS00YTQ3LTk0MTMtMjJkYjFmMWM0M2I5&authkey=COCX_dMI&hl=en" target="_blank">Practical feedback design based OFDM link adaptive communications over frequency selective channels</a>," in <em>Proc. IEEE ICC 2006</em>, pp. 4624–4629, Istanbul, Turkey, May 2006.</li>
+  <li>G. W. Miao and Z. Niu, "Satisfaction oriented resource management in integrated internet and DVB-T network providing high mobility broadband access services," in <em>Proc. IEEE Globecom 2005</em>, pp. 3841–3845, St. Louis, MO, Nov. 2005.</li>
+  <li>G. W. Miao and Z. Niu, "Profit oriented multichannel resource management for integrated internet and DVB-T network," in <em>Proc. IEEE Globecom 2005</em>, pp. 678–683, St. Louis, MO, Nov. 2005.</li>
+  <li>G. W. Miao and Z. Niu, "Multichannel resource management of integrated communication and broadcast networks," in <em>Proc. 19th International Teletraffic Congress</em>, 2005.</li>
+  <li>G. W. Miao and Z. Niu, "Transmission design and QoS oriented resource management based on integrated Internet and DVB-T network," in <em>Proc. IEEE VTC 2005-Fall</em>.</li>
+  <li>G. W. Miao and Z. Niu, "A generalized satisfaction oriented bandwidth management," in <em>Proc. Asia-Pacific Conference on Communications 2005</em>.</li>
+  <li>G. W. Miao, L. Peng, and X. Ding, "<a href="https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B6V10Q9W0BgqYTk0NDcwNzgtZjQ1ZS00MGVjLWFiMzYtZTI4OTZjZjVhN2Jm&hl=en&authkey=CNahj9IK" target="_blank">Newspaper headline extraction method based on reversed region geometric characteristics</a>," in <em>Proc. Tsinghua-KAIST Joint Workshop on Document Recognition</em>, 2005.</li>
+  <li>P. Zhou and G. W. Miao, "Cross-layer congestion control and scheduling in multi-hop OFDMA wireless networks," in <em>Proc. IEEE Globecom 2009</em>.</li>
+</ul>
+</details>
 
-<h3 style="font-size:15pt;color:#0b5394">Patents</h3>
-<p>G. W. Miao and N. Himayat, Energy efficient link adaptation and resource allocation for wireless OFDMA system, United States Patent 7782829.</p>
-<p>G. W. Miao, S. Talwar, and N. Himayat, Probabilistic interference mitigation for wireless cellular networks, US Patent 20,120,058,789.</p>
-<p>G. W. Miao et al., PCFICH Indication for Cross-Scheduled Component Carriers, USPTO Prov. Appl. No. 61314503, 3/16/2010.</p>
-<p>G. W. Miao et al., Control Resource Allocation for Uplink Transmit Diversity, USPTO Prov. Appl. No. 61325702, 4/19/2010.</p>
-<p>G. W. Miao et al., Code Division Multiplexing Design for Wireless Communications, USPTO Prov. Appl. No. 61332607, 5/7/2010.</p>
-<p>G. W. Miao et al., Uplink Power Control for Wireless Communications, USPTO Prov. Appl. No. 61368176, 7/27/2010.</p>
-<p>G. W. Miao et al., PCFICH Support for Range Expansion, USPTO Prov. Appl. No. 61370006, 8/2/2010.</p>
-<p>G. W. Miao et al. (second author), Methods and apparatus for enabling interference coordination in heterogeneous networks, International patent, WO/2012/046997/US Patent 20120083280.</p>
-<p>G. W. Miao et al., APPARATUS AND METHOD FOR CHANNEL MEASUREMENT IN RADIO LINK MONITORING IN A WIRELESS NETWORK, International patent, WO/2012/057532/ US Patent 20120108177.</p>
-<p>G. W. Miao et al., Inter-Cell Interference Coordination in Cellular Networks, USPTO Prov. Appl. No. 61409022, 11/1/2010.</p>
-<p>G. W. Miao et al., PUSCH Hopping in Wireless Networks, USPTO Prov. Appl. No. 61409446, 11/2/2010.</p>
-<p>G. W. Miao et al., VRB Design for Wireless Communications, USPTO Prov. Appl. No. 61314503, 11/16/2010.</p>
-<p>G. W. Miao et al., Improved Feedback Signaling Design for SU/MU-MIMO, filed.</p>
-<p>G. W. Miao et al., APPARATUS AND METHOD FOR SUPPORTING RANGE EXPANSION IN A WIRELESS NETWORK, International Application No.: WO Patent WO/2012/018,221/ US Patent 20,120,026,972.</p>
-<p>G. W. Miao et al., APPARATUS AND METHOD FOR PRIMARY UPLINK SHARED CHANNEL HOPPING IN A WIRELESS NETWORK, US Patent 20120120888, 2012.</p>
+<details class="pub-group">
+<summary>Patents</summary>
+<ul class="pub-list">
+  <li>G. W. Miao and N. Himayat, Energy efficient link adaptation and resource allocation for wireless OFDMA system, United States Patent 7,782,829.</li>
+  <li>G. W. Miao, S. Talwar, and N. Himayat, Probabilistic interference mitigation for wireless cellular networks, US Patent 20,120,058,789.</li>
+  <li>G. W. Miao et al., PCFICH Indication for Cross-Scheduled Component Carriers, USPTO Prov. Appl. No. 61314503, Mar. 2010.</li>
+  <li>G. W. Miao et al., Control Resource Allocation for Uplink Transmit Diversity, USPTO Prov. Appl. No. 61325702, Apr. 2010.</li>
+  <li>G. W. Miao et al., Code Division Multiplexing Design for Wireless Communications, USPTO Prov. Appl. No. 61332607, May 2010.</li>
+  <li>G. W. Miao et al., Uplink Power Control for Wireless Communications, USPTO Prov. Appl. No. 61368176, Jul. 2010.</li>
+  <li>G. W. Miao et al., PCFICH Support for Range Expansion, USPTO Prov. Appl. No. 61370006, Aug. 2010.</li>
+  <li>G. W. Miao et al. (second author), Methods and apparatus for enabling interference coordination in heterogeneous networks, International Patent WO/2012/046997 / US Patent 20,120,083,280.</li>
+  <li>G. W. Miao et al., Apparatus and method for channel measurement in radio link monitoring in a wireless network, International Patent WO/2012/057532 / US Patent 20,120,108,177.</li>
+  <li>G. W. Miao et al., Inter-Cell Interference Coordination in Cellular Networks, USPTO Prov. Appl. No. 61409022, Nov. 2010.</li>
+  <li>G. W. Miao et al., PUSCH Hopping in Wireless Networks, USPTO Prov. Appl. No. 61409446, Nov. 2010.</li>
+  <li>G. W. Miao et al., VRB Design for Wireless Communications, USPTO Prov. Appl. No. 61314503, Nov. 2010.</li>
+  <li>G. W. Miao et al., Improved Feedback Signaling Design for SU/MU-MIMO, filed.</li>
+  <li>G. W. Miao et al., Apparatus and method for supporting range expansion in a wireless network, International Patent WO/2012/018,221 / US Patent 20,120,026,972.</li>
+  <li>G. W. Miao et al., Apparatus and method for primary uplink shared channel hopping in a wireless network, US Patent 20,120,120,888, 2012.</li>
+</ul>
+</details>
 
-<p style="text-align: justify"><em>* Copyright notice: Materials are presented to ensure timely dissemination of scholarly and technical work. Copyright and all rights therein are retained by authors or by other copyright holders. All persons copying this information are expected to adhere to the terms and constraints invoked by each author's copyright.</em></p>
-<p><em>* To download original PDF files, click the link -&gt; File -&gt; Download Original</em></p>
+<div class="copyright-notice">
+  <p>* Copyright notice: Materials are presented to ensure timely dissemination of scholarly and technical work. Copyright and all rights therein are retained by authors or by other copyright holders. All persons copying this information are expected to adhere to the terms and constraints invoked by each author's copyright.</p>
+  <p>* To download original PDF files, click the link → File → Download Original</p>
+</div>
 </section>
 
 <section id="tutorials">
-<h2 style="font-size:18pt;font-family:Arial,sans-serif;color:rgb(11,83,148)">Tutorials</h2>
-<p>1. <a href="files/tutorial03/EE-SE-Miao.html/EE-SE-Miao.html" target="_blank">Cross-Layer Design for Spectrum- and Energy-Efficient Wireless Networks</a>, (Sole presenter) IEEE Globecom 2013, GA, USA, Dec. 2013.</p>
-<p>2. Joint PHY-MAC Design for Spectral- and Energy-Efficient Wireless Networks, (with Prof. G. Y. Li of Gatech) IEEE Globecom 2012, CA, USA, Dec. 2012.</p>
-<p>3. Cross-layer design for spectrum- and energy-efficient wireless networks (with J. Zander of KTH) IEEE VTC 2012-Fall, Quebec, CA, Sep. 2012.</p>
-<p>4. Joint PHY-MAC Design for Spectral- and Energy-Efficient Wireless Networks (with Prof. G. Y. Li of Gatech) IEEE PIMRC 2012, Sydney, Australia, Sep. 2012.</p>
-<p>5. Cross-layer optimization for spectral and energy efficiency in wireless systems (with Prof. G. Y. Li of Gatech) IEEE 2011 Global Telecommunications Conference, Houston, TX, USA, Dec. 2011.</p>
-<p>6. Cross-layer design for energy-efficient wireless systems (invited talk) University of Texas - Dallas, Dallas Chapter of IEEE Signal Processing Society, US, Oct. 2011.</p>
+<h2>Tutorials</h2>
+<ol class="tutorial-list">
+  <li><a href="files/tutorial03/EE-SE-Miao.html/EE-SE-Miao.html" target="_blank">Cross-Layer Design for Spectrum- and Energy-Efficient Wireless Networks</a> (Sole presenter) — IEEE Globecom 2013, Atlanta, GA, Dec. 2013.</li>
+  <li>Joint PHY-MAC Design for Spectral- and Energy-Efficient Wireless Networks (with Prof. G. Y. Li, Georgia Tech) — IEEE Globecom 2012, Anaheim, CA, Dec. 2012.</li>
+  <li>Cross-layer design for spectrum- and energy-efficient wireless networks (with J. Zander, KTH) — IEEE VTC 2012-Fall, Quebec, Canada, Sep. 2012.</li>
+  <li>Joint PHY-MAC Design for Spectral- and Energy-Efficient Wireless Networks (with Prof. G. Y. Li, Georgia Tech) — IEEE PIMRC 2012, Sydney, Australia, Sep. 2012.</li>
+  <li>Cross-layer optimization for spectral and energy efficiency in wireless systems (with Prof. G. Y. Li, Georgia Tech) — IEEE Globecom 2011, Houston, TX, Dec. 2011.</li>
+  <li>Cross-layer design for energy-efficient wireless systems (invited talk) — University of Texas at Dallas, Dallas Chapter of IEEE Signal Processing Society, Oct. 2011.</li>
+</ol>
 </section>
 
 <section id="awards">
-<h2 style="font-size:18pt;font-family:Arial,sans-serif;color:#0b5394">Honors and Awards</h2>
-<p>Exemplary Reviewer for IEEE Communications Letters, 2011 (Fewer than 3%)</p>
-<p>Individual Gold Award for Contribution in LTE-A Standardization, Samsung Telecom America, 2011.</p>
-<p>Marquis Who's Who in America 2012 (66th Edition)</p>
-<p>Frequent fellowships/scholarships for outstanding academic performance in both undergraduate and graduate studies</p>
-<p>Meritorious in Interdisciplinary Contest in Modeling (ICM) 2002 (first prize)</p>
-<p>First Prize in Mathematical Modeling and Computer Application Contest for University Students in Beijing, 2001</p>
+<h2>Honors and Awards</h2>
+<ul class="award-list">
+  <li>Exemplary Reviewer for IEEE Communications Letters, 2011 (fewer than 3% of reviewers)</li>
+  <li>Individual Gold Award for Contribution in LTE-A Standardization, Samsung Telecom America, 2011</li>
+  <li>Marquis Who's Who in America, 2012 (66th Edition)</li>
+  <li>Frequent fellowships and scholarships for outstanding academic performance in undergraduate and graduate studies</li>
+  <li>Meritorious Award, Interdisciplinary Contest in Modeling (ICM), 2002</li>
+  <li>First Prize, Mathematical Modeling and Computer Application Contest for University Students in Beijing, 2001</li>
+</ul>
 </section>
 
 <section id="professional-activities">
-<h2 style="font-size:18pt;font-family:Arial,sans-serif;color:#0b5394">Professional Activities</h2>
-<p>Member of IEEE and IEICE.</p>
-<p>Technical Program Committee Member:</p>
-<ul>
-  <li>8th IEEE Broadband Wireless Access Workshop</li>
-  <li>IEEE Global Communications Conference 2012</li>
-  <li>7th International Conference on Cognitive Radio Oriented Wireless Networks (2012)</li>
-  <li>IEEE Wireless Communications &amp; Networking Conference 2012</li>
-  <li>International Conference on Computing, Networking and Communication (ICNC) 2012</li>
-  <li>IEEE Global Communications Conference 2011</li>
-  <li>IEEE Wireless Communications &amp; Networking Conference 2011</li>
-  <li>IEEE International Conference on Communications ICC2011</li>
-  <li>The First International Conferences on Access Networks, Services and Technologies (ACCESS 2010)</li>
-  <li>The Second International Conferences on Access Networks, Services and Technologies (ACCESS 2011)</li>
-  <li>1st International Workshop on Recent Advances in Broadband Access Networks (RABAN 2010).</li>
-  <li>And many others</li>
-</ul>
-<p>Industry Chair of The Second International Conferences on Access Networks, Services and Technologies (ACCESS 2011).</p>
-<p>Session Chair of IEEE Wireless Communications &amp; Networking Conference 2011, IEEE Global Communications Conference 2011.</p>
-<p>Technical reviewer</p>
-<ul>
-  <li>Book proposal reviewer for Springer SBM.</li>
-  <li>IEEE Transactions on Communications</li>
-  <li>IEEE Transactions on Wireless Communications</li>
-  <li>IEEE Transactions on Broadcasting</li>
-  <li>IEEE Transactions on Signal Processing</li>
-  <li>IEEE Journal on Selected Areas in Communications</li>
-  <li>IEEE Transactions on Vehicle Technology</li>
-  <li>IEEE Communications Letters</li>
-  <li>Wiley Journal Wireless Communication and Mobile Computing</li>
-  <li>International Journal of Communication Systems</li>
-  <li>IEEE International Conference on Communications</li>
-  <li>IEEE Global Communications</li>
-  <li>IEEE Wireless Communications and Networking Conference</li>
-  <li>and many others.</li>
-</ul>
+<h2>Professional Activities</h2>
+
+<div class="act-block">
+  <p>Member of IEEE and IEICE.</p>
+</div>
+
+<div class="act-block">
+  <p>Technical Program Committee Member:</p>
+  <ul class="act-list">
+    <li>8th IEEE Broadband Wireless Access Workshop</li>
+    <li>IEEE Global Communications Conference 2012</li>
+    <li>7th International Conference on Cognitive Radio Oriented Wireless Networks (2012)</li>
+    <li>IEEE Wireless Communications &amp; Networking Conference 2012</li>
+    <li>International Conference on Computing, Networking and Communication (ICNC) 2012</li>
+    <li>IEEE Global Communications Conference 2011</li>
+    <li>IEEE Wireless Communications &amp; Networking Conference 2011</li>
+    <li>IEEE International Conference on Communications (ICC) 2011</li>
+    <li>The First International Conference on Access Networks, Services and Technologies (ACCESS 2010)</li>
+    <li>The Second International Conference on Access Networks, Services and Technologies (ACCESS 2011)</li>
+    <li>1st International Workshop on Recent Advances in Broadband Access Networks (RABAN 2010)</li>
+    <li>And many others</li>
+  </ul>
+</div>
+
+<div class="act-block">
+  <p>Industry Chair, ACCESS 2011. &nbsp; Session Chair, IEEE WCNC 2011 &amp; IEEE Globecom 2011.</p>
+</div>
+
+<div class="act-block">
+  <p>Technical Reviewer:</p>
+  <ul class="act-list">
+    <li>Book proposal reviewer, Springer SBM</li>
+    <li>IEEE Transactions on Communications</li>
+    <li>IEEE Transactions on Wireless Communications</li>
+    <li>IEEE Transactions on Broadcasting</li>
+    <li>IEEE Transactions on Signal Processing</li>
+    <li>IEEE Journal on Selected Areas in Communications</li>
+    <li>IEEE Transactions on Vehicular Technology</li>
+    <li>IEEE Communications Letters</li>
+    <li>Wiley Journal Wireless Communication and Mobile Computing</li>
+    <li>International Journal of Communication Systems</li>
+    <li>IEEE ICC, IEEE Globecom, IEEE WCNC, and many others</li>
+  </ul>
+</div>
 </section>
 
 </main>
+</div>
 
 <footer>
-<p>&copy; Guowang Miao. All rights reserved.</p>
+  <p>&copy; Guowang Miao. All rights reserved.</p>
 </footer>
 
 </body>
